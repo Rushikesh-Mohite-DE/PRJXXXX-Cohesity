@@ -1,0 +1,49 @@
+steps:
+  SALESFORCE_USER_KEY_LOOKUP-8c957efd-d11f-458f-a214-e231b321197f:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: dd3f7f6d-81ed-4ffc-8579-47d2f953a11d
+              stepCounter: 8c957efd-d11f-458f-a214-e231b321197f
+            config: {}
+            dataType: VARCHAR(18)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2b0cbc1b-ea1f-49a4-8be7-db200d2eb695
+              stepCounter: 8c957efd-d11f-458f-a214-e231b321197f
+            config: {}
+            dataType: VARCHAR(80)
+            defaultValue: ""
+            description: ""
+            name: USERNAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'SALESFORCE_USER_KEY_LOOKUP') }}
+      name: SALESFORCE_USER_KEY_LOOKUP
+      schema: ""
+      sqlType: Source
+      table: SALESFORCE_USER_KEY_LOOKUP
+      type: sourceInput
+    stepCounter: 8c957efd-d11f-458f-a214-e231b321197f
