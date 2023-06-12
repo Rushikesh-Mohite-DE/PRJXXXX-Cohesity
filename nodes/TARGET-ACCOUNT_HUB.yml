@@ -1,0 +1,94 @@
+steps:
+  ACCOUNT_HUB-284cad49-92c1-4e94-b9b7-9b84a8e8d329:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: be5da0ac-2b49-4e34-aba5-48204d7ad08b
+              stepCounter: 284cad49-92c1-4e94-b9b7-9b84a8e8d329
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ACCOUNT_HASHKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: be80b123-6ee9-47f7-9d0b-76e477d5390c
+                    stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d
+                transform: ""
+          - columnReference:
+              columnCounter: 3222fdc1-e7cd-49f1-8233-c17b6c3d8935
+              stepCounter: 284cad49-92c1-4e94-b9b7-9b84a8e8d329
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LOAD_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 66da20c6-2710-4d32-8886-ef25d28704e9
+                    stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d
+                transform: ""
+          - columnReference:
+              columnCounter: ac77f6bb-0060-491f-8ac3-883299b3f6ba
+              stepCounter: 284cad49-92c1-4e94-b9b7-9b84a8e8d329
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: RECORD_SOURCE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f4e794be-06b1-4aae-9cc3-fe4b5549a487
+                    stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d
+                transform: ""
+          - columnReference:
+              columnCounter: e8f481f7-a3c6-4039-a914-ee5ff4eef247
+              stepCounter: 284cad49-92c1-4e94-b9b7-9b84a8e8d329
+            config:
+              isHubHash: true
+            dataType: VARCHAR(18)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4d4930e4-b3eb-402a-8738-1e1d32504507
+                    stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              PH_ACCOUNT: 057f31cf-7d69-4b1c-82b4-0fd1d6889033
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: ACCOUNT
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'ACCOUNT') }} "PH_ACCOUNT"
+            name: ACCOUNT_HUB
+            noLinkRefs: []
+      name: ACCOUNT_HUB
+      overrideSQL: false
+      schema: ""
+      sqlType: "76"
+      type: sql
+    stepCounter: 284cad49-92c1-4e94-b9b7-9b84a8e8d329
