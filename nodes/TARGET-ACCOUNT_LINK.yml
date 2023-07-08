@@ -15,6 +15,38 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference:
+              columnCounter: 53ccbc39-3f2e-4e5c-abf3-154463e1a63e
+              stepCounter: 0b46796f-aa02-4d5b-8b66-f6151c874226
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ACCOUNT_LINKHASHKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2cd6fd04-37af-4ef0-85bf-0dcfe34305e5
+                    stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d2879d40-a124-4287-bea9-965ce56a9d79
+              stepCounter: 0b46796f-aa02-4d5b-8b66-f6151c874226
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCreateDate: true
+            name: LOAD_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
               columnCounter: d24f838a-de46-4909-8552-877fe9ab3a95
               stepCounter: 0b46796f-aa02-4d5b-8b66-f6151c874226
             dataType: VARCHAR(100)
@@ -46,35 +78,35 @@ steps:
                     stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d
                 transform: ""
           - columnReference:
-              columnCounter: 8e67307f-cab4-46e4-8fc3-6dc8a9f24fda
-              stepCounter: 0b46796f-aa02-4d5b-8b66-f6151c874226
-            config:
-              isLinkHash: true
-            dataType: STRING
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: CUSTOMER_HASHKEY
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 7891b6cc-93d5-4a8d-acdd-5a7d098fedd1
-                    stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d
-                transform: ""
-          - columnReference:
               columnCounter: 2a0298fd-cb3f-4b1a-8915-21fca7957b89
               stepCounter: 0b46796f-aa02-4d5b-8b66-f6151c874226
             config:
               isLinkHash: true
-            dataType: STRING
+            dataType: VARCHAR(32)
             description: ""
             hashColumns: []
             hashDetails: null
             name: PARENT_HASHKEY
-            nullable: true
+            nullable: false
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: fde02c31-8493-4fe3-97c5-c3b99ea96850
+                    stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d
+                transform: ""
+          - columnReference:
+              columnCounter: 8e67307f-cab4-46e4-8fc3-6dc8a9f24fda
+              stepCounter: 0b46796f-aa02-4d5b-8b66-f6151c874226
+            config:
+              isLinkHash: true
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMER_HASHKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7891b6cc-93d5-4a8d-acdd-5a7d098fedd1
                     stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d
                 transform: ""
           - columnReference:
@@ -82,12 +114,12 @@ steps:
               stepCounter: 0b46796f-aa02-4d5b-8b66-f6151c874226
             config:
               isLinkHash: true
-            dataType: STRING
+            dataType: VARCHAR(32)
             description: ""
             hashColumns: []
             hashDetails: null
             name: FIRST_WIN_OPPORTUNITY_HASHKEY
-            nullable: true
+            nullable: false
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 5eee5370-4ee0-4237-b8af-f94f307ccab4
@@ -98,12 +130,12 @@ steps:
               stepCounter: 0b46796f-aa02-4d5b-8b66-f6151c874226
             config:
               isLinkHash: true
-            dataType: STRING
+            dataType: VARCHAR(32)
             description: ""
             hashColumns: []
             hashDetails: null
             name: PRIMARY_CONTACT_HASHKEY
-            nullable: true
+            nullable: false
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: a2f99ae9-f26f-46c6-9ace-de3ac52b88e4
@@ -114,45 +146,15 @@ steps:
               stepCounter: 0b46796f-aa02-4d5b-8b66-f6151c874226
             config:
               isLinkHash: true
-            dataType: STRING
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: COHESITY_GLOBAL_PARENT_ACCOUNT_HASHKEY
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: d0a1cb22-3793-405a-96ce-d140aa1310c6
-                    stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d
-                transform: ""
-          - columnReference:
-              columnCounter: 40451c6a-a501-4aa4-8ad1-a9dc129c3668
-              stepCounter: 0b46796f-aa02-4d5b-8b66-f6151c874226
-            config:
-              isLinkHash: true
-            dataType: STRING
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: ADVOCATE_HUB_REFERRER_CONTACT_HASHKEY
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 00b22e69-aad4-489d-84a4-2d1cd07bb928
-                    stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d
-                transform: ""
-          - columnReference:
-              columnCounter: 53ccbc39-3f2e-4e5c-abf3-154463e1a63e
-              stepCounter: 0b46796f-aa02-4d5b-8b66-f6151c874226
             dataType: VARCHAR(32)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: ACCOUNT_LINKHASHKEY
+            name: COHESITY_GLOBAL_PARENT_ACCOUNT_HASHKEY
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2cd6fd04-37af-4ef0-85bf-0dcfe34305e5
+                  - columnCounter: d0a1cb22-3793-405a-96ce-d140aa1310c6
                     stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d
                 transform: ""
           - columnReference:
@@ -160,15 +162,31 @@ steps:
               stepCounter: 0b46796f-aa02-4d5b-8b66-f6151c874226
             config:
               isLinkHash: true
-            dataType: STRING
+            dataType: VARCHAR(32)
             description: ""
             hashColumns: []
             hashDetails: null
             name: ADVOCATE_HUB_REFERRER_ACCOUNT_HASHKEY
-            nullable: true
+            nullable: false
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 874cd870-40c8-4583-b7f7-6c2723acefd9
+                    stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d
+                transform: ""
+          - columnReference:
+              columnCounter: 40451c6a-a501-4aa4-8ad1-a9dc129c3668
+              stepCounter: 0b46796f-aa02-4d5b-8b66-f6151c874226
+            config:
+              isLinkHash: true
+            dataType: VARCHAR(32)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ADVOCATE_HUB_REFERRER_CONTACT_HASHKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 00b22e69-aad4-489d-84a4-2d1cd07bb928
                     stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d
                 transform: ""
           - columnReference:
@@ -251,36 +269,18 @@ steps:
                   - columnCounter: 0760da6e-8654-4b71-a27d-da70ea9a9da4
                     stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d
                 transform: ""
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: d2879d40-a124-4287-bea9-965ce56a9d79
-              stepCounter: 0b46796f-aa02-4d5b-8b66-f6151c874226
-            config: {}
-            dataType: TIMESTAMP
-            defaultValue: ""
-            description: ""
-            hashColumns: []
-            isSystemCreateDate: true
-            name: LOAD_DATE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences: []
-                transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - aliases:
-              PH_ACCOUNT: 057f31cf-7d69-4b1c-82b4-0fd1d6889033
+              ACCOUNT: f22b575b-95d0-4f8f-bc44-95854e64440d
             customSQL:
               customSQL: ""
             dependencies:
               - locationName: STAGING
                 nodeName: ACCOUNT
             join:
-              joinCondition: FROM {{ ref('STAGING', 'ACCOUNT') }} "PH_ACCOUNT"
+              joinCondition: FROM {{ ref('STAGING', 'ACCOUNT') }} "ACCOUNT"
             name: ACCOUNT_LINK
             noLinkRefs: []
       name: ACCOUNT_LINK

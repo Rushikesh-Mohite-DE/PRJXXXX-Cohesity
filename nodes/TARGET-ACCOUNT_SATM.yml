@@ -17,6 +17,9 @@ steps:
           - columnReference:
               columnCounter: 76781b97-fce2-42ac-82fd-7f57b2bc4e0b
               stepCounter: e5ebbcfd-7abf-4716-b18f-85820769a427
+            config:
+              isHubHash: true
+              isSatkHashkey: true
             dataType: VARCHAR(32)
             description: ""
             hashColumns: []
@@ -73,7 +76,10 @@ steps:
           - columnReference:
               columnCounter: 54d360a1-98f7-43ef-80b2-d140cab08fee
               stepCounter: e5ebbcfd-7abf-4716-b18f-85820769a427
+            config:
+              isnotequallogic: true
             dataType: BOOLEAN
+            defaultValue: "FALSE"
             description: ""
             hashColumns: []
             hashDetails: null
@@ -87,6 +93,9 @@ steps:
           - columnReference:
               columnCounter: 2091f713-a4dc-48ff-a4aa-8fd347614c0a
               stepCounter: e5ebbcfd-7abf-4716-b18f-85820769a427
+            config:
+              isnotequallogic: true
+              isnulllogic: true
             dataType: VARCHAR(32)
             description: ""
             hashColumns: []
@@ -746,6 +755,6 @@ steps:
       name: ACCOUNT_SATM
       overrideSQL: false
       schema: ""
-      sqlType: "78"
+      sqlType: "82"
       type: sql
     stepCounter: e5ebbcfd-7abf-4716-b18f-85820769a427

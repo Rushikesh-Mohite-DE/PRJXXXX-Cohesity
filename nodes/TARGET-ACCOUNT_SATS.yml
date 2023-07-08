@@ -17,6 +17,8 @@ steps:
           - columnReference:
               columnCounter: c6ec5da8-7c1e-4a8f-be29-18fcc723ff41
               stepCounter: 5a3fe57d-0367-483f-91af-6efa258dcaa7
+            config:
+              isSatkHashkey: true
             dataType: VARCHAR(32)
             description: ""
             hashColumns: []
@@ -73,7 +75,10 @@ steps:
           - columnReference:
               columnCounter: d1da18c5-123d-439a-a740-d30bebffad8c
               stepCounter: 5a3fe57d-0367-483f-91af-6efa258dcaa7
+            config:
+              isnotequallogic: true
             dataType: BOOLEAN
+            defaultValue: "FALSE"
             description: ""
             hashColumns: []
             hashDetails: null
@@ -87,6 +92,9 @@ steps:
           - columnReference:
               columnCounter: 5b038f7a-ce32-422e-8b2e-07997dacf2d5
               stepCounter: 5a3fe57d-0367-483f-91af-6efa258dcaa7
+            config:
+              isnotequallogic: true
+              isnulllogic: true
             dataType: VARCHAR(32)
             description: ""
             hashColumns: []
@@ -4581,6 +4589,6 @@ steps:
       name: ACCOUNT_SATS
       overrideSQL: false
       schema: ""
-      sqlType: "78"
+      sqlType: "82"
       type: sql
     stepCounter: 5a3fe57d-0367-483f-91af-6efa258dcaa7

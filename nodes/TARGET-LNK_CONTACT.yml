@@ -1,0 +1,192 @@
+steps:
+  LNK_CONTACT-bfbcd348-93a2-4cbc-be30-42b56f83c5de:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 9e03bf15-ec29-4179-b807-7cf37ea2f51a
+              stepCounter: bfbcd348-93a2-4cbc-be30-42b56f83c5de
+            config:
+              isLinkHashkey: true
+            dataType: STRING
+            description: ""
+            name: CONTACT_LINKHASHKEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5a55a47c-4156-4fef-b771-222773f078e6
+                    stepCounter: 9b45b82e-80f8-4522-a304-e09c04cd67ab
+                transform: ""
+          - columnReference:
+              columnCounter: 9451c3ee-1b7d-4cfd-8073-a9335e53f2f3
+              stepCounter: bfbcd348-93a2-4cbc-be30-42b56f83c5de
+            dataType: VARCHAR(76)
+            description: ""
+            name: RECORD_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e6c5b181-dd3e-4ce5-b2ca-c76701f4ab42
+                    stepCounter: 9b45b82e-80f8-4522-a304-e09c04cd67ab
+                transform: ""
+          - columnReference:
+              columnCounter: ca36b2d5-716d-4c48-9fa2-373bdb45b7c8
+              stepCounter: bfbcd348-93a2-4cbc-be30-42b56f83c5de
+            dataType: STRING
+            description: ""
+            name: CONTACT_HASHKEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6452228e-0c2f-4c99-a30b-890def9f3794
+                    stepCounter: 9b45b82e-80f8-4522-a304-e09c04cd67ab
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 27a10a53-aaaf-47b4-b179-39fe700ed941
+              stepCounter: bfbcd348-93a2-4cbc-be30-42b56f83c5de
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCreateDate: true
+            name: LOAD_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 2e2c9c73-7afe-47b4-a20f-efd3941a0cd1
+              stepCounter: bfbcd348-93a2-4cbc-be30-42b56f83c5de
+            config:
+              isLinkHash: true
+            dataType: STRING
+            description: ""
+            name: CONTACT_MASTER_RECORD_HASHKEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 57ff4418-0e37-4d7c-b3ff-705328df494c
+                    stepCounter: 9b45b82e-80f8-4522-a304-e09c04cd67ab
+                transform: ""
+          - columnReference:
+              columnCounter: a2b0c83f-b170-45e5-b9f3-2aeb860c481e
+              stepCounter: bfbcd348-93a2-4cbc-be30-42b56f83c5de
+            config:
+              isLinkHash: true
+            dataType: STRING
+            description: ""
+            name: ACCOUNT_HASHKEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0fddf5bc-7545-4f9b-9f67-c4ada489b281
+                    stepCounter: 9b45b82e-80f8-4522-a304-e09c04cd67ab
+                transform: ""
+          - columnReference:
+              columnCounter: 1246a37b-6f71-49a1-ba37-ee5f10324715
+              stepCounter: bfbcd348-93a2-4cbc-be30-42b56f83c5de
+            config:
+              isLinkHash: true
+            dataType: STRING
+            description: ""
+            name: OWNER_HASHKEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11672b16-d36e-40a5-a06f-d3194d926a1f
+                    stepCounter: 9b45b82e-80f8-4522-a304-e09c04cd67ab
+                transform: ""
+          - columnReference:
+              columnCounter: 939fb6d0-8436-4d0d-94d8-0e8629f2f04d
+              stepCounter: bfbcd348-93a2-4cbc-be30-42b56f83c5de
+            config:
+              isLinkHash: true
+            dataType: STRING
+            description: ""
+            name: CREATED_BY_HASHKEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 27093d98-de4b-44ac-b9fb-d606596994bd
+                    stepCounter: 9b45b82e-80f8-4522-a304-e09c04cd67ab
+                transform: ""
+          - columnReference:
+              columnCounter: 03683ba8-43ef-473d-b0b5-34277d334a6f
+              stepCounter: bfbcd348-93a2-4cbc-be30-42b56f83c5de
+            config:
+              isLinkHash: true
+            dataType: STRING
+            description: ""
+            name: LAST_MODIFIED_BY_HASHKEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8227d56e-3ad6-4050-8698-e106ba9e4e86
+                    stepCounter: 9b45b82e-80f8-4522-a304-e09c04cd67ab
+                transform: ""
+          - columnReference:
+              columnCounter: 7ce6b24e-bef6-40bd-bf73-c234801f2dcb
+              stepCounter: bfbcd348-93a2-4cbc-be30-42b56f83c5de
+            config:
+              isLinkHash: true
+            dataType: STRING
+            description: ""
+            name: RECORD_TYPE_HASHKEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d79e4f20-beeb-4926-ade1-90ace07cf53d
+                    stepCounter: 9b45b82e-80f8-4522-a304-e09c04cd67ab
+                transform: ""
+          - columnReference:
+              columnCounter: 8584b038-7e6c-49eb-a7b2-cb7d5859a6e4
+              stepCounter: bfbcd348-93a2-4cbc-be30-42b56f83c5de
+            config:
+              isLinkHash: true
+            dataType: STRING
+            description: ""
+            name: OWNER_AT_LEAD_TIMEOUT_HASHKEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a2ea7700-6542-48fe-bf28-c439240f1b42
+                    stepCounter: 9b45b82e-80f8-4522-a304-e09c04cd67ab
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              CONTACT: 9b45b82e-80f8-4522-a304-e09c04cd67ab
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGING
+                nodeName: CONTACT
+            join:
+              joinCondition: FROM {{ ref('STAGING', 'CONTACT') }} "CONTACT"
+            name: LNK_CONTACT
+            noLinkRefs: []
+      name: LNK_CONTACT
+      overrideSQL: false
+      schema: ""
+      sqlType: "77"
+      type: sql
+    stepCounter: bfbcd348-93a2-4cbc-be30-42b56f83c5de
