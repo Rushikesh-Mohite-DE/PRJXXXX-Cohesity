@@ -44,7 +44,9 @@ steps:
             name: LOAD_DATE
             nullable: false
             sourceColumnReferences:
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: 66da20c6-2710-4d32-8886-ef25d28704e9
+                    stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d
                 transform: ""
           - columnReference:
               columnCounter: d24f838a-de46-4909-8552-877fe9ab3a95

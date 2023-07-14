@@ -3,6 +3,7 @@ steps:
     operation:
       config:
         insertStrategy: INSERT
+        isconstraint: CONSTRAINT ACCOUNT_PK PRIMARY KEY (SEQUENCE, LOAD_DATE)
         postSQL: ""
         preSQL: ""
         testsEnabled: true
@@ -4481,7 +4482,9 @@ steps:
             name: LOAD_DATE
             nullable: false
             sourceColumnReferences:
-              - columnReferences: []
+              - columnReferences:
+                  - columnCounter: e95ddd06-b67f-4b32-913b-8f51f9b31e73
+                    stepCounter: 09a12573-e511-45ca-8bc9-4527d498e011
                 transform: ""
           - columnReference:
               columnCounter: f4e794be-06b1-4aae-9cc3-fe4b5549a487
@@ -5116,8 +5119,6 @@ steps:
               - columnCounter: 5a3b50fb-937c-4781-a99d-7da76aa9e6a7
                 stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d
               - columnCounter: a8702c10-c52f-4abc-87d6-d8d0a233df4c
-                stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d
-              - columnCounter: 9c875ca0-b5f6-489f-8e46-04a40938e92d
                 stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d
               - columnCounter: 5393cb35-269b-4eb5-82ca-e9b37efae94a
                 stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d

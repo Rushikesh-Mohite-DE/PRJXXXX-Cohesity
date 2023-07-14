@@ -104,7 +104,7 @@ steps:
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 44fee64a-3a72-4b99-ad1d-fea4093b802e
+                  - columnCounter: 3758bb0d-7f22-4e27-9126-113c973de171
                     stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d
                 transform: ""
           - columnReference:
