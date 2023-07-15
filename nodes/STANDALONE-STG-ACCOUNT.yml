@@ -1,7 +1,4 @@
----
-
-- 
-   steps: 
+steps: 
        ACCOUNT - f22b575b-95d0-4f8f-bc44-95854e64440d: 
            operation: 
                config: 
