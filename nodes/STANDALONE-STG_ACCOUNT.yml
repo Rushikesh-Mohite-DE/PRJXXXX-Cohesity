@@ -1,5 +1,5 @@
 steps: 
-       ACCOUNT - f22b575b-95d0-4f8f-bc44-95854e64440d: 
+       ACCOUNT_FL - f22b575b-95d0-4f8f-bc44-95854e64440d: 
            operation: 
                config: 
                    insertStrategy: 'INSERT' 
@@ -12,7 +12,7 @@ steps:
                description: 'This is description of table Account' 
                isDataVault:  
                isMultisource: 'false' 
-               locationName: 'STAGING' 
+               locationName: STAGING
                materializationType: 'table' 
                metadata: 
                    appliedNodeTests:  
@@ -178,7 +178,7 @@ steps:
                        aliases: {} 
                        customSQL:  
                        dependencies: 
-                           locationName: 'SOURCE' 
+                           locationName: SOURCE
                            nodeName: 'SALESFORCE_ACCOUNT' 
                        join: 
                            joinCondition: >
