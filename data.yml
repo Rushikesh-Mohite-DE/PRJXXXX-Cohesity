@@ -1,11 +1,21 @@
 defaultStorageMapping: STANDALONE
 jobs: {}
 locations:
+  SOURCE:
+    mappingDefinitions:
+      "24":
+        database: SANDBOX_DB
+        schema: TEST
+  STAGING:
+    mappingDefinitions:
+      "24":
+        database: SANDBOX_DB
+        schema: TEST
   STANDALONE:
     mappingDefinitions:
       "24":
-        database: PROD_CSS
-        schema: STANDALONE
+        database: SANDBOX_DB
+        schema: TEST
 macros: {}
 packages: {}
 projects: {}
