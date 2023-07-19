@@ -18,12 +18,18 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference: 
+                               
+                        
+                                  
+                            
               columnCounter: 4da78255-052b-40a9-8361-d12f47059752
-              stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
-            config: 
+                  stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
+            config:
                   isincrementalteKey: true 
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR(18)
+                            
             description: "This is description of column Sequence"
+                               
             name: SEQUENCE
             nullable: false
             sourceColumnReferences:
@@ -31,6 +37,8 @@ steps:
                   - columnCounter: "0"
                     stepCounter: "0"
                 transform: ""
+                                  
+                         
         cteString: "" 
         enabledColumnTestIDs: []
         sourceMapping:
@@ -40,7 +48,9 @@ steps:
             dependencies:
               - locationName: SOURCE
                 nodeName: SALESFORCE_ACCOUNT
-            join: 
+              - locationName: SOURCE
+                nodeName: SALESFORCE_USER_KEY_LOOKUP
+            join:
               joinCondition: |-
                 FROM {{ ref('SOURCE', 'SALESFORCE_ACCOUNT') }} "SALESFORCE_ACCOUNT"
                                   LEFT JOIN {{ ref('SOURCE', 'SALESFORCE_USER_KEY_LOOKUP') }} "CREATED_BY"
