@@ -1,0 +1,68 @@
+steps:
+  STG_DUMMY_ACCOUNT-1787b03a-7842-4f16-a423-229ef205ad2e:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationName: STAGING
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4e5af9ed-12b5-4639-ad1a-d2c16c8b71c8
+              stepCounter: 1787b03a-7842-4f16-a423-229ef205ad2e
+            config: {}
+            dataType: VARCHAR(18)
+            defaultValue: ""
+            description: "\"This is description of column Sequence\""
+            keyColumnType: None
+            name: SEQUENCE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: SALESFORCE_ACCOUNT
+              - locationName: SOURCE
+                nodeName: SALESFORCE_USER_KEY_LOOKUP
+            join:
+              joinCondition: |-
+                FROM {{ ref('SOURCE', 'SALESFORCE_ACCOUNT') }} "SALESFORCE_ACCOUNT"
+                                  LEFT JOIN {{ ref('SOURCE', 'SALESFORCE_USER_KEY_LOOKUP') }} "CREATED_BY"
+                                  ON SALESFORCE_ACCOUNT.CREATED_BY_ID = CREATED_BY.ID
+                                  LEFT JOIN {{ ref('SOURCE', 'SALESFORCE_USER_KEY_LOOKUP') }} LAST_MODIFIED_BY
+                                  ON SALESFORCE_ACCOUNT.LAST_MODIFIED_BY_ID = LAST_MODIFIED_BY.ID
+                                  LEFT JOIN {{ ref('SOURCE', 'SALESFORCE_USER_KEY_LOOKUP') }} OWNER
+                                  ON SALESFORCE_ACCOUNT.OWNER_ID = OWNER.ID;);
+            name: STG_DUMMY_ACCOUNT
+            noLinkRefs: []
+      name: STG_DUMMY_ACCOUNT
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 1787b03a-7842-4f16-a423-229ef205ad2e
