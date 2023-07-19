@@ -95,7 +95,7 @@ steps:
              defaultValue: "" 
              description: "This is description of column ACCOUNT_HASHKEY"
              hashDetails: 
-               hashAlgorithm: MD5
+               hashAlgorithm: 'MD5'
              hashedColumns: 
                 - columnCounter:"0"
                   stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
