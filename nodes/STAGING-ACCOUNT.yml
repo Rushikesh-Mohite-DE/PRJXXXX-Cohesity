@@ -1,4 +1,4 @@
-- steps: 
+steps: 
       ACCOUNT-f22b575b-95d0-4f8f-bc44-95854e64440d: 
         operation: 
           config: 
@@ -41,8 +41,8 @@
                 nullable: false 
                 sourceColumnReferences: 
                   - columnReferences: 
-                      - columnCounter: c2febb39-2cdc-4ef8-8466-a44b1bee831d 
-                        stepCounter: 09a12573-e511-45ca-8bc9-4527d498e011 
+                      - columnCounter: "0" 
+                        stepCounter: "0" 
                     transform: "" 
               - columnReference: 
                   columnCounter: 19a85af4-bf8f-4675-8264-df39d0b5b7e1 
@@ -54,8 +54,8 @@
                 nullable: false 
                 sourceColumnReferences: 
                   - columnReferences: 
-                      - columnCounter: 6b334e4c-6cf5-44db-b78a-18233b759ec3 
-                        stepCounter: 09a12573-e511-45ca-8bc9-4527d498e011 
+                      - columnCounter: "0" 
+                        stepCounter: "0" 
                     transform: "" 
               - columnReference: 
                   columnCounter: c465b96b-e9cc-4a2b-866b-ca73be12013c 
@@ -67,8 +67,8 @@
                 nullable: false 
                 sourceColumnReferences: 
                   - columnReferences: 
-                      - columnCounter: a3c90963-9bad-4963-afeb-1460b8e710c6 
-                        stepCounter: 09a12573-e511-45ca-8bc9-4527d498e011 
+                      - columnCounter: "0"
+                        stepCounter: "0" 
                     transform: "" 
               - columnReference: 
                   columnCounter: c0a66a4d-0934-4b91-a51c-ce3a3b521ebd 
@@ -80,8 +80,8 @@
                 nullable: false 
                 sourceColumnReferences: 
                   - columnReferences: 
-                      - columnCounter: 544aff4f-798a-4f9b-8a83-b6dcea50aa79 
-                        stepCounter: 09a12573-e511-45ca-8bc9-4527d498e011 
+                      - columnCounter: "0" 
+                        stepCounter: "0" 
                     transform: TO_TIMESTAMP_NTZ(SALESFORCE_ACCOUNT.DSCORGPKG_DISCOVER_ORG_CREATED_ON) 
               - columnReference: 
                   columnCounter: 148e6a8b-f08c-4b8d-8132-090897fb92cb 
