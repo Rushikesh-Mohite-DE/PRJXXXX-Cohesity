@@ -65,7 +65,7 @@ steps:
             description: "This is description of column CREATED_DATE" 
             name: CREATED_DATE 
             nullable: false 
-            sourceColumnReferences: 
+            sourceColumnReferences:
                - columnReferences: 
                    - columnCounter:"0"
                      stepCounter:"0"
@@ -95,7 +95,7 @@ steps:
              defaultValue: "" 
              description: "This is description of column ACCOUNT_HASHKEY" 
              hashDetails: 
-               hashAlgorithm: MD5 
+               hashAlgorithm: 'MD5'
              hashedColumns: 
                 - columnCounter: 4d4930e4-b3eb-402a-8738-1e1d32504507 
                   stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
