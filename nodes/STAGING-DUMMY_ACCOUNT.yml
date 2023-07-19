@@ -27,7 +27,7 @@ steps:
             config: {}
             dataType: VARCHAR(18)
             defaultValue: ""
-            description: This is description of column Sequence
+            description: "\"This is description of column Sequence\""
             keyColumnType: None
             name: SEQUENCE
             nullable: false
