@@ -121,7 +121,7 @@
                 nullable: false 
                 sourceColumnReferences: 
                   - columnReferences: [] 
-                  transform: "" 
+                    transform: "" 
               - acceptedValues: 
                   strictMatch: true 
                   values: [] 
@@ -152,7 +152,7 @@
                 nullable: false 
                 sourceColumnReferences: 
                   - columnReferences: [] 
-                  transform: "" 
+                    transform: "" 
             cteString: "" 
             enabledColumnTestIDs: [] 
             sourceMapping: 
