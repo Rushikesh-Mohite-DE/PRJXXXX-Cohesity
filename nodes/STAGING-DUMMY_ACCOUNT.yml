@@ -1,0 +1,228 @@
+steps:
+  DUMMY_ACCOUNT-6a14445c-1109-418f-94b9-8dd6eed00b58:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationName: STAGING
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: baec67f3-417e-4ed0-8bbf-d0553731b33e
+              stepCounter: 6a14445c-1109-418f-94b9-8dd6eed00b58
+            config: {}
+            dataType: VARCHAR(18)
+            defaultValue: ""
+            description: This is description of column Sequence
+            keyColumnType: None
+            name: SEQUENCE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 920d6bd3-dc72-47ae-b5eb-d4ff14befdc8
+              stepCounter: 6a14445c-1109-418f-94b9-8dd6eed00b58
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: This is description of column ID
+            keyColumnType: None
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7e4dafab-020a-46ac-8d94-48f62168d79e
+              stepCounter: 6a14445c-1109-418f-94b9-8dd6eed00b58
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: This is description of column BILLING_LONGITUDE
+            keyColumnType: None
+            name: BILLING_LONGITUDE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4a223169-63d5-4064-923f-99bf7dc6701d
+              stepCounter: 6a14445c-1109-418f-94b9-8dd6eed00b58
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: This is description of column CREATED_DATE
+            keyColumnType: None
+            name: CREATED_DATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d5fc223b-db6b-4aeb-b955-60b0f12b4a55
+              stepCounter: 6a14445c-1109-418f-94b9-8dd6eed00b58
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: This is description of column DSCORGPKG_DISCOVER_ORG_CREATED_ON
+            keyColumnType: None
+            name: DSCORGPKG_DISCOVER_ORG_CREATED_ON
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: TO_TIMESTAMP_NTZ(SALESFORCE_ACCOUNT.DSCORGPKG_DISCOVER_ORG_CREATED_ON)
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fb84d0ae-4468-4376-99fe-ec6e11d5bd9c
+              stepCounter: 6a14445c-1109-418f-94b9-8dd6eed00b58
+            config: {}
+            dataType: NUMBER(8,0)
+            defaultValue: ""
+            description: This is description of column PURE_REGISTRATION_END_DATE_KEY
+            keyColumnType: None
+            name: PURE_REGISTRATION_END_DATE_KEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: |-
+                  (
+                                        YEAR(TO_TIMESTAMP_NTZ(SALESFORCE_ACCOUNT.PURE_REGISTRATION_END_DATE)) * 10000
+                                        + MONTH(TO_TIMESTAMP_NTZ(SALESFORCE_ACCOUNT.PURE_REGISTRATION_END_DATE)) * 100
+                                        + DAY(TO_TIMESTAMP_NTZ(SALESFORCE_ACCOUNT.PURE_REGISTRATION_END_DATE))
+                                        )
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 25fbce1b-d325-48a0-ab32-6aab518becb9
+              stepCounter: 6a14445c-1109-418f-94b9-8dd6eed00b58
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: This is description of column ACCOUNT_HASHKEY
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: 4a223169-63d5-4064-923f-99bf7dc6701d
+                stepCounter: 6a14445c-1109-418f-94b9-8dd6eed00b58
+              - columnCounter: d5fc223b-db6b-4aeb-b955-60b0f12b4a55
+                stepCounter: 6a14445c-1109-418f-94b9-8dd6eed00b58
+              - columnCounter: fb84d0ae-4468-4376-99fe-ec6e11d5bd9c
+                stepCounter: 6a14445c-1109-418f-94b9-8dd6eed00b58
+            name: ACCOUNT_HASHKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d4760575-16b8-434d-962f-f5def574817b
+              stepCounter: 6a14445c-1109-418f-94b9-8dd6eed00b58
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: This is description of column ACCOUNT_HASHDIFFF
+            hashDetails:
+              hashAlgorithm: MD5
+            hashedColumns:
+              - columnCounter: baec67f3-417e-4ed0-8bbf-d0553731b33e
+                stepCounter: 6a14445c-1109-418f-94b9-8dd6eed00b58
+              - columnCounter: 920d6bd3-dc72-47ae-b5eb-d4ff14befdc8
+                stepCounter: 6a14445c-1109-418f-94b9-8dd6eed00b58
+              - columnCounter: 7e4dafab-020a-46ac-8d94-48f62168d79e
+                stepCounter: 6a14445c-1109-418f-94b9-8dd6eed00b58
+            name: ACCOUNT_HASHDIFFF
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: SALESFORCE_ACCOUNT
+              - locationName: SOURCE
+                nodeName: SALESFORCE_USER_KEY_LOOKUP
+            join:
+              joinCondition: |-
+                FROM {{ ref('SOURCE', 'SALESFORCE_ACCOUNT') }} "SALESFORCE_ACCOUNT"
+                                  LEFT JOIN {{ ref('SOURCE', 'SALESFORCE_USER_KEY_LOOKUP') }} "CREATED_BY"
+                                  ON SALESFORCE_ACCOUNT.CREATED_BY_ID = CREATED_BY.ID
+                                  LEFT JOIN {{ ref('SOURCE', 'SALESFORCE_USER_KEY_LOOKUP') }} LAST_MODIFIED_BY
+                                  ON SALESFORCE_ACCOUNT.LAST_MODIFIED_BY_ID = LAST_MODIFIED_BY.ID
+                                  LEFT JOIN {{ ref('SOURCE', 'SALESFORCE_USER_KEY_LOOKUP') }} OWNER
+                                  ON SALESFORCE_ACCOUNT.OWNER_ID = OWNER.ID;);
+            name: DUMMY_ACCOUNT
+            noLinkRefs: []
+      name: DUMMY_ACCOUNT
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 6a14445c-1109-418f-94b9-8dd6eed00b58
