@@ -97,12 +97,12 @@ steps:
              hashDetails: 
                hashAlgorithm: MD5
              hashedColumns: 
-                - columnCounter: 4d4930e4-b3eb-402a-8738-1e1d32504507 
+                - columnCounter:"0"
                   stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
              name: ACCOUNT_HASHKEY 
              nullable: false
              sourceColumnReferences: 
-                - columnReferences: [] 
+                - columnReferences:
                   transform: ""
         cteString: ""
         enabledColumnTestIDs: []
