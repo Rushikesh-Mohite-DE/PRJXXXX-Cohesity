@@ -18,10 +18,6 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference: 
-                               
-                        
-                                  
-                            
               columnCounter: 4da78255-052b-40a9-8361-d12f47059752
                   stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
             config:
