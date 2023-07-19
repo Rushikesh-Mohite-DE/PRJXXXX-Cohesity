@@ -54,7 +54,7 @@ steps:
               noLinkRefs: [] 
           name: ACCOUNT 
           overrideSQL: false 
-          schema: "" 
-          sqlType: "84" 
-          type: sql 
+          schema: ""
+          sqlType: "84"
+          type: sql
       stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d
