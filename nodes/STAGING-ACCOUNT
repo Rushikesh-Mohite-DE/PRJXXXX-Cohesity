@@ -22,7 +22,7 @@ steps:
               stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
             config:
               isincrementalteKey: true 
-            dataType: NUMBER(38,0)         
+            dataType: NUMBER(38,0)
             description: "This is description of column Sequence"
             name: SEQUENCE
             nullable: false
@@ -32,43 +32,43 @@ steps:
                     stepCounter: "0"
                 transform: ""
           - columnReference: 
-                  columnCounter: 4d4930e4-b3eb-402a-8738-1e1d32504507 
-                  stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
-                config: {} 
-                dataType: VARCHAR(18) 
-                description: "This is description of column ID" 
-                name: ID 
-                nullable: false 
-                sourceColumnReferences: 
-                  - columnReferences: 
-                      - columnCounter: c2febb39-2cdc-4ef8-8466-a44b1bee831d 
-                        stepCounter: 09a12573-e511-45ca-8bc9-4527d498e011 
-                    transform: "" 
-              - columnReference: 
-                  columnCounter: 19a85af4-bf8f-4675-8264-df39d0b5b7e1 
-                  stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
-                config: {} 
-                dataType: FLOAT 
+                  columnCounter:4d4930e4-b3eb-402a-8738-1e1d32504507
+                  stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d
+                config: {}
+                dataType: VARCHAR(18)
+                description: "This is description of column ID"
+                name: ID
+                nullable: false
+                sourceColumnReferences:
+                  - columnReferences:
+                      - columnCounter:"0"
+                        stepCounter: "0"
+                    transform: ""
+              - columnReference:
+                  columnCounter: 19a85af4-bf8f-4675-8264-df39d0b5b7e1
+                  stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d
+                config: {}
+                dataType: FLOAT
                 description: "This is description of column BILLING_LONGITUDE" 
                 name: BILLING_LONGITUDE 
-                nullable: false 
+                nullable: false
                 sourceColumnReferences: 
                   - columnReferences: 
-                      - columnCounter: 6b334e4c-6cf5-44db-b78a-18233b759ec3 
-                        stepCounter: 09a12573-e511-45ca-8bc9-4527d498e011 
-                    transform: "" 
-              - columnReference: 
+                      - columnCounter:"0"
+                        stepCounter: "0"
+                    transform: ""
+              - columnReference:
                   columnCounter: c465b96b-e9cc-4a2b-866b-ca73be12013c 
                   stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
                 config: {} 
-                dataType: TIMESTAMP_NTZ(9) 
+                dataType: TIMESTAMP_NTZ(9)
                 description: "This is description of column CREATED_DATE" 
                 name: CREATED_DATE 
                 nullable: false 
                 sourceColumnReferences: 
                   - columnReferences: 
-                      - columnCounter: a3c90963-9bad-4963-afeb-1460b8e710c6 
-                        stepCounter: 09a12573-e511-45ca-8bc9-4527d498e011 
+                      - columnCounter:"0"
+                        stepCounter:"0"
                     transform: "" 
               - columnReference: 
                   columnCounter: c0a66a4d-0934-4b91-a51c-ce3a3b521ebd 
@@ -80,8 +80,8 @@ steps:
                 nullable: false 
                 sourceColumnReferences: 
                   - columnReferences: 
-                      - columnCounter: 544aff4f-798a-4f9b-8a83-b6dcea50aa79 
-                        stepCounter: 09a12573-e511-45ca-8bc9-4527d498e011 
+                      - columnCounter:"0"
+                        stepCounter:"0"
                     transform: TO_TIMESTAMP_NTZ(SALESFORCE_ACCOUNT.DSCORGPKG_DISCOVER_ORG_CREATED_ON) 
               - columnReference: 
                   columnCounter: 148e6a8b-f08c-4b8d-8132-090897fb92cb 
@@ -91,10 +91,10 @@ steps:
                 description: "This is description of column PURE_REGISTRATION_END_DATE_KEY" 
                 name: PURE_REGISTRATION_END_DATE_KEY 
                 nullable: false 
-                sourceColumnReferences: 
-                  - columnReferences: 
-                      - columnCounter: "0" 
-                        stepCounter: "0" 
+                sourceColumnReferences:
+                  - columnReferences:
+                      - columnCounter: "0"
+                        stepCounter: "0"
                     transform: |-
                       (
                       YEAR(TO_TIMESTAMP_NTZ(SALESFORCE_ACCOUNT.PURE_REGISTRATION_END_DATE)) * 10000
