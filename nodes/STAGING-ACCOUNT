@@ -85,7 +85,7 @@ steps:
                  transform: TO_TIMESTAMP_NTZ(SALESFORCE_ACCOUNT.DSCORGPKG_DISCOVER_ORG_CREATED_ON)
            - acceptedValues:
                  strictMatch:true
-                 values: []
+                 values:
              appliedColumnTests: {} 
              columnReference: 
                  columnCounter: be80b123-6ee9-47f7-9d0b-76e477d5390c 
