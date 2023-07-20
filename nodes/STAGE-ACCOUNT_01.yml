@@ -104,14 +104,14 @@ steps:
         cteString: "" 
         enabledColumnTestIDs: [] 
         sourceMapping: 
-         - aliases: {} 
-           customSQL: 
-            customSQL: "" 
-           dependencies: 
-            - locationName: SOURCE 
-              nodeName: SALESFORCE_ACCOUNT_01 
-            - locationName: SOURCE 
-              nodeName: SALESFORCE_USER_KEY 
+          - aliases: {} 
+            customSQL: 
+              customSQL: "" 
+            dependencies: 
+              - locationName: SOURCE 
+                nodeName: SALESFORCE_ACCOUNT_01 
+              - locationName: SOURCE 
+                nodeName: SALESFORCE_USER_KEY 
             join: 
               joinCondition: |-
                 FROM {{ ref('SOURCE', 'SALESFORCE_ACCOUNT_01') }} "SALESFORCE_ACCOUNT_01"
