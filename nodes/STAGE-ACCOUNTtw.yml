@@ -30,7 +30,7 @@ steps:
               - columnReferences: 
                   - columnCounter: "0" 
                     stepCounter: "0" 
-                  transform: "" 
+                transform: "" 
           - columnReference: 
               columnCounter: 4d4930e4-b3eb-402a-8738-1e1d32504507 
               stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
@@ -43,7 +43,7 @@ steps:
               - columnReferences: 
                   - columnCounter: c2febb39-2cdc-4ef8-8466-a44b1bee831d 
                     stepCounter: 09a12573-e511-45ca-8bc9-4527d498e011 
-                  transform: "" 
+                transform: "" 
           - columnReference: 
               columnCounter: 19a85af4-bf8f-4675-8264-df39d0b5b7e1 
               stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
