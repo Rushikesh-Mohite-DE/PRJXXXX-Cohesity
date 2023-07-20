@@ -30,7 +30,7 @@ steps:
               - columnReferences: 
                   - columnCounter: "0" 
                     stepCounter: "0" 
-                  transform: "" 
+                transform: "" 
           - columnReference: 
               columnCounter: 4d4930e4-b3eb-402a-8738-1e1d32504507 
               stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
@@ -43,7 +43,7 @@ steps:
               - columnReferences: 
                   - columnCounter: "0"
                     stepCounter: "0"
-                  transform: "" 
+                transform: "" 
           - columnReference: 
               columnCounter: 19a85af4-bf8f-4675-8264-df39d0b5b7e1 
               stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
@@ -56,7 +56,7 @@ steps:
               - columnReferences: 
                   - columnCounter: "0"
                     stepCounter: "0"
-                  transform: "" 
+                transform: "" 
           - columnReference: 
               columnCounter: c465b96b-e9cc-4a2b-866b-ca73be12013c 
               stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
@@ -69,7 +69,7 @@ steps:
               - columnReferences: 
                   - columnCounter: "0"
                     stepCounter: "0"
-                  transform: "" 
+                transform: "" 
           - columnReference: 
               columnCounter: c0a66a4d-0934-4b91-a51c-ce3a3b521ebd 
               stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
