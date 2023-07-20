@@ -56,7 +56,7 @@ steps:
               - columnReferences: 
                   - columnCounter: 6b334e4c-6cf5-44db-b78a-18233b759ec3 
                     stepCounter: 09a12573-e511-45ca-8bc9-4527d498e011 
-                  transform: "" 
+                transform: "" 
           - columnReference: 
               columnCounter: c465b96b-e9cc-4a2b-866b-ca73be12013c 
               stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
@@ -69,7 +69,7 @@ steps:
               - columnReferences: 
                   - columnCounter: a3c90963-9bad-4963-afeb-1460b8e710c6 
                     stepCounter: 09a12573-e511-45ca-8bc9-4527d498e011 
-                  transform: "" 
+                transform: "" 
           - columnReference: 
               columnCounter: c0a66a4d-0934-4b91-a51c-ce3a3b521ebd 
               stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
