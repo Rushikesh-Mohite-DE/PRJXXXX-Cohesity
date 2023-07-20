@@ -12,7 +12,7 @@ steps:
       description: This is description of table Account 
       isDataVault: "" 
       isMultisource: false 
-      locationName: STAGING 
+      locationName: STAGING
       materializationType: table 
       metadata: 
         appliedNodeTests: [] 
@@ -115,8 +115,8 @@ steps:
             hashDetails: 
               hashAlgorithm: MD5 
             hashedColumns: 
-              - columnCounter: 4da78255-052b-40a9-8361-d12f47059752 
-                stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
+              - columnCounter: "0" 
+                stepCounter: "0" 
             name: ACCOUNT_HASHKEY 
             nullable: false 
             sourceColumnReferences: 
@@ -136,10 +136,10 @@ steps:
             hashDetails: 
               hashAlgorithm: MD5 
             hashedColumns: 
-              - columnCounter: 4d4930e4-b3eb-402a-8738-1e1d32504507 
-                stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
-              - columnCounter: c0a66a4d-0934-4b91-a51c-ce3a3b521ebd 
-                stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
+              - columnCounter: "0" 
+                stepCounter: "0" 
+              - columnCounter: "0" 
+                stepCounter: "0" 
             name: ACCOUNT_HASHDIFFF 
             nullable: false 
             sourceColumnReferences: 
