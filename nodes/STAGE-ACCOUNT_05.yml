@@ -12,7 +12,7 @@ steps:
       description: This is description of table ACCOUNT_05 
       isDataVault: false 
       isMultisource: false 
-      locationName: STAGING 
+      locationName: STAGING
       materializationType: table 
       metadata: 
         appliedNodeTests: [] 
@@ -24,7 +24,7 @@ steps:
               isincrementalteKey: true 
             dataType: NUMBER(38,0) 
             description: "" 
-            name: SEQUENCE 
+            name: SEQUENCE
             nullable: false 
             sourceColumnReferences: 
               - columnReferences: 
@@ -37,7 +37,7 @@ steps:
             config: {} 
             dataType: VARCHAR(18) 
             description: This is description of column ID 
-            name: ID 
+            name: ID
             nullable: false 
             sourceColumnReferences: 
               - columnReferences: 
@@ -50,7 +50,7 @@ steps:
             config: {} 
             dataType: FLOAT 
             description: This is description of column BILLING_LONGITUDE 
-            name: BILLING_LONGITUDE 
+            name: BILLING_LONGITUDE
             nullable: false 
             sourceColumnReferences: 
               - columnReferences: 
@@ -63,7 +63,7 @@ steps:
             config: {} 
             dataType: TIMESTAMP_NTZ(9) 
             description: This is description of column CREATED_DATE 
-            name: CREATED_DATE 
+            name: CREATED_DATE
             nullable: false 
             sourceColumnReferences: 
               - columnReferences: 
@@ -76,7 +76,7 @@ steps:
             config: {} 
             dataType: TIMESTAMP_NTZ(9) 
             description: This is description of column DSCORGPKG_DISCOVER_ORG_CREATED_ON 
-            name: DSCORGPKG_DISCOVER_ORG_CREATED_ON 
+            name: DSCORGPKG_DISCOVER_ORG_CREATED_ON
             nullable: false 
             sourceColumnReferences: 
               - columnReferences: 
@@ -89,7 +89,7 @@ steps:
             config: {} 
             dataType: NUMBER(8,0) 
             description: This is description of column PURE_REGISTRATION_END_DATE_KEY 
-            name: PURE_REGISTRATION_END_DATE_KEY 
+            name: PURE_REGISTRATION_END_DATE_KEY
             nullable: false 
             sourceColumnReferences: 
               - columnReferences: 
@@ -110,7 +110,7 @@ steps:
             dependencies: []
             join: 
               joinCondition: ""
-            name: ACCOUNT_05 
+            name: ACCOUNT_05
             noLinkRefs: [] 
       name: ACCOUNT_05
       overrideSQL: false 
