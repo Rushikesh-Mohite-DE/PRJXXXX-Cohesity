@@ -109,14 +109,7 @@ steps:
               customSQL: "" 
             dependencies: []
             join: 
-              joinCondition: |-
-                FROM {{ ref('SOURCE', 'SALESFORCE_ACCOUNT_05') }} "SALESFORCE_ACCOUNT_05"
-                LEFT JOIN {{ ref('SOURCE', 'SALESFORCE_USER_KEY_LOOKUP') }} "CREATED_BY"
-                ON SALESFORCE_ACCOUNT_05.CREATED_BY_ID = CREATED_BY.ID
-                LEFT JOIN {{ ref('SOURCE', 'SALESFORCE_USER_KEY_LOOKUP') }} LAST_MODIFIED_BY
-                ON SALESFORCE_ACCOUNT_05.LAST_MODIFIED_BY_ID = LAST_MODIFIED_BY.ID
-                LEFT JOIN {{ ref('SOURCE', 'SALESFORCE_USER_KEY_LOOKUP') }} OWNER
-                ON SALESFORCE_ACCOUNT_05.OWNER_ID = OWNER.ID;);
+              joinCondition: ""
             name: ACCOUNT_05 
             noLinkRefs: [] 
       name: ACCOUNT_05
