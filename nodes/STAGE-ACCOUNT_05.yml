@@ -107,11 +107,7 @@ steps:
           - aliases: {} 
             customSQL: 
               customSQL: "" 
-            dependencies: 
-              - locationName: SOURCE 
-                nodeName: SALESFORCE_ACCOUNT_05 
-              - locationName: SOURCE 
-                nodeName: SALESFORCE_USER_KEY 
+            dependencies: []
             join: 
               joinCondition: |-
                 FROM {{ ref('SOURCE', 'SALESFORCE_ACCOUNT_05') }} "SALESFORCE_ACCOUNT_05"
