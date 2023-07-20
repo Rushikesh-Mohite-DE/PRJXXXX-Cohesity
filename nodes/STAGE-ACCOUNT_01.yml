@@ -109,7 +109,7 @@ steps:
               customSQL: "" 
             dependencies: 
               - locationName: SOURCE 
-                nodeName: SALESFORCE_ACCOUNT_01 
+                nodeName: SALESFORCE_ACCOUNT
               - locationName: SOURCE 
                 nodeName: SALESFORCE_USER_KEY 
             join: 
