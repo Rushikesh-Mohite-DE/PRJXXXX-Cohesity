@@ -128,4 +128,4 @@ steps:
       schema: "" 
       sqlType: "84" 
       type: sql
-  stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d
+    stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d
