@@ -1,5 +1,5 @@
 steps: 
-  ACCOUNT-f22b575b-95d0-4f8f-bc44-95854e64440d: 
+  ACCOUNT-f22b575b-95d0-4f8f-bc44-95854e64440d:
     operation: 
       config: 
         insertStrategy: INSERT 
@@ -24,7 +24,7 @@ steps:
               isincrementalteKey: true 
             dataType: NUMBER(38,0) 
             description: "" 
-            name: SEQUENCE 
+            name: SEQUENCE
             nullable: false 
             sourceColumnReferences: 
               - columnReferences: 
@@ -37,7 +37,7 @@ steps:
             config: {} 
             dataType: VARCHAR(18) 
             description: This is description of column ID 
-            name: ID 
+            name: ID
             nullable: false 
             sourceColumnReferences: 
               - columnReferences: 
@@ -50,7 +50,7 @@ steps:
             config: {} 
             dataType: FLOAT 
             description: This is description of column BILLING_LONGITUDE 
-            name: BILLING_LONGITUDE 
+            name: BILLING_LONGITUDE
             nullable: false 
             sourceColumnReferences: 
               - columnReferences: 
@@ -63,7 +63,7 @@ steps:
             config: {} 
             dataType: TIMESTAMP_NTZ(9) 
             description: This is description of column CREATED_DATE 
-            name: CREATED_DATE 
+            name: CREATED_DATE
             nullable: false 
             sourceColumnReferences: 
               - columnReferences: 
@@ -76,7 +76,7 @@ steps:
             config: {} 
             dataType: TIMESTAMP_NTZ(9) 
             description: This is description of column DSCORGPKG_DISCOVER_ORG_CREATED_ON 
-            name: DSCORGPKG_DISCOVER_ORG_CREATED_ON 
+            name: DSCORGPKG_DISCOVER_ORG_CREATED_ON
             nullable: false 
             sourceColumnReferences: 
               - columnReferences: 
@@ -89,7 +89,7 @@ steps:
             config: {} 
             dataType: NUMBER(8,0) 
             description: This is description of column PURE_REGISTRATION_END_DATE_KEY 
-            name: PURE_REGISTRATION_END_DATE_KEY 
+            name: PURE_REGISTRATION_END_DATE_KEY
             nullable: false 
             sourceColumnReferences: 
               - columnReferences: 
@@ -109,9 +109,9 @@ steps:
             customSQL: "" 
            dependencies: 
             - locationName: SOURCE
-              nodeName: SALESFORCE_ACCOUNT 
+              nodeName: SALESFORCE_ACCOUNT
             - locationName: SOURCE
-              nodeName: SALESFORCE_USER_KEY 
+              nodeName: SALESFORCE_USER_KEY
            join: 
             joinCondition: |-
               FROM {{ ref('SOURCE', 'SALESFORCE_ACCOUNT') }} "SALESFORCE_ACCOUNT"
@@ -121,9 +121,9 @@ steps:
               ON SALESFORCE_ACCOUNT.LAST_MODIFIED_BY_ID = LAST_MODIFIED_BY.ID
               LEFT JOIN {{ ref('SOURCE', 'SALESFORCE_USER_KEY_LOOKUP') }} OWNER
               ON SALESFORCE_ACCOUNT.OWNER_ID = OWNER.ID;);
-           name: ACCOUNT 
+           name: ACCOUNT
            noLinkRefs: [] 
-      name: ACCOUNT 
+      name: ACCOUNT
       overrideSQL: false 
       schema: "" 
       sqlType: "84" 
