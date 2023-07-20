@@ -39,9 +39,9 @@ steps:
               customSQL: ""
             dependencies:
               - locationName: SOURCE
-                nodeName: SALESFORCE_ACCOUNT
+                nodeName: SALESFORCE_ACCOUNT 
               - locationName: SOURCE
-                nodeName: SALESFORCE_USER_KEY
+                nodeName: SALESFORCE_USER_KEY 
              join: 
               joinCondition: |-
               FROM {{ ref('SOURCE', 'SALESFORCE_ACCOUNT') }} "SALESFORCE_ACCOUNT"
