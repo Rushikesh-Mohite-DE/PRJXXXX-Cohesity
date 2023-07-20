@@ -112,14 +112,14 @@ steps:
                 nodeName: SALESFORCE_ACCOUNT
               - locationName: SOURCE
                 nodeName: SALESFORCE_USER_KEY 
-            join: 
+            join:
               joinCondition: |-
                 FROM {{ ref('SOURCE', 'SALESFORCE_ACCOUNT_01') }} "SALESFORCE_ACCOUNT_01"
                 LEFT JOIN {{ ref('SOURCE', 'SALESFORCE_USER_KEY_LOOKUP') }} "CREATED_BY"
                 ON SALESFORCE_ACCOUNT_01.CREATED_BY_ID = CREATED_BY.ID
-                LEFT JOIN {{ ref('SOURCE', 'SALESFORCE_USER_KEY_LOOKUP') }} LAST_MODIFIED_BY
+                LEFT JOIN {{ ref('SOURCE', 'SALESFORCE_USER_KEY_LOOKUP') }} "LAST_MODIFIED_BY"
                 ON SALESFORCE_ACCOUNT_01.LAST_MODIFIED_BY_ID = LAST_MODIFIED_BY.ID
-                LEFT JOIN {{ ref('SOURCE', 'SALESFORCE_USER_KEY_LOOKUP') }} OWNER
+                LEFT JOIN {{ ref('SOURCE', 'SALESFORCE_USER_KEY_LOOKUP') }} "OWNER"
                 ON SALESFORCE_ACCOUNT_01.OWNER_ID = OWNER.ID;);
             name: ACCOUNT_01
             noLinkRefs: [] 
