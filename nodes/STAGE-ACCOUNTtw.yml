@@ -115,7 +115,7 @@ steps:
             hashDetails: 
               hashAlgorithm: MD5 
             hashedColumns: 
-              - columnCounter: 4d4930e4-b3eb-402a-8738-1e1d32504507 
+              - columnCounter: 4da78255-052b-40a9-8361-d12f47059752 
                 stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
             name: ACCOUNT_HASHKEY 
             nullable: false 
@@ -136,17 +136,9 @@ steps:
             hashDetails: 
               hashAlgorithm: MD5 
             hashedColumns: 
-              - columnCounter: 2a7368c2-fb24-49c8-8be7-331ba7ea96f2 
+              - columnCounter: 4d4930e4-b3eb-402a-8738-1e1d32504507 
                 stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
-              - columnCounter: 95740c6c-8a34-45d1-9cc4-1a532717b378 
-                stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
-              - columnCounter: 63a16247-2884-4101-a5dd-253af4fd5711 
-                stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
-              - columnCounter: 1075fe0c-f803-4651-b47c-d72f4d63d69b 
-                stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
-              - columnCounter: c5a026ec-7b28-4089-9181-5001a9b74386 
-                stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
-              - columnCounter: 040f4787-f025-4c04-8475-ae83027b3018 
+              - columnCounter: c0a66a4d-0934-4b91-a51c-ce3a3b521ebd 
                 stepCounter: f22b575b-95d0-4f8f-bc44-95854e64440d 
             name: ACCOUNT_HASHDIFFF 
             nullable: false 
