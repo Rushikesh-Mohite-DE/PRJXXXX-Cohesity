@@ -10,7 +10,7 @@ steps:
       database: "" 
       deployEnabled: true 
       description: This is description of table ACCOUNT_01 
-      isDataVault: "" 
+      isDataVault: false
       isMultisource: false 
       locationName: STAGING 
       materializationType: table 
