@@ -11,8 +11,8 @@ steps:
       deployEnabled: true
       description: This is description of table Account
       isDataVault: false
-      isMultisource: false
-      locationName: STAGING
+      isMultisource: false 
+      locationName: STAGING 
       materializationType: table
       metadata:
         appliedNodeTests: []
