@@ -113,7 +113,7 @@ steps:
               - locationName: SOURCE
                 nodeName: SALESFORCE_USER_KEY
             join:
-              joinCondition: |-
+               joinCondition: |-
                 FROM {{ ref('SOURCE', 'SALESFORCE_ACCOUNT') }} "SALESFORCE_ACCOUNT"
                 LEFT JOIN {{ ref('SOURCE', 'SALESFORCE_USER_KEY_LOOKUP') }} CREATED_BY
                 ON SALESFORCE_ACCOUNT.CREATED_BY_ID = CREATED_BY.ID
