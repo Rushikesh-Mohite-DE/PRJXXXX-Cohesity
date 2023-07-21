@@ -100,21 +100,21 @@ steps:
                   YEAR(TO_TIMESTAMP_NTZ(SALESFORCE_ACCOUNT_05.PURE_REGISTRATION_END_DATE)) * 10000
                   + MONTH(TO_TIMESTAMP_NTZ(SALESFORCE_ACCOUNT_05.PURE_REGISTRATION_END_DATE)) * 100
                   + DAY(TO_TIMESTAMP_NTZ(SALESFORCE_ACCOUNT_05.PURE_REGISTRATION_END_DATE))
-                  ) 
+                  )
         cteString: "" 
-        enabledColumnTestIDs: [] 
-        sourceMapping: 
-          - aliases: {} 
-            customSQL: 
-              customSQL: "" 
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
             dependencies: []
-            join: 
+            join:
               joinCondition: ""
             name: ACCOUNT_05
             noLinkRefs: [] 
       name: ACCOUNT_05
       overrideSQL: false 
-      schema: "" 
-      sqlType: "84" 
-      type: sql 
+      schema: ""
+      sqlType: "84"
+      type: sql
   stepCounter: f22b575b-95d1-4f8f-bc44-95854e64440d
