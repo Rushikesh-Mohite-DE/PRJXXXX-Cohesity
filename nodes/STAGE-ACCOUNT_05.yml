@@ -115,6 +115,6 @@ steps:
       name: ACCOUNT_05
       overrideSQL: false
       schema: ""
-      sqlType: "84"
+      sqlType: Stage
       type: sql
   stepCounter: f22b575b-95d1-4f8f-bc44-95854e64440d
