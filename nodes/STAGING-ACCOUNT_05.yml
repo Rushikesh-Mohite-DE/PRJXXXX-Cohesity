@@ -99,8 +99,7 @@ steps:
         cteString: "" 
         enabledColumnTestIDs: []
         sourceMapping:
-          - aliases: {}
-            customSQL:
+          - customSQL:
               customSQL: ""
             dependencies: []
             join:
