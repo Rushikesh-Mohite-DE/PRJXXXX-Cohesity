@@ -48,8 +48,8 @@ steps:
               columnCounter: 19a85af4-bf8f-4675-8264-df39d0b5b7e1
               stepCounter: f22b575b-95d1-4f8f-bc44-95854e64440d
             config: {}
-            dataType: FLOAT 
-            description: This is description of column BILLING_LONGITUDE 
+            dataType: FLOAT
+            description: This is description of column BILLING_LONGITUDE
             name: BILLING_LONGITUDE
             nullable: false
             sourceColumnReferences:
@@ -83,7 +83,7 @@ steps:
                   - columnCounter: "0"
                     stepCounter: "0"
                 transform:  ""
-          - columnReference: 
+          - columnReference:
               columnCounter: 148e6a8b-f08c-4b8d-8132-090897fb92cb
               stepCounter: f22b575b-95d1-4f8f-bc44-95854e64440d
             config: {}
