@@ -82,7 +82,7 @@ steps:
               - columnReferences:
                   - columnCounter: "0"
                     stepCounter: "0"
-                transform: TO_TIMESTAMP_NTZ(SALESFORCE_ACCOUNT_FIVE.DSCORGPKG_DISCOVER_ORG_CREATED_ON)
+                transform:  ""
           - columnReference: 
               columnCounter: 148e6a8b-f08c-4b8d-8132-090897fb92cb
               stepCounter: f22b575b-95d1-4f8f-bc44-95854e64440d
@@ -95,12 +95,7 @@ steps:
               - columnReferences:
                   - columnCounter: "0"
                     stepCounter: "0"
-                transform: |-
-                  (
-                  YEAR(TO_TIMESTAMP_NTZ(SALESFORCE_ACCOUNT.PURE_REGISTRATION_END_DATE)) * 10000
-                  + MONTH(TO_TIMESTAMP_NTZ(SALESFORCE_ACCOUNT.PURE_REGISTRATION_END_DATE)) * 100
-                  + DAY(TO_TIMESTAMP_NTZ(SALESFORCE_ACCOUNT.PURE_REGISTRATION_END_DATE))
-                  )
+                transform:  ""
         cteString: "" 
         enabledColumnTestIDs: []
         sourceMapping:
