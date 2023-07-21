@@ -96,7 +96,7 @@ steps:
                   - columnCounter: "0"
                     stepCounter: "0"
                 transform:  ""
-        cteString: "" 
+        cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
           - customSQL:
