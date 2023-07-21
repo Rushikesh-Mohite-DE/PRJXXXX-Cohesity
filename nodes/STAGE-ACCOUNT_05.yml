@@ -9,7 +9,7 @@ steps:
         truncateBefore: true
       database: ""
       deployEnabled: true
-      description: This is description of table ACCOUNT_05
+      description: "This is description of table ACCOUNT_05"
       isDataVault: false
       isMultisource: false
       locationName: STAGING
