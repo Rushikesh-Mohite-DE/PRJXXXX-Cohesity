@@ -47,7 +47,7 @@ steps:
           - columnReference:
               columnCounter: 19a85af4-bf8f-4675-8264-df39d0b5b7e1 
               stepCounter: f22b575b-95d1-4f8f-bc44-95854e64440d 
-            config: {} 
+            config: {}
             dataType: FLOAT 
             description: This is description of column BILLING_LONGITUDE 
             name: BILLING_LONGITUDE
@@ -60,7 +60,7 @@ steps:
           - columnReference:
               columnCounter: c465b96b-e9cc-4a2b-866b-ca73be12013c 
               stepCounter: f22b575b-95d1-4f8f-bc44-95854e64440d 
-            config: {} 
+            config: {}
             dataType: TIMESTAMP_NTZ(9) 
             description: This is description of column CREATED_DATE 
             name: CREATED_DATE
@@ -70,10 +70,10 @@ steps:
                   - columnCounter: "0"
                     stepCounter: "0"
                 transform: "" 
-          - columnReference: 
+          - columnReference:
               columnCounter: c0a66a4d-0934-4b91-a51c-ce3a3b521ebd 
               stepCounter: f22b575b-95d1-4f8f-bc44-95854e64440d 
-            config: {} 
+            config: {}
             dataType: TIMESTAMP_NTZ(9) 
             description: This is description of column DSCORGPKG_DISCOVER_ORG_CREATED_ON 
             name: DSCORGPKG_DISCOVER_ORG_CREATED_ON
@@ -86,7 +86,7 @@ steps:
           - columnReference: 
               columnCounter: 148e6a8b-f08c-4b8d-8132-090897fb92cb 
               stepCounter: f22b575b-95d1-4f8f-bc44-95854e64440d 
-            config: {} 
+            config: {}
             dataType: NUMBER(8,0) 
             description: This is description of column PURE_REGISTRATION_END_DATE_KEY 
             name: PURE_REGISTRATION_END_DATE_KEY
