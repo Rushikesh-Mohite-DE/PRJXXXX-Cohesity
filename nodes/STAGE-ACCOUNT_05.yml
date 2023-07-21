@@ -14,87 +14,87 @@ steps:
       isMultisource: false
       locationName: STAGING
       materializationType: table
-      metadata: 
-        appliedNodeTests: [] 
-        columns: 
+      metadata:
+        appliedNodeTests: []
+        columns:
           - columnReference:
-              columnCounter: 4da78255-052b-40a9-8361-d12f47059752 
-              stepCounter: f22b575b-95d1-4f8f-bc44-95854e64440d 
+              columnCounter: 4da78255-052b-40a9-8361-d12f47059752
+              stepCounter: f22b575b-95d1-4f8f-bc44-95854e64440d
             config:
               isincrementalteKey: true
-            dataType: NUMBER(38,0) 
+            dataType: NUMBER(38,0)
             description: ""
             name: SEQUENCE
-            nullable: false 
-            sourceColumnReferences: 
-              - columnReferences: 
-                  - columnCounter: "0" 
-                    stepCounter: "0" 
-                transform: "" 
-          - columnReference: 
-              columnCounter: 4d4930e4-b3eb-402a-8738-1e1d32504507 
-              stepCounter: f22b575b-95d1-4f8f-bc44-95854e64440d 
-            config: {} 
-            dataType: VARCHAR(18) 
-            description: This is description of column ID 
-            name: ID
-            nullable: false 
+            nullable: false
             sourceColumnReferences:
-              - columnReferences: 
+              - columnReferences:
                   - columnCounter: "0"
                     stepCounter: "0"
-                transform: "" 
+                transform: ""
           - columnReference:
-              columnCounter: 19a85af4-bf8f-4675-8264-df39d0b5b7e1 
-              stepCounter: f22b575b-95d1-4f8f-bc44-95854e64440d 
+              columnCounter: 4d4930e4-b3eb-402a-8738-1e1d32504507
+              stepCounter: f22b575b-95d1-4f8f-bc44-95854e64440d
+            config: {}
+            dataType: VARCHAR(18)
+            description: This is description of column ID
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+          - columnReference:
+              columnCounter: 19a85af4-bf8f-4675-8264-df39d0b5b7e1
+              stepCounter: f22b575b-95d1-4f8f-bc44-95854e64440d
             config: {}
             dataType: FLOAT 
             description: This is description of column BILLING_LONGITUDE 
             name: BILLING_LONGITUDE
-            nullable: false 
+            nullable: false
             sourceColumnReferences:
-              - columnReferences: 
+              - columnReferences:
                   - columnCounter: "0"
                     stepCounter: "0"
-                transform: "" 
+                transform: ""
           - columnReference:
-              columnCounter: c465b96b-e9cc-4a2b-866b-ca73be12013c 
-              stepCounter: f22b575b-95d1-4f8f-bc44-95854e64440d 
+              columnCounter: c465b96b-e9cc-4a2b-866b-ca73be12013c
+              stepCounter: f22b575b-95d1-4f8f-bc44-95854e64440d
             config: {}
-            dataType: TIMESTAMP_NTZ(9) 
-            description: This is description of column CREATED_DATE 
+            dataType: TIMESTAMP_NTZ(9)
+            description: This is description of column CREATED_DATE
             name: CREATED_DATE
-            nullable: false 
+            nullable: false
             sourceColumnReferences:
-              - columnReferences: 
+              - columnReferences:
                   - columnCounter: "0"
                     stepCounter: "0"
-                transform: "" 
+                transform: ""
           - columnReference:
-              columnCounter: c0a66a4d-0934-4b91-a51c-ce3a3b521ebd 
-              stepCounter: f22b575b-95d1-4f8f-bc44-95854e64440d 
+              columnCounter: c0a66a4d-0934-4b91-a51c-ce3a3b521ebd
+              stepCounter: f22b575b-95d1-4f8f-bc44-95854e64440d
             config: {}
-            dataType: TIMESTAMP_NTZ(9) 
-            description: This is description of column DSCORGPKG_DISCOVER_ORG_CREATED_ON 
+            dataType: TIMESTAMP_NTZ(9)
+            description: This is description of column DSCORGPKG_DISCOVER_ORG_CREATED_ON
             name: DSCORGPKG_DISCOVER_ORG_CREATED_ON
-            nullable: false 
+            nullable: false
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: "0"
                     stepCounter: "0"
-                transform: TO_TIMESTAMP_NTZ(SALESFORCE_ACCOUNT_05.DSCORGPKG_DISCOVER_ORG_CREATED_ON) 
+                transform: TO_TIMESTAMP_NTZ(SALESFORCE_ACCOUNT_05.DSCORGPKG_DISCOVER_ORG_CREATED_ON)
           - columnReference: 
-              columnCounter: 148e6a8b-f08c-4b8d-8132-090897fb92cb 
-              stepCounter: f22b575b-95d1-4f8f-bc44-95854e64440d 
+              columnCounter: 148e6a8b-f08c-4b8d-8132-090897fb92cb
+              stepCounter: f22b575b-95d1-4f8f-bc44-95854e64440d
             config: {}
-            dataType: NUMBER(8,0) 
-            description: This is description of column PURE_REGISTRATION_END_DATE_KEY 
+            dataType: NUMBER(8,0)
+            description: This is description of column PURE_REGISTRATION_END_DATE_KEY
             name: PURE_REGISTRATION_END_DATE_KEY
-            nullable: false 
+            nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: "0" 
-                    stepCounter: "0" 
+                  - columnCounter: "0"
+                    stepCounter: "0"
                 transform: |-
                   (
                   YEAR(TO_TIMESTAMP_NTZ(SALESFORCE_ACCOUNT_05.PURE_REGISTRATION_END_DATE)) * 10000
@@ -111,7 +111,7 @@ steps:
             join:
               joinCondition: ""
             name: ACCOUNT_05
-            noLinkRefs: [] 
+            noLinkRefs: []
       name: ACCOUNT_05
       overrideSQL: false
       schema: ""
