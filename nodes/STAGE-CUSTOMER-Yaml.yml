@@ -146,7 +146,7 @@ steps:
                 LEFT JOIN {{ ref('SOURCE', 'SALESFORCE_USER_KEY_LOOKUP') }} OWNER
                 ON SALESFORCE_ACCOUNT.OWNER_ID = OWNER.ID;);
  
-            name: ACCOUNT 
+            name: CUSTOMER
             noLinkRefs: [] 
       name: ACCOUNT 
       overrideSQL: false 
