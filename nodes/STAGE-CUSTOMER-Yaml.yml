@@ -148,7 +148,7 @@ steps:
  
             name: CUSTOMER
             noLinkRefs: [] 
-      name: ACCOUNT 
+      name: CUSTOMER
       overrideSQL: false 
       schema: "" 
       sqlType: "84" 
