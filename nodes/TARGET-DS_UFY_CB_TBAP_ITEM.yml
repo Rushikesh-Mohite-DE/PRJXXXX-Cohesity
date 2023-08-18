@@ -1,0 +1,130 @@
+steps:
+  DS_UFY_CB_TBAP_ITEM-9c1a1b07-407b-4571-b054-47d899fa8536:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: |-
+          DELETE FROM {{ ref('TARGET', 'DS_UFY_CB_TBAP_ITEM') }}
+            WHERE (MAIN_ITEM_ID, AP_VERSION_ID) IN
+          (SELECT MAIN_ITEM_ID, AP_VERSION_ID FROM {{ ref('SOURCE', 'L_UFY_CB_TBAP_ITEM') }});
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: ea6fb28e-6708-42e6-869f-99b0b1a0d3ee
+              stepCounter: 9c1a1b07-407b-4571-b054-47d899fa8536
+            dataType: VARCHAR(18)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: AP_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c0c34869-dca4-4552-88de-6e75d64e07b5
+                    stepCounter: bf171332-4740-4acd-93e9-769be821e55f
+                transform: ""
+          - columnReference:
+              columnCounter: 2356b5d4-7546-465e-9923-0c2accacc349
+              stepCounter: 9c1a1b07-407b-4571-b054-47d899fa8536
+            dataType: VARCHAR(18)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: MAIN_ITEM_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a469c64f-69f7-41b1-b8e8-13039bc323ba
+                    stepCounter: bf171332-4740-4acd-93e9-769be821e55f
+                transform: ""
+          - columnReference:
+              columnCounter: dbf085ee-dbae-4f67-b241-1c44472ee05b
+              stepCounter: 9c1a1b07-407b-4571-b054-47d899fa8536
+            dataType: VARCHAR(10)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: AP_VERSION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0d0eb543-c413-4f04-a722-98c6317a80b2
+                    stepCounter: bf171332-4740-4acd-93e9-769be821e55f
+                transform: ""
+          - columnReference:
+              columnCounter: e265040f-246d-433e-9b15-e170b260430f
+              stepCounter: 9c1a1b07-407b-4571-b054-47d899fa8536
+            dataType: VARCHAR(765)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1a5248ee-4360-4f27-a621-bc6cdf26d227
+                    stepCounter: bf171332-4740-4acd-93e9-769be821e55f
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2ede3df3-34cc-4988-840d-7b92f0a397f3
+              stepCounter: 9c1a1b07-407b-4571-b054-47d899fa8536
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCreateDate: true
+            name: ROWCREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c1ad93c2-0355-4bc9-91ab-6e6eb3e28949
+              stepCounter: 9c1a1b07-407b-4571-b054-47d899fa8536
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemUpdateDate: true
+            name: ROWUPDATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: L_UFY_CB_TBAP_ITEM
+            join:
+              joinCondition: FROM {{ ref('SOURCE', 'L_UFY_CB_TBAP_ITEM') }} "L_UFY_CB_TBAP_ITEM";
+            name: DS_UFY_CB_TBAP_ITEM
+            noLinkRefs: []
+      name: DS_UFY_CB_TBAP_ITEM
+      overrideSQL: false
+      schema: ""
+      sqlType: persistentStage
+      type: sql
+    stepCounter: 9c1a1b07-407b-4571-b054-47d899fa8536

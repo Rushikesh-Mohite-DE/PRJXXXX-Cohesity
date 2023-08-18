@@ -1,0 +1,154 @@
+steps:
+  L_BCS_NPSSEGREFUNI-a43911fd-9fce-4f56-b473-b3da32c7d807:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: Load table bijsmanj.Cxp_Nps_Segref_Uni from Oracle to Teradata
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 571a55b7-5de0-47cb-a51d-ebc37962aba9
+              stepCounter: a43911fd-9fce-4f56-b473-b3da32c7d807
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: DEPARTMENTID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1bd6aa37-3303-49dc-958a-333e71b9fa0e
+              stepCounter: a43911fd-9fce-4f56-b473-b3da32c7d807
+            config: {}
+            dataType: VARCHAR(150)
+            defaultValue: ""
+            description: ""
+            name: SEGMENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f5429935-b694-4866-9ba4-665aed25f58b
+              stepCounter: a43911fd-9fce-4f56-b473-b3da32c7d807
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SEGTARGET
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0e466b3a-1fe0-481e-a4e5-d0d50761e194
+              stepCounter: a43911fd-9fce-4f56-b473-b3da32c7d807
+            config: {}
+            dataType: VARCHAR(150)
+            defaultValue: ""
+            description: ""
+            name: DEPARTMENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f0fee799-20d7-4f0c-b670-d4bd9b39a666
+              stepCounter: a43911fd-9fce-4f56-b473-b3da32c7d807
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: DEPTARGET
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 62330466-1d38-48d7-b7af-8ab963ed4592
+              stepCounter: a43911fd-9fce-4f56-b473-b3da32c7d807
+            config: {}
+            dataType: VARCHAR(150)
+            defaultValue: ""
+            description: ""
+            name: TARGETGROUP
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: df0c79e1-8dba-4236-9cac-1fba5ac2139c
+              stepCounter: a43911fd-9fce-4f56-b473-b3da32c7d807
+            config: {}
+            dataType: TIMESTAMP_NTZ(0)
+            defaultValue: ""
+            description: ""
+            name: DTVAN
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0195a8b1-13fe-4bf6-8308-398df72cc8db
+              stepCounter: a43911fd-9fce-4f56-b473-b3da32c7d807
+            config: {}
+            dataType: TIMESTAMP_NTZ(0)
+            defaultValue: ""
+            description: ""
+            name: DTTOT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: feb03a18-9d66-42ef-8952-6c13523025f9
+              stepCounter: a43911fd-9fce-4f56-b473-b3da32c7d807
+            config: {}
+            dataType: TIMESTAMP_NTZ(0)
+            defaultValue: ""
+            description: ""
+            name: DTTOT_EIND
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'L_BCS_NPSSEGREFUNI') }}
+      name: L_BCS_NPSSEGREFUNI
+      schema: ""
+      sqlType: Source
+      table: L_BCS_NPSSEGREFUNI
+      type: sourceInput
+    stepCounter: a43911fd-9fce-4f56-b473-b3da32c7d807

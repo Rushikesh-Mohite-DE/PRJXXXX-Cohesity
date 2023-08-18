@@ -1,0 +1,66 @@
+steps:
+  STG_tHIS_IS_cAMEL-0ec4b714-e7b9-418d-a3d0-69460a871dd8:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: a9f7353c-6a6c-42fa-aa82-e6413ec317bd
+              stepCounter: 0ec4b714-e7b9-418d-a3d0-69460a871dd8
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 335f197b-09dc-4152-85bb-e9bfb6c46351
+                    stepCounter: 0f972395-664e-4a21-bbe0-d1cfd823e120
+                transform: ""
+          - columnReference:
+              columnCounter: 12bf9234-7a66-448c-887b-8d39b435907c
+              stepCounter: 0ec4b714-e7b9-418d-a3d0-69460a871dd8
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: VAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 52830981-0933-4ddd-993f-73b7d58c8749
+                    stepCounter: 0f972395-664e-4a21-bbe0-d1cfd823e120
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              tHIS_IS_cAMEL: 0f972395-664e-4a21-bbe0-d1cfd823e120
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: DUMMY
+                nodeName: tHIS_IS_cAMEL
+            join:
+              joinCondition: FROM {{ ref('DUMMY', 'tHIS_IS_cAMEL') }} "tHIS_IS_cAMEL"
+            name: STG_tHIS_IS_cAMEL
+            noLinkRefs: []
+      name: STG_tHIS_IS_cAMEL
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 0ec4b714-e7b9-418d-a3d0-69460a871dd8

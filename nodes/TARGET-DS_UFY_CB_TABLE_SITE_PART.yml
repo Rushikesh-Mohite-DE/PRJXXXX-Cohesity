@@ -1,0 +1,134 @@
+steps:
+  DS_UFY_CB_TABLE_SITE_PART-d5f60fd7-c9d6-40c8-a727-e829772bac06:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: |-
+          DELETE FROM {{ ref('TARGET', 'DS_UFY_CB_TABLE_SITE_PART') }}
+            WHERE OBJID in
+          (SELECT OBJID FROM {{ ref('SOURCE', 'L_UFY_CB_TABLE_SITE_PART') }})
+                ;
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: ecca7755-9048-436c-93ce-93158930e9ef
+              stepCounter: d5f60fd7-c9d6-40c8-a727-e829772bac06
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: OBJID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 092fa2a5-b9cd-438b-a618-5400453c5e8f
+                    stepCounter: 0718361e-e6e6-4be6-8b78-50f6de3ae1e1
+                transform: DISTINCT l_UFY_CB_TABLE_SITE_PART.OBJID
+          - columnReference:
+              columnCounter: 23bdf166-9885-4d54-a152-daee75a32f7e
+              stepCounter: d5f60fd7-c9d6-40c8-a727-e829772bac06
+            dataType: VARCHAR(720)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: X_APID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b036ac0e-8fe0-41c6-81a3-116448269064
+                    stepCounter: 0718361e-e6e6-4be6-8b78-50f6de3ae1e1
+                transform: ""
+          - columnReference:
+              columnCounter: 1b6a752e-159e-4c30-8375-7688e5318f0f
+              stepCounter: d5f60fd7-c9d6-40c8-a727-e829772bac06
+            dataType: TIMESTAMP_NTZ(0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: X_3_LAST_UPDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: efbdeba8-c55c-41d2-ae51-44195f3bc5ec
+                    stepCounter: 0718361e-e6e6-4be6-8b78-50f6de3ae1e1
+                transform: ""
+          - columnReference:
+              columnCounter: 98f0fc27-8de6-4735-b104-29594b2bdfb1
+              stepCounter: d5f60fd7-c9d6-40c8-a727-e829772bac06
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SITE_PART2CUSTOMER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 79e59161-9451-41ca-851d-7cf0baaa1c2c
+                    stepCounter: 0718361e-e6e6-4be6-8b78-50f6de3ae1e1
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6e6c3d86-4368-4f0f-a2d6-722686484c78
+              stepCounter: d5f60fd7-c9d6-40c8-a727-e829772bac06
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCreateDate: true
+            name: ROWCREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d0884c36-5f89-4868-a7d7-bca719515530
+              stepCounter: d5f60fd7-c9d6-40c8-a727-e829772bac06
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemUpdateDate: true
+            name: ROWUPDATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              L_UFY_CB_TABLE_SITE_PART: 0718361e-e6e6-4be6-8b78-50f6de3ae1e1
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: L_UFY_CB_TABLE_SITE_PART
+            join:
+              joinCondition: |
+                FROM {{ ref('SOURCE', 'L_UFY_CB_TABLE_SITE_PART') }} "L_UFY_CB_TABLE_SITE_PART"
+                
+            name: DS_UFY_CB_TABLE_SITE_PART
+            noLinkRefs: []
+      name: DS_UFY_CB_TABLE_SITE_PART
+      overrideSQL: false
+      schema: ""
+      sqlType: persistentStage
+      type: sql
+    stepCounter: d5f60fd7-c9d6-40c8-a727-e829772bac06

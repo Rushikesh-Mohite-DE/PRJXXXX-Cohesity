@@ -1,0 +1,139 @@
+steps:
+  L_BCS_GROEPHIST-619df986-457c-4af3-a6d4-07cc86d12b56:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: To load table bocs_adm.Cs_Groep_Hist from Oracle to Teradata
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 322af602-70d2-4156-b0a8-ea75f553783f
+              stepCounter: 619df986-457c-4af3-a6d4-07cc86d12b56
+            config: {}
+            dataType: NUMBER(10,0)
+            defaultValue: ""
+            description: ""
+            name: RECNR
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a4ddba43-a261-422f-ba0e-6cfa941960d1
+              stepCounter: 619df986-457c-4af3-a6d4-07cc86d12b56
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: SOURCESYSTEM
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0489d7e2-05c7-43e0-86bf-60442cfcd358
+              stepCounter: 619df986-457c-4af3-a6d4-07cc86d12b56
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: AFKORTING
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 98db94b1-4929-4870-9c35-669cc5206301
+              stepCounter: 619df986-457c-4af3-a6d4-07cc86d12b56
+            config: {}
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: NAAM
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0c88158a-4ff6-4193-9c45-c1a4d8a08ae1
+              stepCounter: 619df986-457c-4af3-a6d4-07cc86d12b56
+            config: {}
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: Afdeling - Department
+            name: NAAM_ENG
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 07c393a3-20b4-438e-a905-0f010fb6090e
+              stepCounter: 619df986-457c-4af3-a6d4-07cc86d12b56
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: SLB
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3c17fc16-828d-4719-b4ff-34f5d45104ff
+              stepCounter: 619df986-457c-4af3-a6d4-07cc86d12b56
+            config: {}
+            dataType: TIMESTAMP_NTZ(0)
+            defaultValue: ""
+            description: ""
+            name: DTVAN
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 56aa412c-cf62-4c1b-b11d-3eda15b005da
+              stepCounter: 619df986-457c-4af3-a6d4-07cc86d12b56
+            config: {}
+            dataType: TIMESTAMP_NTZ(0)
+            defaultValue: ""
+            description: ""
+            name: DTTOT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'L_BCS_GROEPHIST') }}
+      name: L_BCS_GROEPHIST
+      schema: ""
+      sqlType: Source
+      table: L_BCS_GROEPHIST
+      type: sourceInput
+    stepCounter: 619df986-457c-4af3-a6d4-07cc86d12b56

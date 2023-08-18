@@ -1,0 +1,86 @@
+steps:
+  L_UFY_CB_TABLE_BUS_ROL_ITM_V-3a284199-f332-41b7-b881-ca207c23dbbe:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: true
+      locationName: TARGET
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 818651ab-86c2-47dc-85fc-8e9100fb937b
+              stepCounter: 3a284199-f332-41b7-b881-ca207c23dbbe
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ACC_OBJID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6536c5f4-46ba-41dc-8ccc-c855d8f1920c
+                    stepCounter: ff09bba3-8dd1-49ad-9131-5d3294ad52fe
+                transform: ""
+              - columnReferences:
+                  - columnCounter: 6536c5f4-46ba-41dc-8ccc-c855d8f1920c
+                    stepCounter: ff09bba3-8dd1-49ad-9131-5d3294ad52fe
+                transform: ""
+          - columnReference:
+              columnCounter: ff8c9a2a-4e52-4330-825e-53692c26e30e
+              stepCounter: 3a284199-f332-41b7-b881-ca207c23dbbe
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: BUS_ITM2ROLLUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7485100d-412e-4d67-9e51-5a792b27d42d
+                    stepCounter: ff09bba3-8dd1-49ad-9131-5d3294ad52fe
+                transform: ""
+              - columnReferences:
+                  - columnCounter: 7485100d-412e-4d67-9e51-5a792b27d42d
+                    stepCounter: ff09bba3-8dd1-49ad-9131-5d3294ad52fe
+                transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              L_UFY_CB_TABLE_BUS_ROL_ITM: ff09bba3-8dd1-49ad-9131-5d3294ad52fe
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: L_UFY_CB_TABLE_BUS_ROL_ITM
+            join:
+              joinCondition: |-
+                FROM {{ ref('SOURCE', 'L_UFY_CB_TABLE_BUS_ROL_ITM') }} "L_UFY_CB_TABLE_BUS_ROL_ITM"
+                WHERE l_UFY_CB_TABLE_BUS_ROL_ITM.BUS_ITM2ROLLUP IS NOT NULL
+                AND l_UFY_CB_TABLE_BUS_ROL_ITM.PARENT2BUS_ORG IS NOT NULL
+            name: l_UFY_CB_TABLE_BUS_ROL_ITM_V_05
+            noLinkRefs: []
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: L_UFY_CB_TABLE_BUS_ROL_ITM
+            join:
+              joinCondition: |-
+                FROM {{ ref('SOURCE', 'L_UFY_CB_TABLE_BUS_ROL_ITM') }} "L_UFY_CB_TABLE_BUS_ROL_ITM"
+                WHERE l_UFY_CB_TABLE_BUS_ROL_ITM.BUS_ITM2ROLLUP is not NULL
+                AND l_UFY_CB_TABLE_BUS_ROL_ITM.PARENT2BUS_ORG IS NOT NULL;
+            name: l_UFY_CB_TABLE_BUS_ROL_ITM_V_10
+            noLinkRefs: []
+      name: L_UFY_CB_TABLE_BUS_ROL_ITM_V
+      overrideSQL: false
+      schema: ""
+      sqlType: View
+      type: sql
+    stepCounter: 3a284199-f332-41b7-b881-ca207c23dbbe

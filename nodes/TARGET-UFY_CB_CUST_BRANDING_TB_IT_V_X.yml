@@ -1,0 +1,140 @@
+steps:
+  UFY_CB_CUST_BRANDING_TB_IT_V_X-e7991223-8dbe-494c-a60b-9f277a08c9d9:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: true
+      locationName: TARGET
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 7dae8578-6788-4048-ba62-84c74c1063f0
+              stepCounter: e7991223-8dbe-494c-a60b-9f277a08c9d9
+            dataType: VARCHAR(765)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3001355c-6dab-418b-919e-1e7b9606cabf
+                    stepCounter: 9307fea2-9aa2-4f76-a224-93ce930e56c3
+                transform: ""
+              - columnReferences: []
+                transform: CAST(NULL AS VARCHAR(765))
+          - columnReference:
+              columnCounter: 6cd8d72d-fa83-4fec-8ef0-d3a3c2ae2ab3
+              stepCounter: e7991223-8dbe-494c-a60b-9f277a08c9d9
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUST_OBJID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: edd4fd92-6fb5-4181-99f4-983d595a89c1
+                    stepCounter: 9307fea2-9aa2-4f76-a224-93ce930e56c3
+                transform: ""
+              - columnReferences: []
+                transform: CAST(NULL AS NUMBER)
+          - columnReference:
+              columnCounter: fc36c56d-ba00-4919-b278-6376c453e2cc
+              stepCounter: e7991223-8dbe-494c-a60b-9f277a08c9d9
+            dataType: VARCHAR(18)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: MAIN_ITEM_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: tbi.MAIN_ITEM_ID
+              - columnReferences:
+                  - columnCounter: a6b0cd1f-c9f2-4ed9-a089-e5da966b0445
+                    stepCounter: 05181405-a934-4cd8-8790-5faba30d921c
+                transform: CAST(UFY_CB_REF_EXCEPTIONS.KEY_VALUE_EXCEPTION AS VARCHAR(18))
+          - columnReference:
+              columnCounter: 67fe386f-03ec-4cbd-9b74-77abce780624
+              stepCounter: e7991223-8dbe-494c-a60b-9f277a08c9d9
+            dataType: VARCHAR(120)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: BRAND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3e0d465b-ebad-4c02-b978-2756f70f061c
+                    stepCounter: 9307fea2-9aa2-4f76-a224-93ce930e56c3
+                transform: ""
+              - columnReferences:
+                  - columnCounter: 9ca9d38e-41c1-4fed-ba36-d424ffe9f831
+                    stepCounter: 05181405-a934-4cd8-8790-5faba30d921c
+                transform: ""
+          - columnReference:
+              columnCounter: 2583223e-834b-4315-8238-1e28f54ac41d
+              stepCounter: e7991223-8dbe-494c-a60b-9f277a08c9d9
+            dataType: VARCHAR(3)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PROCESS_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 689619db-ea94-4b37-a6dd-d39fe2bb861b
+                    stepCounter: 9307fea2-9aa2-4f76-a224-93ce930e56c3
+                transform: "'REG'"
+              - columnReferences: []
+                transform: "'EXC'"
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              DS_UFY_CB_CUSTOMER: 9307fea2-9aa2-4f76-a224-93ce930e56c3
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: DS_UFY_CB_CUSTOMER
+              - locationName: TARGET
+                nodeName: DS_UFY_CB_TBAP_ITEM
+            join:
+              joinCondition: |-
+                FROM {{ ref('TARGET', 'DS_UFY_CB_CUSTOMER') }} "DS_UFY_CB_CUSTOMER"
+                INNER JOIN (SELECT CUSTOMER_ID
+                , MAIN_ITEM_ID
+                FROM {{ ref('TARGET', 'DS_UFY_CB_TBAP_ITEM') }} 
+                WHERE MAIN_ITEM_ID = AP_ID
+                QUALIFY ROW_NUMBER() OVER (PARTITION BY MAIN_ITEM_ID ORDER BY CAST(AP_VERSION_ID as NUMBER) DESC) = 1
+                ) tbi
+                ON DS_UFY_CB_CUSTOMER.CUSTOMER_ID = tbi.CUSTOMER_ID
+            name: UFY_CB_CUST_BRANDING_TB_IT_V_X_05
+            noLinkRefs: []
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: UFY_CB_REF_EXCEPTIONS
+            join:
+              joinCondition: |-
+                FROM {{ ref('TARGET', 'UFY_CB_REF_EXCEPTIONS') }} "UFY_CB_REF_EXCEPTIONS"
+                WHERE UFY_CB_REF_EXCEPTIONS.LEVEL = 'TBAP_ITEM';
+            name: UFY_CB_CUST_BRANDING_TB_IT_V_X_10
+            noLinkRefs: []
+      name: UFY_CB_CUST_BRANDING_TB_IT_V_X
+      overrideSQL: false
+      schema: ""
+      sqlType: View
+      type: sql
+    stepCounter: e7991223-8dbe-494c-a60b-9f277a08c9d9

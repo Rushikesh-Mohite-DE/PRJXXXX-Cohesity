@@ -1,0 +1,94 @@
+steps:
+  L_UFY_CB_SUBSCRIBER-04d1df73-7671-4f9c-a90e-90b01630ecc4:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: de4070b4-1b16-4413-8aec-e65f8de6bf98
+              stepCounter: 04d1df73-7671-4f9c-a90e-90b01630ecc4
+            config: {}
+            dataType: NUMBER(18,0)
+            defaultValue: ""
+            description: ""
+            name: SUBSCRIBER_NO
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6ae64a88-c4f0-4b24-85f9-1557f39d9817
+              stepCounter: 04d1df73-7671-4f9c-a90e-90b01630ecc4
+            config: {}
+            dataType: NUMBER(18,0)
+            defaultValue: ""
+            description: ""
+            name: CUSTOMER_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f496be80-abd4-4fd5-8910-fffc772f657c
+              stepCounter: 04d1df73-7671-4f9c-a90e-90b01630ecc4
+            config: {}
+            dataType: VARCHAR(600)
+            defaultValue: ""
+            description: ""
+            name: PRIM_RESOURCE_VAL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4551c85a-26c6-4ae8-95a1-0964bc1858ff
+              stepCounter: 04d1df73-7671-4f9c-a90e-90b01630ecc4
+            config: {}
+            dataType: TIMESTAMP_NTZ(0)
+            defaultValue: ""
+            description: ""
+            name: SYS_CREATION_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4b045e12-cdf2-42d1-95e2-4e21e58d8cb0
+              stepCounter: 04d1df73-7671-4f9c-a90e-90b01630ecc4
+            config: {}
+            dataType: TIMESTAMP_NTZ(0)
+            defaultValue: ""
+            description: ""
+            name: SYS_UPDATE_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'L_UFY_CB_SUBSCRIBER') }}
+      name: L_UFY_CB_SUBSCRIBER
+      schema: ""
+      sqlType: Source
+      table: L_UFY_CB_SUBSCRIBER
+      type: sourceInput
+    stepCounter: 04d1df73-7671-4f9c-a90e-90b01630ecc4

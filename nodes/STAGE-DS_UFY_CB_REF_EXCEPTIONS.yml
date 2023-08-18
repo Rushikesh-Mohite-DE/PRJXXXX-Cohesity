@@ -1,0 +1,160 @@
+steps:
+  DS_UFY_CB_REF_EXCEPTIONS-b6313a66-b96d-49b1-9ca9-e89ed59eda7f:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f3e63d25-a15c-454b-96d9-58eff5b6c78a
+              stepCounter: b6313a66-b96d-49b1-9ca9-e89ed59eda7f
+            config: {}
+            dataType: VARCHAR(20)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: LEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6d174e1e-1701-4c2b-a42b-11f8b8fdb27e
+              stepCounter: b6313a66-b96d-49b1-9ca9-e89ed59eda7f
+            config: {}
+            dataType: VARCHAR(765)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: KEY_VALUE_EXCEPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5d1589fa-2c96-4b84-bfd8-3e8157dc2428
+              stepCounter: b6313a66-b96d-49b1-9ca9-e89ed59eda7f
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: BRAND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a253dafd-c643-4d5f-b654-4e90f518a587
+              stepCounter: b6313a66-b96d-49b1-9ca9-e89ed59eda7f
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: TIMESTAMP_ENTRY
+            keyColumnType: None
+            name: TIMESTAMP_ENTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 306e1609-458c-4514-938d-0058da70ce33
+              stepCounter: b6313a66-b96d-49b1-9ca9-e89ed59eda7f
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the row was created in the data warehouse.
+            keyColumnType: None
+            name: ROWCREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a20b02a6-e7c1-4584-a0d9-7eb25c1de6d3
+              stepCounter: b6313a66-b96d-49b1-9ca9-e89ed59eda7f
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the row was updated in the data warehouse.
+            keyColumnType: None
+            name: ROWUPDATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies: []
+            join:
+              joinCondition: ""
+            name: DS_UFY_CB_REF_EXCEPTIONS
+            noLinkRefs: []
+      name: DS_UFY_CB_REF_EXCEPTIONS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: b6313a66-b96d-49b1-9ca9-e89ed59eda7f

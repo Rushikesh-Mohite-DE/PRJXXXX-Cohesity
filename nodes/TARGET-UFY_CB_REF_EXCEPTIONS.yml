@@ -1,0 +1,117 @@
+steps:
+  UFY_CB_REF_EXCEPTIONS-05181405-a934-4cd8-8790-5faba30d921c:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 4b881450-5fa0-4116-94c1-6d1e49cb0824
+              stepCounter: 05181405-a934-4cd8-8790-5faba30d921c
+            dataType: VARCHAR(20)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f3e63d25-a15c-454b-96d9-58eff5b6c78a
+                    stepCounter: b6313a66-b96d-49b1-9ca9-e89ed59eda7f
+                transform: ""
+          - columnReference:
+              columnCounter: a6b0cd1f-c9f2-4ed9-a089-e5da966b0445
+              stepCounter: 05181405-a934-4cd8-8790-5faba30d921c
+            dataType: VARCHAR(765)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: KEY_VALUE_EXCEPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6d174e1e-1701-4c2b-a42b-11f8b8fdb27e
+                    stepCounter: b6313a66-b96d-49b1-9ca9-e89ed59eda7f
+                transform: ""
+          - columnReference:
+              columnCounter: 9ca9d38e-41c1-4fed-ba36-d424ffe9f831
+              stepCounter: 05181405-a934-4cd8-8790-5faba30d921c
+            dataType: VARCHAR(120)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: BRAND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5d1589fa-2c96-4b84-bfd8-3e8157dc2428
+                    stepCounter: b6313a66-b96d-49b1-9ca9-e89ed59eda7f
+                transform: ""
+          - columnReference:
+              columnCounter: 87282be2-bbd7-4867-8345-ec50104c37af
+              stepCounter: 05181405-a934-4cd8-8790-5faba30d921c
+            dataType: TIMESTAMP_NTZ(9)
+            description: TIMESTAMP_ENTRY
+            hashColumns: []
+            hashDetails: null
+            name: TIMESTAMP_ENTRY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a253dafd-c643-4d5f-b654-4e90f518a587
+                    stepCounter: b6313a66-b96d-49b1-9ca9-e89ed59eda7f
+                transform: ""
+          - columnReference:
+              columnCounter: 6078ac2d-3857-4eb1-b23e-3064d825059a
+              stepCounter: 05181405-a934-4cd8-8790-5faba30d921c
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the row was created in the data warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: ROWCREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 306e1609-458c-4514-938d-0058da70ce33
+                    stepCounter: b6313a66-b96d-49b1-9ca9-e89ed59eda7f
+                transform: ""
+          - columnReference:
+              columnCounter: 15751c63-b43d-4a65-b323-4bc18f0a08e6
+              stepCounter: 05181405-a934-4cd8-8790-5faba30d921c
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the row was updated in the data warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: ROWUPDATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a20b02a6-e7c1-4584-a0d9-7eb25c1de6d3
+                    stepCounter: b6313a66-b96d-49b1-9ca9-e89ed59eda7f
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: DS_UFY_CB_REF_EXCEPTIONS
+            join:
+              joinCondition: FROM {{ ref('STAGE', 'DS_UFY_CB_REF_EXCEPTIONS') }} "DS_UFY_CB_REF_EXCEPTIONS"
+            name: UFY_CB_REF_EXCEPTIONS
+            noLinkRefs: []
+      name: UFY_CB_REF_EXCEPTIONS
+      overrideSQL: false
+      schema: ""
+      sqlType: View
+      type: sql
+    stepCounter: 05181405-a934-4cd8-8790-5faba30d921c

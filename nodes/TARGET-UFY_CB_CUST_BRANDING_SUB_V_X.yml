@@ -1,0 +1,156 @@
+steps:
+  UFY_CB_CUST_BRANDING_SUB_V_X-d419b609-531e-4014-83ce-5f0de5b4c2e8:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: true
+      locationName: TARGET
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: d0b21fcf-d6a0-4c25-8067-c45c8ede15d8
+              stepCounter: d419b609-531e-4014-83ce-5f0de5b4c2e8
+            dataType: VARCHAR(765)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3001355c-6dab-418b-919e-1e7b9606cabf
+                    stepCounter: 9307fea2-9aa2-4f76-a224-93ce930e56c3
+                transform: ""
+              - columnReferences: []
+                transform: CAST(NULL AS VARCHAR(765))
+          - columnReference:
+              columnCounter: 8b8ac522-e2ac-433c-9db6-6101809d9829
+              stepCounter: d419b609-531e-4014-83ce-5f0de5b4c2e8
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUST_OBJID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: edd4fd92-6fb5-4181-99f4-983d595a89c1
+                    stepCounter: 9307fea2-9aa2-4f76-a224-93ce930e56c3
+                transform: ""
+              - columnReferences: []
+                transform: CAST(NULL AS NUMBER)
+          - columnReference:
+              columnCounter: 709c9031-35bb-4669-9f6d-39e331ebe81d
+              stepCounter: d419b609-531e-4014-83ce-5f0de5b4c2e8
+            dataType: NUMBER
+            description: ""
+            name: SUBSCRIBER_NO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ab82ec9d-2cb5-44fa-b642-1f2a61abc93e
+                    stepCounter: af13b15b-0420-4bd6-b92e-02e99e8c9a88
+                transform: ""
+              - columnReferences:
+                  - columnCounter: a6b0cd1f-c9f2-4ed9-a089-e5da966b0445
+                    stepCounter: 05181405-a934-4cd8-8790-5faba30d921c
+                transform: CAST(UFY_CB_REF_EXCEPTIONS.KEY_VALUE_EXCEPTION AS NUMBER(18))
+          - columnReference:
+              columnCounter: 1bf127a2-ad6b-487d-9c4b-d42458242703
+              stepCounter: d419b609-531e-4014-83ce-5f0de5b4c2e8
+            dataType: VARCHAR(600)
+            description: ""
+            name: CTN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e4dfc325-462f-4430-80e6-e661647b5963
+                    stepCounter: af13b15b-0420-4bd6-b92e-02e99e8c9a88
+                transform: ""
+              - columnReferences: []
+                transform: CAST(NULL AS VARCHAR(600))
+          - columnReference:
+              columnCounter: 1b60a9a2-3daf-4774-8c4a-85cf58be5033
+              stepCounter: d419b609-531e-4014-83ce-5f0de5b4c2e8
+            dataType: VARCHAR(120)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: BRAND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3e0d465b-ebad-4c02-b978-2756f70f061c
+                    stepCounter: 9307fea2-9aa2-4f76-a224-93ce930e56c3
+                transform: ""
+              - columnReferences:
+                  - columnCounter: 9ca9d38e-41c1-4fed-ba36-d424ffe9f831
+                    stepCounter: 05181405-a934-4cd8-8790-5faba30d921c
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 134a2784-b10b-45eb-988e-31eb7d9419f3
+              stepCounter: d419b609-531e-4014-83ce-5f0de5b4c2e8
+            config: {}
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: PROCESS_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'REG'"
+              - columnReferences: []
+                transform: "'EXC'"
+            systemColumnType: None
+            transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              DS_UFY_CB_CUSTOMER: 9307fea2-9aa2-4f76-a224-93ce930e56c3
+              DS_UFY_CB_SUBSCRIBER: af13b15b-0420-4bd6-b92e-02e99e8c9a88
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: DS_UFY_CB_CUSTOMER
+              - locationName: TARGET
+                nodeName: DS_UFY_CB_SUBSCRIBER
+            join:
+              joinCondition: |-
+                FROM {{ ref('TARGET', 'DS_UFY_CB_CUSTOMER') }} "DS_UFY_CB_CUSTOMER"
+                INNER JOIN {{ ref('TARGET', 'DS_UFY_CB_SUBSCRIBER') }} "DS_UFY_CB_SUBSCRIBER"
+                ON DS_UFY_CB_CUSTOMER.CUSTOMER_ID = DS_UFY_CB_SUBSCRIBER.CUSTOMER_ID
+            name: UFY_CB_CUST_BRANDING_SUB_V_X_05
+            noLinkRefs: []
+          - aliases:
+              UFY_CB_REF_EXCEPTIONS: 05181405-a934-4cd8-8790-5faba30d921c
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: UFY_CB_REF_EXCEPTIONS
+            join:
+              joinCondition: |-
+                FROM {{ ref('TARGET', 'UFY_CB_REF_EXCEPTIONS') }} "UFY_CB_REF_EXCEPTIONS"
+                WHERE UFY_CB_REF_EXCEPTIONS.LEVEL = 'SUBSCRIBER'
+            name: UFY_CB_CUST_BRANDING_SUB_V_X_10
+            noLinkRefs: []
+      name: UFY_CB_CUST_BRANDING_SUB_V_X
+      overrideSQL: false
+      schema: ""
+      sqlType: View
+      type: sql
+    stepCounter: d419b609-531e-4014-83ce-5f0de5b4c2e8

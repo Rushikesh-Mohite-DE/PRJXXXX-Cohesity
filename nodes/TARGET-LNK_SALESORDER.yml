@@ -1,0 +1,179 @@
+steps:
+  LNK_SALESORDER-06155dea-2a75-46bb-8c0a-3bbf428864bb:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: f4207f04-e86a-4912-9fb1-06a6078ef261
+              stepCounter: 06155dea-2a75-46bb-8c0a-3bbf428864bb
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK_SALESORDER_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 38c61ea4-ee04-4ed9-a62d-9304cc7b0705
+                    stepCounter: c03295cd-3e72-46a3-b7cb-58346e60f7de
+                transform: ""
+          - columnReference:
+              columnCounter: 53827ad8-fd81-42e6-9894-625d0ed82bd3
+              stepCounter: 06155dea-2a75-46bb-8c0a-3bbf428864bb
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HUB_SALESORDER_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 38c61ea4-ee04-4ed9-a62d-9304cc7b0705
+                    stepCounter: c03295cd-3e72-46a3-b7cb-58346e60f7de
+                transform: ""
+          - columnReference:
+              columnCounter: 594c8a5d-a305-4a65-9423-b0021fd6a870
+              stepCounter: 06155dea-2a75-46bb-8c0a-3bbf428864bb
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HUB_CUSTOMER_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 38c61ea4-ee04-4ed9-a62d-9304cc7b0705
+                    stepCounter: c03295cd-3e72-46a3-b7cb-58346e60f7de
+                transform: ""
+          - columnReference:
+              columnCounter: f7529c5f-44cf-482b-9304-5442d9f81cf6
+              stepCounter: 06155dea-2a75-46bb-8c0a-3bbf428864bb
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HUB_DEALER_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 38c61ea4-ee04-4ed9-a62d-9304cc7b0705
+                    stepCounter: c03295cd-3e72-46a3-b7cb-58346e60f7de
+                transform: ""
+          - columnReference:
+              columnCounter: 34a7a793-9fb6-4f63-89dd-bd4b52114051
+              stepCounter: 06155dea-2a75-46bb-8c0a-3bbf428864bb
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HUB_SALESCHANNEL_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 38c61ea4-ee04-4ed9-a62d-9304cc7b0705
+                    stepCounter: c03295cd-3e72-46a3-b7cb-58346e60f7de
+                transform: ""
+          - columnReference:
+              columnCounter: 71719553-bce1-41c9-81f2-607b2149598d
+              stepCounter: 06155dea-2a75-46bb-8c0a-3bbf428864bb
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HUB_SUBSCRIPTION_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 38c61ea4-ee04-4ed9-a62d-9304cc7b0705
+                    stepCounter: c03295cd-3e72-46a3-b7cb-58346e60f7de
+                transform: ""
+          - columnReference:
+              columnCounter: 743bafdc-28cb-45b5-8c83-1d3a635bf646
+              stepCounter: 06155dea-2a75-46bb-8c0a-3bbf428864bb
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROWSOURCENAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e6a89bb9-891d-4656-bcb4-190dff0c7341
+                    stepCounter: c03295cd-3e72-46a3-b7cb-58346e60f7de
+                transform: ""
+          - columnReference:
+              columnCounter: 87e75b8f-4837-4dbc-a2d4-f55c3335ff26
+              stepCounter: 06155dea-2a75-46bb-8c0a-3bbf428864bb
+            config:
+              isLinkHash: true
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROWSOURCEDATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1195705f-da8e-41ab-b2b6-01167091f437
+                    stepCounter: c03295cd-3e72-46a3-b7cb-58346e60f7de
+                transform: ""
+          - columnReference:
+              columnCounter: b8ba324c-57b9-418f-8742-4b513fc713c5
+              stepCounter: 06155dea-2a75-46bb-8c0a-3bbf428864bb
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROWSEQUENCE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 34684a10-4d07-4822-afa0-6718958fbd54
+                    stepCounter: c03295cd-3e72-46a3-b7cb-58346e60f7de
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ff052945-2b40-4e01-ac4d-20dc5e78052d
+              stepCounter: 06155dea-2a75-46bb-8c0a-3bbf428864bb
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCreateDate: true
+            name: ROWCREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: S_OINB_ORDER
+            join:
+              joinCondition: FROM {{ ref('STAGE', 'S_OINB_ORDER') }} "S_OINB_ORDER"
+            name: LNK_SALESORDER
+            noLinkRefs: []
+      name: LNK_SALESORDER
+      overrideSQL: false
+      schema: ""
+      sqlType: "87"
+      type: sql
+    stepCounter: 06155dea-2a75-46bb-8c0a-3bbf428864bb

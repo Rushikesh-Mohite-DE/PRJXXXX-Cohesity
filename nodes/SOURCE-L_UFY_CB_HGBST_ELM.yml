@@ -1,0 +1,79 @@
+steps:
+  L_UFY_CB_HGBST_ELM-200819a4-0e79-4240-b754-1f1c0b9e50ee:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 398321d4-b748-4e7d-b9db-b4a28f7015a6
+              stepCounter: 200819a4-0e79-4240-b754-1f1c0b9e50ee
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: OBJID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: dd1557a9-527d-40bd-a1aa-e92086e12c14
+              stepCounter: 200819a4-0e79-4240-b754-1f1c0b9e50ee
+            config: {}
+            dataType: VARCHAR(360)
+            defaultValue: ""
+            description: ""
+            name: TITLE_COL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e5a906ff-e678-43f9-b17b-f2549d70570a
+              stepCounter: 200819a4-0e79-4240-b754-1f1c0b9e50ee
+            config: {}
+            dataType: VARCHAR(360)
+            defaultValue: ""
+            description: ""
+            name: S_TITLE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d7083297-fae9-4b66-9ac6-f9020eb85e40
+              stepCounter: 200819a4-0e79-4240-b754-1f1c0b9e50ee
+            config: {}
+            dataType: VARCHAR(765)
+            defaultValue: ""
+            description: ""
+            name: S_REF_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'L_UFY_CB_HGBST_ELM') }}
+      name: L_UFY_CB_HGBST_ELM
+      schema: ""
+      sqlType: Source
+      table: L_UFY_CB_HGBST_ELM
+      type: sourceInput
+    stepCounter: 200819a4-0e79-4240-b754-1f1c0b9e50ee

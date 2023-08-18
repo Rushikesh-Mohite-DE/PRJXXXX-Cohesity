@@ -1,0 +1,146 @@
+steps:
+  DS_UFY_CB_ACCOUNT-c1d04d21-1d21-478b-a307-2710b05beb2b:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: |-
+          DELETE FROM {{ ref('TARGET', 'DS_UFY_CB_ACCOUNT') }}WHERE ACCOUNT_ID in 
+          (SELECT ORG_ID FROM {{ ref('TARGET', 'UFY_CB_ACCOUNT_LOAD_V') }} )
+                ;
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 921d487f-f2c4-46d8-9fa9-696ac91a255c
+              stepCounter: c1d04d21-1d21-478b-a307-2710b05beb2b
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ACC_OBJID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 675df126-a182-4fdd-8371-302f40607f81
+                    stepCounter: 83ca961b-e99e-4b5b-b98f-89e081406210
+                transform: ""
+          - columnReference:
+              columnCounter: 8e107bfd-1cee-4e4c-b935-8642bd8c5244
+              stepCounter: c1d04d21-1d21-478b-a307-2710b05beb2b
+            dataType: VARCHAR(120)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ACCOUNT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3e3df506-4f3d-4958-9765-5588d8b4af5e
+                    stepCounter: 83ca961b-e99e-4b5b-b98f-89e081406210
+                transform: ""
+          - columnReference:
+              columnCounter: d905e010-9ecc-433c-89f8-e87e0dd630fb
+              stepCounter: c1d04d21-1d21-478b-a307-2710b05beb2b
+            dataType: VARCHAR(360)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: X_CORPORATE_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c0b27cd9-5fd0-4eef-8d69-33c51f2d0ab3
+                    stepCounter: 83ca961b-e99e-4b5b-b98f-89e081406210
+                transform: ""
+          - columnReference:
+              columnCounter: 23d816d9-a0c1-4618-ac2a-fe71dc7b872d
+              stepCounter: c1d04d21-1d21-478b-a307-2710b05beb2b
+            dataType: TIMESTAMP_NTZ(0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: UPDATE_STAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7a697662-697a-46ce-8773-1256bdc362f1
+                    stepCounter: 83ca961b-e99e-4b5b-b98f-89e081406210
+                transform: ""
+          - columnReference:
+              columnCounter: c48ee283-9d98-4bd4-92ea-9eb4b1a6d5e7
+              stepCounter: c1d04d21-1d21-478b-a307-2710b05beb2b
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: BUS_ITM2ROLLUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 42570cd9-96ec-4af2-afa0-18fd17539a77
+                    stepCounter: 83ca961b-e99e-4b5b-b98f-89e081406210
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e0e0e7b4-cd07-40e2-b4e0-5b477d56365f
+              stepCounter: c1d04d21-1d21-478b-a307-2710b05beb2b
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 46232c9c-3c75-4a2b-a830-1193a1f1f67f
+              stepCounter: c1d04d21-1d21-478b-a307-2710b05beb2b
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: UFY_CB_ACCOUNT_LOAD_V
+            join:
+              joinCondition: |-
+                FROM {{ ref('TARGET', 'UFY_CB_ACCOUNT_LOAD_V') }} "UFY_CB_ACCOUNT_LOAD_V"
+                WHERE UFY_CB_ACCOUNT_LOAD_V.ORG_ID IS NOT NULL;
+            name: DS_UFY_CB_ACCOUNT
+            noLinkRefs: []
+      name: DS_UFY_CB_ACCOUNT
+      overrideSQL: false
+      schema: ""
+      sqlType: persistentStage
+      type: sql
+    stepCounter: c1d04d21-1d21-478b-a307-2710b05beb2b

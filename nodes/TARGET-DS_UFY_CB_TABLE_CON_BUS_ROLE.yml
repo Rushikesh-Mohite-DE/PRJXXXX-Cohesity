@@ -1,0 +1,172 @@
+steps:
+  DS_UFY_CB_TABLE_CON_BUS_ROLE-9f15e870-f26d-423a-a713-4bb1a7c0cec4:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: |-
+          DELETE FROM {{ ref('TARGET', 'DS_UFY_CB_TABLE_CON_BUS_ROLE') }}
+            WHERE OBJID IN
+          (SELECT OBJID FROM {{ ref('SOURCE', 'L_UFY_CB_TABLE_CON_BUS_ROLE') }})
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 43726ca4-9e62-41f2-8ab3-73e449f7de14
+              stepCounter: 9f15e870-f26d-423a-a713-4bb1a7c0cec4
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: OBJID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 547bc495-21e8-4c28-a924-02d6b2b2d454
+                    stepCounter: 8bc64ccf-1bc5-43eb-bb64-3ab13d78c652
+                transform: ""
+          - columnReference:
+              columnCounter: 6da96947-d57c-4d49-a74e-2147eddef98d
+              stepCounter: 9f15e870-f26d-423a-a713-4bb1a7c0cec4
+            dataType: TIMESTAMP_NTZ(0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LAST_UPDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ea0996bd-0a52-4e58-89c4-cc6d1978aeab
+                    stepCounter: 8bc64ccf-1bc5-43eb-bb64-3ab13d78c652
+                transform: ""
+          - columnReference:
+              columnCounter: a2cdfadf-3ebe-4c8a-8d09-e15c84608dc9
+              stepCounter: 9f15e870-f26d-423a-a713-4bb1a7c0cec4
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CON_BUS_ROLE2CONTACT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2e812cef-7417-4a2d-a2d2-b203f7c2dca1
+                    stepCounter: 8bc64ccf-1bc5-43eb-bb64-3ab13d78c652
+                transform: ""
+          - columnReference:
+              columnCounter: 94fe9cbf-77c2-4e37-888e-9873775c0c5a
+              stepCounter: 9f15e870-f26d-423a-a713-4bb1a7c0cec4
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CON_BUS_ROLE2CUSTOMER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 41b16478-cb19-4dc2-8b52-969858a3f7cf
+                    stepCounter: 8bc64ccf-1bc5-43eb-bb64-3ab13d78c652
+                transform: ""
+          - columnReference:
+              columnCounter: 79e7c691-106b-4be7-a6e7-2735f6354a69
+              stepCounter: 9f15e870-f26d-423a-a713-4bb1a7c0cec4
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: BUS_ACCOUNT2BUS_ORG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 19927c39-f6e2-44cc-b2ac-f0f0791266ba
+                    stepCounter: 8bc64ccf-1bc5-43eb-bb64-3ab13d78c652
+                transform: ""
+          - columnReference:
+              columnCounter: a6543f0d-7b08-41a5-8e76-a60ee21658ab
+              stepCounter: 9f15e870-f26d-423a-a713-4bb1a7c0cec4
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ACTIVE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 095019c9-b2b8-46c5-ac9d-e5273e187a31
+                    stepCounter: 8bc64ccf-1bc5-43eb-bb64-3ab13d78c652
+                transform: ""
+          - columnReference:
+              columnCounter: 1ff55266-0c74-44df-adfa-ca43464b1940
+              stepCounter: 9f15e870-f26d-423a-a713-4bb1a7c0cec4
+            dataType: VARCHAR(240)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROLE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a5d10673-ae28-4fde-954d-de3bed84fe26
+                    stepCounter: 8bc64ccf-1bc5-43eb-bb64-3ab13d78c652
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fe54b5a8-d135-4caf-be19-0e9ac84a5be3
+              stepCounter: 9f15e870-f26d-423a-a713-4bb1a7c0cec4
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCreateDate: true
+            name: ROWCREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2832cc22-7143-41ee-8477-6ad9f54e54c2
+              stepCounter: 9f15e870-f26d-423a-a713-4bb1a7c0cec4
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemUpdateDate: true
+            name: ROWUPDATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: L_UFY_CB_TABLE_CON_BUS_ROLE
+            join:
+              joinCondition: FROM {{ ref('SOURCE', 'L_UFY_CB_TABLE_CON_BUS_ROLE') }} "L_UFY_CB_TABLE_CON_BUS_ROLE"
+            name: DS_UFY_CB_TABLE_CON_BUS_ROLE
+            noLinkRefs: []
+      name: DS_UFY_CB_TABLE_CON_BUS_ROLE
+      overrideSQL: false
+      schema: ""
+      sqlType: persistentStage
+      type: sql
+    stepCounter: 9f15e870-f26d-423a-a713-4bb1a7c0cec4

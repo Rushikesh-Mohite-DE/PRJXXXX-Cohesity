@@ -1,0 +1,130 @@
+steps:
+  DS_UFY_CB_TABLE_CONTACT-f35c7479-663a-4e22-a60a-d019e7f3acea:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: |-
+          DELETE FROM {{ ref('TARGET', 'DS_UFY_CB_TABLE_CONTACT') }}
+            WHERE OBJID IN 
+          (SELECT OBJID FROM {{ ref('TARGET', 'UFY_CB_TABLE_CONTACT_LOAD_V') }});
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 1f440251-2dfd-4725-969b-b756da41b471
+              stepCounter: f35c7479-663a-4e22-a60a-d019e7f3acea
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: OBJID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 665b4351-7ab6-4cf6-8e22-bb5fcb46e78e
+                    stepCounter: d55cc0c3-ba16-4c2d-865d-4cac58c1d1b1
+                transform: ""
+          - columnReference:
+              columnCounter: 81d49202-e81a-42c2-bc1c-2a776c98d8a5
+              stepCounter: f35c7479-663a-4e22-a60a-d019e7f3acea
+            dataType: TIMESTAMP_NTZ(0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: UPDATE_STAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: befacf92-b2dd-461c-b780-6437463b6d57
+                    stepCounter: d55cc0c3-ba16-4c2d-865d-4cac58c1d1b1
+                transform: ""
+          - columnReference:
+              columnCounter: efd14684-e6d1-422e-8436-68edd0e3be56
+              stepCounter: f35c7479-663a-4e22-a60a-d019e7f3acea
+            dataType: VARCHAR(279)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CONTACT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 84bea9ad-c8c4-40e0-85d3-41c468d53df9
+                    stepCounter: d55cc0c3-ba16-4c2d-865d-4cac58c1d1b1
+                transform: UFY_CB_TABLE_CONTACT_LOAD_V.CONTACT_ID
+          - columnReference:
+              columnCounter: 425bc726-bfc7-4d97-a844-5d361e1b2f47
+              stepCounter: f35c7479-663a-4e22-a60a-d019e7f3acea
+            dataType: VARCHAR(360)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: BRAND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 02a590cc-5427-4d9a-9285-ad8fb05ed437
+                    stepCounter: d55cc0c3-ba16-4c2d-865d-4cac58c1d1b1
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a66c616d-5ed5-4411-a08c-16e2996642ec
+              stepCounter: f35c7479-663a-4e22-a60a-d019e7f3acea
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCreateDate: true
+            name: ROWCREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bcf09124-61d3-43c8-b241-07b2e1c022d4
+              stepCounter: f35c7479-663a-4e22-a60a-d019e7f3acea
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemUpdateDate: true
+            name: ROWUPDATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: UFY_CB_TABLE_CONTACT_LOAD_V
+            join:
+              joinCondition: FROM {{ ref('TARGET', 'UFY_CB_TABLE_CONTACT_LOAD_V') }} "UFY_CB_TABLE_CONTACT_LOAD_V";
+            name: DS_UFY_CB_TABLE_CONTACT
+            noLinkRefs: []
+      name: DS_UFY_CB_TABLE_CONTACT
+      overrideSQL: false
+      schema: ""
+      sqlType: persistentStage
+      type: sql
+    stepCounter: f35c7479-663a-4e22-a60a-d019e7f3acea

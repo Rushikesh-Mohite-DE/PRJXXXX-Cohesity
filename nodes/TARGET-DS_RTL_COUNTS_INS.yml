@@ -1,0 +1,142 @@
+steps:
+  DS_RTL_COUNTS_INS-7780d6ce-61ff-4630-a578-8d4cc2a075e4:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: Retail stores counts
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 46ea2da5-3dac-428e-932c-d12ed0af949c
+              stepCounter: 7780d6ce-61ff-4630-a578-8d4cc2a075e4
+            dataType: VARCHAR(10)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: STOREID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4be0a12a-23a5-4748-b656-878c8c74f9f0
+                    stepCounter: ad563a3a-1d57-4c50-b69d-73e87fbcefbf
+                transform: ""
+          - columnReference:
+              columnCounter: 580409ef-8d58-42d4-842a-4c4656e048d0
+              stepCounter: 7780d6ce-61ff-4630-a578-8d4cc2a075e4
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: COUNTDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3f5fcb20-178e-4404-a293-39e9b90ae644
+                    stepCounter: ad563a3a-1d57-4c50-b69d-73e87fbcefbf
+                transform: ""
+          - columnReference:
+              columnCounter: f5cf6fe7-6682-47ef-bea5-485b2a7bb29a
+              stepCounter: 7780d6ce-61ff-4630-a578-8d4cc2a075e4
+            dataType: INTEGER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TOTALIN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8d987ad3-04fe-4cc5-a63f-5050d5844f80
+                    stepCounter: ad563a3a-1d57-4c50-b69d-73e87fbcefbf
+                transform: ""
+          - columnReference:
+              columnCounter: d4f3b7a1-0f8c-4d3f-9752-883480bcb083
+              stepCounter: 7780d6ce-61ff-4630-a578-8d4cc2a075e4
+            dataType: INTEGER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TOTALOUT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7d94abac-ad47-4043-aeab-3abd7e76a399
+                    stepCounter: ad563a3a-1d57-4c50-b69d-73e87fbcefbf
+                transform: ""
+          - columnReference:
+              columnCounter: 508083e2-2b23-4265-b18a-fddee8ee279a
+              stepCounter: 7780d6ce-61ff-4630-a578-8d4cc2a075e4
+            dataType: BYTEINT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: REPROCESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 94531961-d9cc-45b7-ad99-887705730568
+                    stepCounter: ad563a3a-1d57-4c50-b69d-73e87fbcefbf
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e78ab882-9d0b-47b3-9425-b0c8805077eb
+              stepCounter: 7780d6ce-61ff-4630-a578-8d4cc2a075e4
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCreateDate: true
+            name: ROWCREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0f1a455b-5706-4c38-88d5-a32cc34fdf3e
+              stepCounter: 7780d6ce-61ff-4630-a578-8d4cc2a075e4
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemUpdateDate: true
+            name: ROWUPDATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: L_RTL_COUNTS
+            join:
+              joinCondition: FROM {{ ref('SOURCE', 'L_RTL_COUNTS') }} "L_RTL_COUNTS"
+            name: DS_RTL_COUNTS_INS
+            noLinkRefs: []
+      name: DS_RTL_COUNTS_INS
+      overrideSQL: false
+      schema: ""
+      sqlType: persistentStage
+      type: sql
+    stepCounter: 7780d6ce-61ff-4630-a578-8d4cc2a075e4

@@ -1,0 +1,295 @@
+steps:
+  D_SKILLS-31ff5899-5bae-43b0-94e8-fa6f4ed17c24:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8c4c869f-d4b3-43ce-9211-4f5f1a5c7b79
+              stepCounter: 31ff5899-5bae-43b0-94e8-fa6f4ed17c24
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSurrogateKey: true
+            name: D_SKILLS_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: d9622b2e-87e3-4562-b1ee-d9429c69e792
+              stepCounter: 31ff5899-5bae-43b0-94e8-fa6f4ed17c24
+            dataType: NUMBER(10)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: SKILL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ac67f0ed-c0a8-4e4f-a8af-d2ab00733145
+                    stepCounter: 0bf15e12-eed4-4dfd-923c-b9d29466601a
+                transform: ""
+          - columnReference:
+              columnCounter: 9617bc75-88c6-43f2-a4c3-0d70887e5917
+              stepCounter: 31ff5899-5bae-43b0-94e8-fa6f4ed17c24
+            dataType: VARCHAR(30)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: DATA_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 829fcf66-ae96-4fcc-91b1-0ffdf7997127
+                    stepCounter: 0bf15e12-eed4-4dfd-923c-b9d29466601a
+                transform: ""
+          - columnReference:
+              columnCounter: bec5e9ef-9aa8-4e67-8b3a-aaefa2e26ad1
+              stepCounter: 31ff5899-5bae-43b0-94e8-fa6f4ed17c24
+            dataType: VARCHAR(30)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SKILL_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8d9448b9-53dd-419c-a387-7bbc76e85b55
+                    stepCounter: 0bf15e12-eed4-4dfd-923c-b9d29466601a
+                transform: ""
+          - columnReference:
+              columnCounter: 017d65b1-9a6f-4517-86f6-21851bea131c
+              stepCounter: 31ff5899-5bae-43b0-94e8-fa6f4ed17c24
+            dataType: VARCHAR(5)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ABBREVATION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d06d528e-a044-4c21-8aa2-4753bda6ee09
+                    stepCounter: 0bf15e12-eed4-4dfd-923c-b9d29466601a
+                transform: ""
+          - columnReference:
+              columnCounter: 5433a302-0414-4939-bc93-a5bf66728887
+              stepCounter: 31ff5899-5bae-43b0-94e8-fa6f4ed17c24
+            dataType: VARCHAR(255)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DEPARTMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7cc21034-3b05-428a-a3c3-ef6b0c9286c6
+                    stepCounter: 0bf15e12-eed4-4dfd-923c-b9d29466601a
+                transform: ""
+          - columnReference:
+              columnCounter: 6da9b134-b5d9-41e4-8939-0fd7a8655103
+              stepCounter: 31ff5899-5bae-43b0-94e8-fa6f4ed17c24
+            dataType: VARCHAR(150)
+            description: ""
+            name: SEGMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6ab16b4b-d0d5-42c2-9a80-1aa7cb61bcfd
+                    stepCounter: 0bf15e12-eed4-4dfd-923c-b9d29466601a
+                transform: ""
+          - columnReference:
+              columnCounter: 25ccac24-51be-4ec6-a38a-02ce0dbb0fe9
+              stepCounter: 31ff5899-5bae-43b0-94e8-fa6f4ed17c24
+            dataType: INTEGER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SERVICELEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2086ad9c-b9e8-42f2-82b2-187d2cbdbb4f
+                    stepCounter: 0bf15e12-eed4-4dfd-923c-b9d29466601a
+                transform: ""
+          - columnReference:
+              columnCounter: 465f011b-af74-4797-b0e2-1985a1bcfb8b
+              stepCounter: 31ff5899-5bae-43b0-94e8-fa6f4ed17c24
+            dataType: INTEGER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SERVICELEVELSEC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: aec87c3e-fb7b-423c-b32c-29971ae92129
+                    stepCounter: 0bf15e12-eed4-4dfd-923c-b9d29466601a
+                transform: ""
+          - columnReference:
+              columnCounter: 743c59b5-56a1-4bcd-afda-37a98919eed1
+              stepCounter: 31ff5899-5bae-43b0-94e8-fa6f4ed17c24
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: VALID_FROM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1b8fa73a-1868-4420-b338-eaa169cb47ca
+                    stepCounter: 0bf15e12-eed4-4dfd-923c-b9d29466601a
+                transform: TO_DATE(SPLIT_PART(S_D_SKILLS_V.DPERIOD,',',1))
+          - columnReference:
+              columnCounter: c8e07fd4-23f2-49bf-9603-5c814c2d9f49
+              stepCounter: 31ff5899-5bae-43b0-94e8-fa6f4ed17c24
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: VALID_TO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1b8fa73a-1868-4420-b338-eaa169cb47ca
+                    stepCounter: 0bf15e12-eed4-4dfd-923c-b9d29466601a
+                transform: |-
+                  CASE WHEN TO_DATE(SPLIT_PART(S_D_SKILLS_V.DPERIOD,',',2))
+                  >= TO_DATE('20201231','YYYYMMDD')
+                  THEN TO_DATE ('20201231','YYYYMMDD')
+                  ELSE DATEADD(DAY,-1,TO_DATE(SPLIT_PART(S_D_SKILLS_V.DPERIOD,',',2))) 
+                  END
+          - columnReference:
+              columnCounter: 6daed0f2-9716-4990-b1d6-baa4cd091248
+              stepCounter: 31ff5899-5bae-43b0-94e8-fa6f4ed17c24
+            dataType: VARCHAR(40)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SKILL_GROUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 36747b84-d0cd-4a3f-9813-f114c7de622e
+                    stepCounter: 0bf15e12-eed4-4dfd-923c-b9d29466601a
+                transform: ""
+          - columnReference:
+              columnCounter: 36da391e-101f-4274-96f4-cfb5d9204983
+              stepCounter: 31ff5899-5bae-43b0-94e8-fa6f4ed17c24
+            dataType: VARCHAR(40)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SKILL_CHAIN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d81337e1-43bc-497d-837c-b41e0dea4fa7
+                    stepCounter: 0bf15e12-eed4-4dfd-923c-b9d29466601a
+                transform: ""
+          - columnReference:
+              columnCounter: 116ca30d-95e8-48b5-b631-208fa6d14ced
+              stepCounter: 31ff5899-5bae-43b0-94e8-fa6f4ed17c24
+            dataType: VARCHAR(40)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SKILL_SERVICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fe59b0ba-94d4-4c16-acf2-3d91f68247d3
+                    stepCounter: 0bf15e12-eed4-4dfd-923c-b9d29466601a
+                transform: ""
+          - columnReference:
+              columnCounter: 697ea0ef-b633-4f49-8a03-e9229a653dbe
+              stepCounter: 31ff5899-5bae-43b0-94e8-fa6f4ed17c24
+            dataType: VARCHAR(40)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COMMERCIAL_SEGMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fa1ec519-7003-49eb-878d-534306a135a8
+                    stepCounter: 0bf15e12-eed4-4dfd-923c-b9d29466601a
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 27c6b508-c5a0-425e-af70-d6dfe3950acf
+              stepCounter: 31ff5899-5bae-43b0-94e8-fa6f4ed17c24
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCreateDate: true
+            name: ROWCREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 201bc3c1-92cf-4ef9-b7cc-73d5abe53544
+              stepCounter: 31ff5899-5bae-43b0-94e8-fa6f4ed17c24
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemUpdateDate: true
+            name: ROWUPDATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              S_D_SKILLS_V: 0bf15e12-eed4-4dfd-923c-b9d29466601a
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: S_D_SKILLS_V
+            join:
+              joinCondition: |-
+                FROM {{ ref('TARGET', 'S_D_SKILLS_V') }} "S_D_SKILLS_V"
+                
+                	
+            name: D_SKILLS
+            noLinkRefs: []
+      name: D_SKILLS
+      overrideSQL: false
+      schema: ""
+      sqlType: Dimension
+      type: sql
+    stepCounter: 31ff5899-5bae-43b0-94e8-fa6f4ed17c24

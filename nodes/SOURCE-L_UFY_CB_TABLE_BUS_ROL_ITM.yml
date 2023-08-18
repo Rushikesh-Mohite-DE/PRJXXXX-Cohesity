@@ -1,0 +1,94 @@
+steps:
+  L_UFY_CB_TABLE_BUS_ROL_ITM-ff09bba3-8dd1-49ad-9131-5d3294ad52fe:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 640622ae-6248-457a-8875-ab2b4e85db38
+              stepCounter: ff09bba3-8dd1-49ad-9131-5d3294ad52fe
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: OBJID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: aa7ce9e4-3a8e-4e36-b181-fffeb840ecd1
+              stepCounter: ff09bba3-8dd1-49ad-9131-5d3294ad52fe
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PATH_TYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6536c5f4-46ba-41dc-8ccc-c855d8f1920c
+              stepCounter: ff09bba3-8dd1-49ad-9131-5d3294ad52fe
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: CHILD2BUS_ORG
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ff4234e0-ee9e-4119-ad51-fc2a8b956ff0
+              stepCounter: ff09bba3-8dd1-49ad-9131-5d3294ad52fe
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PARENT2BUS_ORG
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7485100d-412e-4d67-9e51-5a792b27d42d
+              stepCounter: ff09bba3-8dd1-49ad-9131-5d3294ad52fe
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: BUS_ITM2ROLLUP
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'L_UFY_CB_TABLE_BUS_ROL_ITM') }}
+      name: L_UFY_CB_TABLE_BUS_ROL_ITM
+      schema: ""
+      sqlType: Source
+      table: L_UFY_CB_TABLE_BUS_ROL_ITM
+      type: sourceInput
+    stepCounter: ff09bba3-8dd1-49ad-9131-5d3294ad52fe

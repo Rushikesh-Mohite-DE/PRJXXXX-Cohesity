@@ -1,0 +1,169 @@
+steps:
+  L_ORDER_RECON-7e363682-e335-436c-8aa9-167f19ea7992:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a4882075-92a7-4c0a-95bf-458d4b1835ae
+              stepCounter: 7e363682-e335-436c-8aa9-167f19ea7992
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: The creation date of the record.
+            name: CREATE_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ef5227d9-4c2c-4edd-9b51-515cdc5d947e
+              stepCounter: 7e363682-e335-436c-8aa9-167f19ea7992
+            config: {}
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: The shopping cart id.
+            name: SHOPPING_CART_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 38c2b837-6271-44b8-9aa4-515683d4ae5b
+              stepCounter: 7e363682-e335-436c-8aa9-167f19ea7992
+            config: {}
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: The Dynalean order id.
+            name: DYNALEAN_ORDER_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b7b85176-7d76-4785-82b1-eaa24f6ff72e
+              stepCounter: 7e363682-e335-436c-8aa9-167f19ea7992
+            config: {}
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: "The even name. Possible values: “CREATE_AND_VALIDATE_ORDER”, “SUBMIT_ORDER” or “FRONT_END”."
+            name: EVENT_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 16d479fb-8dbb-4c96-87d7-7f3040c31bb7
+              stepCounter: 7e363682-e335-436c-8aa9-167f19ea7992
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: The even result indicator. 0 = failure, 1 = success.
+            name: EVENT_RESULT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 775b7307-19cd-40cb-a31b-afb9fff40b1b
+              stepCounter: 7e363682-e335-436c-8aa9-167f19ea7992
+            config: {}
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            name: TRANSACTION_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 941d0eff-1c96-464d-8805-8001a3cfc298
+              stepCounter: 7e363682-e335-436c-8aa9-167f19ea7992
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: The (C)onsumer or (B)usiness flag. Contains value “C” or “B”.
+            name: CONSUMER_OR_BUSINESS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1f927d0d-b2db-4c2f-b4c7-41d0b534989d
+              stepCounter: 7e363682-e335-436c-8aa9-167f19ea7992
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: The (A)cquisition or (R)etention flag. Contains value “A” or “R”.
+            name: AQUISITION_OR_RETENTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1d0c69dd-5de3-48bf-8050-d521ac09d9b1
+              stepCounter: 7e363682-e335-436c-8aa9-167f19ea7992
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: The indicator if a handset was ordered. 0 = false, 1 = true.
+            name: HANDSET
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e96534e6-bcc5-4d00-84c1-b87645715251
+              stepCounter: 7e363682-e335-436c-8aa9-167f19ea7992
+            config: {}
+            dataType: VARCHAR(4000)
+            defaultValue: ""
+            description: The error message.
+            name: ERROR_MESSAGE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'L_ORDER_RECON') }}
+      name: L_ORDER_RECON
+      schema: ""
+      sqlType: Source
+      table: L_ORDER_RECON
+      type: sourceInput
+    stepCounter: 7e363682-e335-436c-8aa9-167f19ea7992

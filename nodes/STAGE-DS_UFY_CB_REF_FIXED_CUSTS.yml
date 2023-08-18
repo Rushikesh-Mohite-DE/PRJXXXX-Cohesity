@@ -1,0 +1,181 @@
+steps:
+  DS_UFY_CB_REF_FIXED_CUSTS-8ef25c50-5e45-4f5f-bc0f-401cee320034:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 02446e98-7962-48fc-a1e8-28c94d4bf6f6
+              stepCounter: 8ef25c50-5e45-4f5f-bc0f-401cee320034
+            config: {}
+            dataType: VARCHAR(765)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ac43c966-e036-4f90-849d-98f78890dffa
+              stepCounter: 8ef25c50-5e45-4f5f-bc0f-401cee320034
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: CUSTOMER_CATEGORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cee10503-e6c5-49cb-8c4d-c2ca83a9a011
+              stepCounter: 8ef25c50-5e45-4f5f-bc0f-401cee320034
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: The planned migration date of the customer, from Derby to Unify
+            keyColumnType: None
+            name: MIGRATION_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8ef552f7-4beb-4bd1-8c1e-f406655f207b
+              stepCounter: 8ef25c50-5e45-4f5f-bc0f-401cee320034
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: Date on which this customer was first seen/observed in BCV.For migrated customers, this is typically one day after the migration date.
+            keyColumnType: None
+            name: OBSERVATION_DATE_BCV
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 926565c6-62b4-46b6-a92f-86a192b6a1b1
+              stepCounter: 8ef25c50-5e45-4f5f-bc0f-401cee320034
+            config: {}
+            dataType: VARCHAR(2000)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: REMARKS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 96dff6e4-0464-42ac-82bc-35418b3420f2
+              stepCounter: 8ef25c50-5e45-4f5f-bc0f-401cee320034
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the row was created in the data warehouse.
+            keyColumnType: None
+            name: ROWCREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3b2b9152-8cb2-4229-85ee-f60b7ad18109
+              stepCounter: 8ef25c50-5e45-4f5f-bc0f-401cee320034
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the row was updated in the data warehouse.
+            keyColumnType: None
+            name: ROWUPDATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies: []
+            join:
+              joinCondition: ""
+            name: DS_UFY_CB_REF_FIXED_CUSTS
+            noLinkRefs: []
+      name: DS_UFY_CB_REF_FIXED_CUSTS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 8ef25c50-5e45-4f5f-bc0f-401cee320034

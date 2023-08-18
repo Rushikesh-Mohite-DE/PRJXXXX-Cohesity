@@ -1,0 +1,155 @@
+steps:
+  LNK_DETAILRECORDS-43a61110-7b9c-48d6-907f-4fee7f39d577:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 1dfabd81-865b-4c5b-b40e-394c3c3dde40
+              stepCounter: 43a61110-7b9c-48d6-907f-4fee7f39d577
+            config:
+              isLinkHash: true
+            dataType: BINARY
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LNK_DETAILRECORDS_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3a59d497-dae5-4957-b1bb-dcfbcc6fe2bc
+                    stepCounter: cf8c6106-bf90-4c1f-9a7e-5f72918819c2
+                transform: ""
+          - columnReference:
+              columnCounter: 7d11b78a-f216-48a6-9240-c174d286022c
+              stepCounter: 43a61110-7b9c-48d6-907f-4fee7f39d577
+            dataType: BINARY
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HUB_ACCESSMETHOD_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d4fd0bd0-eff4-4ed0-be64-39c61aadd385
+                    stepCounter: cf8c6106-bf90-4c1f-9a7e-5f72918819c2
+                transform: ""
+          - columnReference:
+              columnCounter: 16643478-b3e2-48db-88c0-aed9e2c1c143
+              stepCounter: 43a61110-7b9c-48d6-907f-4fee7f39d577
+            dataType: BIGINT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CALL_START_TIME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 20a85065-805e-4b9f-bdbf-e5f434dec8da
+                    stepCounter: cf8c6106-bf90-4c1f-9a7e-5f72918819c2
+                transform: ""
+          - columnReference:
+              columnCounter: b897feff-3db4-43b5-b905-88b3924dee32
+              stepCounter: 43a61110-7b9c-48d6-907f-4fee7f39d577
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CDR_REF_NUM
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 04121534-f188-49a7-95d0-a8dbb9658c4d
+                    stepCounter: cf8c6106-bf90-4c1f-9a7e-5f72918819c2
+                transform: ""
+          - columnReference:
+              columnCounter: 769109d3-8a8f-44b6-bb19-a3db1b00f899
+              stepCounter: 43a61110-7b9c-48d6-907f-4fee7f39d577
+            dataType: VARCHAR(40)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROWSOURCENAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3d2590cd-b36d-4347-a439-25099e02ba98
+                    stepCounter: cf8c6106-bf90-4c1f-9a7e-5f72918819c2
+                transform: ""
+          - columnReference:
+              columnCounter: 5d71fc1a-2b04-4f1f-aca5-aadcf3dd9834
+              stepCounter: 43a61110-7b9c-48d6-907f-4fee7f39d577
+            dataType: TIMESTAMP(0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROWSOURCEDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6e233072-e345-4bb5-b2ba-7994c5450213
+                    stepCounter: cf8c6106-bf90-4c1f-9a7e-5f72918819c2
+                transform: ""
+          - columnReference:
+              columnCounter: 93beed11-6777-448d-a89c-63d2849d3ffb
+              stepCounter: 43a61110-7b9c-48d6-907f-4fee7f39d577
+            dataType: VARCHAR(16)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROWSOURCESEQ
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 05cf2728-ca6c-467e-b54f-ac9a0361b507
+                    stepCounter: cf8c6106-bf90-4c1f-9a7e-5f72918819c2
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: af232933-8946-458b-9225-96299bc4f063
+              stepCounter: 43a61110-7b9c-48d6-907f-4fee7f39d577
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCreateDate: true
+            name: ROWCREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              S_G2K_SUREPAY_AMA: cf8c6106-bf90-4c1f-9a7e-5f72918819c2
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: S_G2K_SUREPAY_AMA
+            join:
+              joinCondition: |-
+                FROM {{ ref('STAGE', 'S_G2K_SUREPAY_AMA') }} "S_G2K_SUREPAY_AMA"
+                WHERE S_G2K_Surepay_Ama.Event_Cat = 'Usage' AND S_G2K_Surepay_Ama.Traffic_Cat <> 'Signalling'
+            name: LNK_DETAILRECORDS
+            noLinkRefs: []
+      name: LNK_DETAILRECORDS
+      overrideSQL: false
+      schema: ""
+      sqlType: "87"
+      type: sql
+    stepCounter: 43a61110-7b9c-48d6-907f-4fee7f39d577

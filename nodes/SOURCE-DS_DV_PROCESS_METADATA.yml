@@ -1,0 +1,139 @@
+steps:
+  DS_DV_PROCESS_METADATA-1be8b20a-cd28-4e7b-bffa-32b5e53b8fda:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 103349a9-9430-4792-9ebe-065884f091e5
+              stepCounter: 1be8b20a-cd28-4e7b-bffa-32b5e53b8fda
+            config: {}
+            dataType: VARCHAR(64)
+            defaultValue: ""
+            description: ""
+            name: IDENTIFIER_1
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cb2a165b-0f2f-4590-aad6-9a09319f6b1e
+              stepCounter: 1be8b20a-cd28-4e7b-bffa-32b5e53b8fda
+            config: {}
+            dataType: VARCHAR(64)
+            defaultValue: ""
+            description: ""
+            name: IDENTIFIER_2
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 226dc400-eb8a-4ed4-ba70-b92659b2f5af
+              stepCounter: 1be8b20a-cd28-4e7b-bffa-32b5e53b8fda
+            config: {}
+            dataType: VARCHAR(64)
+            defaultValue: ""
+            description: ""
+            name: IDENTIFIER_3
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8f78427f-7c9b-4425-b586-2bae470244f3
+              stepCounter: 1be8b20a-cd28-4e7b-bffa-32b5e53b8fda
+            config: {}
+            dataType: VARCHAR(64)
+            defaultValue: ""
+            description: ""
+            name: IDENTIFIER_4
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8b529979-e04c-4007-a04a-432379ef2ac1
+              stepCounter: 1be8b20a-cd28-4e7b-bffa-32b5e53b8fda
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: METADATA_VALUE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5d202d0a-7a43-41b0-b5d7-47037afb01c3
+              stepCounter: 1be8b20a-cd28-4e7b-bffa-32b5e53b8fda
+            config: {}
+            dataType: VARCHAR(256)
+            defaultValue: ""
+            description: ""
+            name: DESCRIPTION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0af310dc-3301-42e1-bbeb-8e15125c5e0f
+              stepCounter: 1be8b20a-cd28-4e7b-bffa-32b5e53b8fda
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the row was created in the data warehouse.
+            name: ROWCREATED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fff2a0da-9e5d-4beb-99e8-cf45047f65bf
+              stepCounter: 1be8b20a-cd28-4e7b-bffa-32b5e53b8fda
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: Date and time the row was updated in the data warehouse.
+            name: ROWUPDATED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'DS_DV_PROCESS_METADATA') }}
+      name: DS_DV_PROCESS_METADATA
+      schema: ""
+      sqlType: Source
+      table: DS_DV_PROCESS_METADATA
+      type: sourceInput
+    stepCounter: 1be8b20a-cd28-4e7b-bffa-32b5e53b8fda

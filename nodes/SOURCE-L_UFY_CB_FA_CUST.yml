@@ -1,0 +1,94 @@
+steps:
+  L_UFY_CB_FA_CUST-8accc57e-55f6-4e3d-be17-ff6992c8762f:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: Financial Accounts from CUST intance
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 25d130e3-6c8a-442a-8ce5-44cdb58f3af5
+              stepCounter: 8accc57e-55f6-4e3d-be17-ff6992c8762f
+            config: {}
+            dataType: NUMBER(18,0)
+            defaultValue: ""
+            description: Financial Account ID
+            name: ACCOUNT_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b4a2b491-aef4-4c79-abad-a17c3ea1dffc
+              stepCounter: 8accc57e-55f6-4e3d-be17-ff6992c8762f
+            config: {}
+            dataType: NUMBER(18,0)
+            defaultValue: ""
+            description: ""
+            name: CUSTOMER_NO
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0c6f9867-a3ca-46c8-9280-dac5bc35edc6
+              stepCounter: 8accc57e-55f6-4e3d-be17-ff6992c8762f
+            config: {}
+            dataType: TIMESTAMP_NTZ(0)
+            defaultValue: ""
+            description: ""
+            name: SYS_CREATION_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 19efb195-ff5d-48dc-a228-a8c3c943daf5
+              stepCounter: 8accc57e-55f6-4e3d-be17-ff6992c8762f
+            config: {}
+            dataType: TIMESTAMP_NTZ(0)
+            defaultValue: ""
+            description: ""
+            name: SYS_UPDATE_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a1b4658e-6d1b-4bcf-a199-90ed5de05feb
+              stepCounter: 8accc57e-55f6-4e3d-be17-ff6992c8762f
+            config: {}
+            dataType: NUMBER(9,0)
+            defaultValue: ""
+            description: OPERATOR_ID
+            name: OPERATOR_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'L_UFY_CB_FA_CUST') }}
+      name: L_UFY_CB_FA_CUST
+      schema: ""
+      sqlType: Source
+      table: L_UFY_CB_FA_CUST
+      type: sourceInput
+    stepCounter: 8accc57e-55f6-4e3d-be17-ff6992c8762f

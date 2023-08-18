@@ -1,0 +1,202 @@
+steps:
+  UFY_CB_FIXED_CUSTS_LOAD_V-931d0edd-7f29-417c-843e-64b55a7447e7:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: ddbb966c-42b0-4ac9-a97f-4f188aa5b0e3
+              stepCounter: 931d0edd-7f29-417c-843e-64b55a7447e7
+            dataType: VARCHAR(265)
+            description: CUSTOMER_ID
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3cd27a28-f50b-4108-b004-eb105cdf85e1
+                    stepCounter: 64e9106f-9b39-4889-a213-70aac9bcdcb2
+                transform: COALESCE(DS_UFY_CB_CUST_BRAND.CUSTOMER_ID, UFY_CB_REF_FIXED_CUSTS.CUSTOMER_ID)
+          - columnReference:
+              columnCounter: 224ad3b5-b6f2-437c-b31a-f5b81bf460bb
+              stepCounter: 931d0edd-7f29-417c-843e-64b55a7447e7
+            dataType: NUMBER
+            description: OPERATOR_ID
+            hashColumns: []
+            hashDetails: null
+            name: OPERATOR_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c4c2d95a-e368-48e9-8739-2b0007a12230
+                    stepCounter: 64e9106f-9b39-4889-a213-70aac9bcdcb2
+                transform: ""
+          - columnReference:
+              columnCounter: daecc686-a7d1-4503-9ea3-a45caac7bae6
+              stepCounter: 931d0edd-7f29-417c-843e-64b55a7447e7
+            dataType: VARCHAR(720)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_LOGIN_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: afc54af2-831a-4619-8176-741a4953ce90
+                    stepCounter: 64e9106f-9b39-4889-a213-70aac9bcdcb2
+                transform: ""
+          - columnReference:
+              columnCounter: 36e812d8-e0f6-438d-8b4a-926423d787b0
+              stepCounter: 931d0edd-7f29-417c-843e-64b55a7447e7
+            dataType: VARCHAR(270)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_FIRST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 991d395b-e5b8-4e81-94ab-a8f5191dba84
+                    stepCounter: 64e9106f-9b39-4889-a213-70aac9bcdcb2
+                transform: ""
+          - columnReference:
+              columnCounter: 18980873-c5a4-40af-9174-7792b0430bd2
+              stepCounter: 931d0edd-7f29-417c-843e-64b55a7447e7
+            dataType: VARCHAR(270)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: S_LAST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e47405b6-a3ac-48c0-bc07-38a3853f973e
+                    stepCounter: 64e9106f-9b39-4889-a213-70aac9bcdcb2
+                transform: ""
+          - columnReference:
+              columnCounter: 6771f45a-06ba-4bc3-ab6d-1f8b5e31bbd6
+              stepCounter: 931d0edd-7f29-417c-843e-64b55a7447e7
+            dataType: VARCHAR(720)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: E_MAIL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d1adabe1-3359-4451-86a3-29b6ad937477
+                    stepCounter: 64e9106f-9b39-4889-a213-70aac9bcdcb2
+                transform: ""
+          - columnReference:
+              columnCounter: eee4e6eb-37df-4b8c-ab21-fbe7b142338d
+              stepCounter: 931d0edd-7f29-417c-843e-64b55a7447e7
+            dataType: VARCHAR(10)
+            description: CUSTOMER_CATEGORY
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMER_CATEGORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: |-
+                  CASE WHEN DS_UFY_CB_CUST_BRAND.CUSTOMER_ID is null AND UFY_CB_REF_FIXED_CUSTS.CUSTOMER_CATEGORY NOT LIKE 'future%'
+                  THEN 'DELETED'
+                  ELSE CASE WHEN DS_UFY_CB_CUST_BRAND.CUSTOMER_ID is not null AND UFY_CB_REF_FIXED_CUSTS.CUSTOMER_CATEGORY = 'futureDUT'
+                  THEN 'NewMigDUT'
+                  WHEN DS_UFY_CB_CUST_BRAND.CUSTOMER_ID is not null AND UFY_CB_REF_FIXED_CUSTS.CUSTOMER_CATEGORY = 'futureFUT'
+                  THEN 'NewMigFUT'
+                  ELSE COALESCE(UFY_CB_REF_FIXED_CUSTS.CUSTOMER_CATEGORY,'TBD')
+                  END
+                  END
+          - columnReference:
+              columnCounter: 581cd4d6-cf7f-465d-8cc5-24f929a8b480
+              stepCounter: 931d0edd-7f29-417c-843e-64b55a7447e7
+            dataType: DATE
+            description: OBSERVATION_DATE_BCV
+            hashColumns: []
+            hashDetails: null
+            name: OBSERVATION_DATE_BCV
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: |-
+                  CASE WHEN UFY_CB_REF_FIXED_CUSTS.Customer_ID is not null
+                  AND DS_UFY_CB_CUST_BRAND.CUSTOMER_ID is not null
+                  THEN COALESCE(UFY_CB_REF_FIXED_CUSTS.OBSERVATION_DATE_BCV, CURRENT_DATE)
+                  WHEN UFY_CB_REF_FIXED_CUSTS.Customer_ID is not null
+                  AND DS_UFY_CB_CUST_BRAND.CUSTOMER_ID is null
+                  THEN UFY_CB_REF_FIXED_CUSTS.OBSERVATION_DATE_BCV
+                  WHEN UFY_CB_REF_FIXED_CUSTS.Customer_ID is null
+                  AND DS_UFY_CB_CUST_BRAND.CUSTOMER_ID is not null
+                  THEN CURRENT_DATE
+                  ELSE NULL
+                  END
+          - columnReference:
+              columnCounter: 2d8795ac-066e-420f-8fcb-1dc8c6bc5659
+              stepCounter: 931d0edd-7f29-417c-843e-64b55a7447e7
+            dataType: DATE
+            description: MIGRATION_DATE
+            hashColumns: []
+            hashDetails: null
+            name: MIGRATION_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 14295989-344c-4451-aba4-63e59dfaab3b
+                    stepCounter: 136f39e5-7030-415a-9b62-05ce7b9a0281
+                transform: ""
+          - columnReference:
+              columnCounter: efba4983-55c3-46ae-855e-06203e99af22
+              stepCounter: 931d0edd-7f29-417c-843e-64b55a7447e7
+            dataType: VARCHAR(2000)
+            description: REMARKS
+            hashColumns: []
+            hashDetails: null
+            name: REMARKS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c24e667f-1b62-4004-8578-6efc47315674
+                    stepCounter: 136f39e5-7030-415a-9b62-05ce7b9a0281
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: DS_UFY_CB_CUST_BRAND
+              - locationName: TARGET
+                nodeName: UFY_CB_REF_FIXED_CUSTS
+            join:
+              joinCondition: |
+                FROM (SELECT * FROM {{ ref('TARGET', 'DS_UFY_CB_CUST_BRAND') }}
+                       WHERE BRAND = 'ZIGGO'
+                       QUALIFY RANK() OVER (PARTITION BY CUSTOMER_ID ORDER BY FA_ID DESC)=1
+                     ) DS_UFY_CB_CUST_BRAND
+                FULL OUTER JOIN {{ ref('TARGET', 'UFY_CB_REF_FIXED_CUSTS') }} "UFY_CB_REF_FIXED_CUSTS"
+                             ON DS_UFY_CB_CUST_BRAND.CUSTOMER_ID = UFY_CB_REF_FIXED_CUSTS.CUSTOMER_ID;
+            name: UFY_CB_FIXED_CUSTS_LOAD_V
+            noLinkRefs: []
+      name: UFY_CB_FIXED_CUSTS_LOAD_V
+      overrideSQL: false
+      schema: ""
+      sqlType: View
+      type: sql
+    stepCounter: 931d0edd-7f29-417c-843e-64b55a7447e7

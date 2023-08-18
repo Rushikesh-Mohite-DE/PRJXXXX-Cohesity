@@ -1,0 +1,152 @@
+steps:
+  UFY_CB_CUST_BRANDING_CNTC_WA_V_X-f9fcd9f5-a171-461a-8833-3f0b938289b3:
+    operation:
+      config:
+        insertStrategy: UNION ALL
+        selectDistinct: false
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: true
+      locationName: TARGET
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: c955828c-01aa-46dc-8a34-da64b59b0dfd
+              stepCounter: f9fcd9f5-a171-461a-8833-3f0b938289b3
+            dataType: VARCHAR(765)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(NULL AS VARCHAR(765))
+              - columnReferences: []
+                transform: CAST(NULL AS VARCHAR(765))
+          - columnReference:
+              columnCounter: befc5e99-4df2-49b6-aaed-6bacc0aa4cb6
+              stepCounter: f9fcd9f5-a171-461a-8833-3f0b938289b3
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUST_OBJID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(NULL AS NUMBER)
+              - columnReferences: []
+                transform: CAST(NULL AS NUMBER)
+          - columnReference:
+              columnCounter: d1030d71-3d16-4aa0-ad25-ce7a8fc5b14c
+              stepCounter: f9fcd9f5-a171-461a-8833-3f0b938289b3
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: OBJID_CONTACT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1f440251-2dfd-4725-969b-b756da41b471
+                    stepCounter: f35c7479-663a-4e22-a60a-d019e7f3acea
+                transform: ""
+              - columnReferences: []
+                transform: CAST(NULL AS NUMBER)
+          - columnReference:
+              columnCounter: d515e940-78be-41b2-ae8e-b82a40976a6a
+              stepCounter: f9fcd9f5-a171-461a-8833-3f0b938289b3
+            dataType: VARCHAR(279)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CONTACT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: efd14684-e6d1-422e-8436-68edd0e3be56
+                    stepCounter: f35c7479-663a-4e22-a60a-d019e7f3acea
+                transform: ""
+              - columnReferences:
+                  - columnCounter: a6b0cd1f-c9f2-4ed9-a089-e5da966b0445
+                    stepCounter: 05181405-a934-4cd8-8790-5faba30d921c
+                transform: CAST(UFY_CB_REF_EXCEPTIONS.KEY_VALUE_EXCEPTION AS VARCHAR(269))
+          - columnReference:
+              columnCounter: 8cdb5f34-d84d-43e1-9f04-72a9aefbc8cd
+              stepCounter: f9fcd9f5-a171-461a-8833-3f0b938289b3
+            dataType: VARCHAR(10)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CONTACT_LEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'UNKNOWN'"
+              - columnReferences: []
+                transform: "'UNKNOWN'"
+          - columnReference:
+              columnCounter: 57e0da89-1af0-4210-a8d9-ab8d22a22d2e
+              stepCounter: f9fcd9f5-a171-461a-8833-3f0b938289b3
+            dataType: VARCHAR(120)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: BRAND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 425bc726-bfc7-4d97-a844-5d361e1b2f47
+                    stepCounter: f35c7479-663a-4e22-a60a-d019e7f3acea
+                transform: ""
+              - columnReferences:
+                  - columnCounter: 9ca9d38e-41c1-4fed-ba36-d424ffe9f831
+                    stepCounter: 05181405-a934-4cd8-8790-5faba30d921c
+                transform: ""
+          - columnReference:
+              columnCounter: 6c2b9a2e-96c7-4b29-8b1d-31d83f24dc3d
+              stepCounter: f9fcd9f5-a171-461a-8833-3f0b938289b3
+            dataType: VARCHAR(3)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PROCESS_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "'REG'"
+              - columnReferences: []
+                transform: "'EXC'"
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: DS_UFY_CB_TABLE_CONTACT
+            join:
+              joinCondition: FROM {{ ref('TARGET', 'DS_UFY_CB_TABLE_CONTACT') }} "DS_UFY_CB_TABLE_CONTACT"
+            name: UFY_CB_CUST_BRANDING_CNTC_WA_V_X_05
+            noLinkRefs: []
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: UFY_CB_REF_EXCEPTIONS
+            join:
+              joinCondition: |-
+                FROM {{ ref('TARGET', 'UFY_CB_REF_EXCEPTIONS') }} "UFY_CB_REF_EXCEPTIONS"
+                WHERE UFY_CB_REF_EXCEPTIONS.LEVEL = 'CONTACT';
+            name: UFY_CB_CUST_BRANDING_CNTC_WA_V_X_05
+            noLinkRefs: []
+      name: UFY_CB_CUST_BRANDING_CNTC_WA_V_X
+      overrideSQL: false
+      schema: ""
+      sqlType: View
+      type: sql
+    stepCounter: f9fcd9f5-a171-461a-8833-3f0b938289b3

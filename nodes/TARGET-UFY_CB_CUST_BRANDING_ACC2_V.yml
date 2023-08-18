@@ -1,0 +1,200 @@
+steps:
+  UFY_CB_CUST_BRANDING_ACC2_V-73316fc5-1e33-422f-b688-d3031794906c:
+    operation:
+      config:
+        insertStrategy: MINUS
+        selectDistinct: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: true
+      locationName: TARGET
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: b60dcead-ec26-4081-bf41-35b11b7bea79
+              stepCounter: 73316fc5-1e33-422f-b688-d3031794906c
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ACC_OBJID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 921d487f-f2c4-46d8-9fa9-696ac91a255c
+                    stepCounter: c1d04d21-1d21-478b-a307-2710b05beb2b
+                transform: ""
+              - columnReferences:
+                  - columnCounter: 15ec6094-e993-460d-898d-072c90f32556
+                    stepCounter: 4c237d9f-338f-4cd4-b28e-9fdd5647188e
+                transform: ""
+          - columnReference:
+              columnCounter: 5cc41377-6c0e-47ad-aeab-7afd6d6f8bdb
+              stepCounter: 73316fc5-1e33-422f-b688-d3031794906c
+            dataType: VARCHAR(120)
+            description: ""
+            name: ACCOUNT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8e107bfd-1cee-4e4c-b935-8642bd8c5244
+                    stepCounter: c1d04d21-1d21-478b-a307-2710b05beb2b
+                transform: ""
+              - columnReferences:
+                  - columnCounter: d0a43a77-d9a3-4044-8035-23c347e45072
+                    stepCounter: 4c237d9f-338f-4cd4-b28e-9fdd5647188e
+                transform: ""
+          - columnReference:
+              columnCounter: aa91998c-0d27-48a2-be2c-952f7024cd1c
+              stepCounter: 73316fc5-1e33-422f-b688-d3031794906c
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: BUS_ITM2ROLLUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ff8c9a2a-4e52-4330-825e-53692c26e30e
+                    stepCounter: 3a284199-f332-41b7-b881-ca207c23dbbe
+                transform: ""
+              - columnReferences:
+                  - columnCounter: a8499cb0-0410-4e2d-9049-631475de4af5
+                    stepCounter: 4c237d9f-338f-4cd4-b28e-9fdd5647188e
+                transform: ""
+          - columnReference:
+              columnCounter: 5b4d2894-1e2f-4180-8a23-f0af27ad4ab2
+              stepCounter: 73316fc5-1e33-422f-b688-d3031794906c
+            dataType: VARCHAR(765)
+            description: ""
+            name: CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3001355c-6dab-418b-919e-1e7b9606cabf
+                    stepCounter: 9307fea2-9aa2-4f76-a224-93ce930e56c3
+                transform: ""
+              - columnReferences:
+                  - columnCounter: 322b10d4-41fd-406b-96bb-ee53bf05d54e
+                    stepCounter: 4c237d9f-338f-4cd4-b28e-9fdd5647188e
+                transform: ""
+          - columnReference:
+              columnCounter: 69045edf-c8ed-4279-9f82-b6d510eeb6a2
+              stepCounter: 73316fc5-1e33-422f-b688-d3031794906c
+            dataType: NUMBER
+            description: ""
+            name: CUST_OBJID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: edd4fd92-6fb5-4181-99f4-983d595a89c1
+                    stepCounter: 9307fea2-9aa2-4f76-a224-93ce930e56c3
+                transform: ""
+              - columnReferences:
+                  - columnCounter: f2ca9f34-7eb9-46d6-905d-6fe3b437966f
+                    stepCounter: 4c237d9f-338f-4cd4-b28e-9fdd5647188e
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e8dca977-e2b6-4fde-85cc-48b12de2b83f
+              stepCounter: 73316fc5-1e33-422f-b688-d3031794906c
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: BRAND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: ""
+              - columnReferences:
+                  - columnCounter: 772ff785-67ae-4772-9a42-4b5e9a5be103
+                    stepCounter: 4c237d9f-338f-4cd4-b28e-9fdd5647188e
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6906ad43-58b2-484f-b068-47540ea5f19b
+              stepCounter: 73316fc5-1e33-422f-b688-d3031794906c
+            config: {}
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: PROCESS_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'REG'"
+              - columnReferences:
+                  - columnCounter: 667b4292-bae6-4503-b672-509d8ede667d
+                    stepCounter: 4c237d9f-338f-4cd4-b28e-9fdd5647188e
+                transform: ""
+            systemColumnType: None
+            transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              DS_UFY_CB_ACCOUNT: c1d04d21-1d21-478b-a307-2710b05beb2b
+              DS_UFY_CB_CUSTOMER: 9307fea2-9aa2-4f76-a224-93ce930e56c3
+              L_UFY_CB_TABLE_BUS_ROL_ITM_V: 3a284199-f332-41b7-b881-ca207c23dbbe
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: DS_UFY_CB_ACCOUNT
+              - locationName: TARGET
+                nodeName: DS_UFY_CB_CUST_BRAND_ACC1
+              - locationName: TARGET
+                nodeName: DS_UFY_CB_CUSTOMER
+              - locationName: TARGET
+                nodeName: L_UFY_CB_TABLE_BUS_ROL_ITM_V
+            join:
+              joinCondition: |-
+                FROM {{ ref('TARGET', 'L_UFY_CB_TABLE_BUS_ROL_ITM_V') }} "L_UFY_CB_TABLE_BUS_ROL_ITM_V"
+                INNER JOIN {{ ref('TARGET', 'DS_UFY_CB_ACCOUNT') }} "DS_UFY_CB_ACCOUNT"
+                ON l_UFY_CB_TABLE_BUS_ROL_ITM_V.ACC_OBJID = DS_UFY_CB_ACCOUNT.ACC_OBJID
+                INNER JOIN (SELECT BUS_ITM2ROLLUP
+                , MAX(BRAND) as BRAND
+                , MAX(CUST_OBJID) as MAX_CUST_OBJID
+                FROM {{ ref('TARGET', 'DS_UFY_CB_CUST_BRAND_ACC1') }}
+                GROUP BY BUS_ITM2ROLLUP) h
+                ON l_UFY_CB_TABLE_BUS_ROL_ITM_V.BUS_ITM2ROLLUP = h.BUS_ITM2ROLLUP
+                INNER JOIN {{ ref('TARGET', 'DS_UFY_CB_CUSTOMER') }} "DS_UFY_CB_CUSTOMER"
+                ON h.MAX_CUST_OBJID = DS_UFY_CB_CUSTOMER.OBJID
+            name: UFY_CB_CUST_BRANDING_ACC2_V_05
+            noLinkRefs: []
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: DS_UFY_CB_CUST_BRAND_ACC1
+            join:
+              joinCondition: |-
+                FROM {{ ref('TARGET', 'DS_UFY_CB_CUST_BRAND_ACC1') }} "DS_UFY_CB_CUST_BRAND_ACC1"
+                WHERE DS_UFY_CB_CUST_BRAND_ACC1.BUS_ITM2ROLLUP IS NOT NULL
+                ;
+            name: UFY_CB_CUST_BRANDING_ACC2_V_10
+            noLinkRefs: []
+      name: UFY_CB_CUST_BRANDING_ACC2_V
+      overrideSQL: false
+      schema: ""
+      sqlType: "90"
+      type: sql
+    stepCounter: 73316fc5-1e33-422f-b688-d3031794906c

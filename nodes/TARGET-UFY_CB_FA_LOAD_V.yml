@@ -1,0 +1,166 @@
+steps:
+  UFY_CB_FA_LOAD_V-ecfb1809-7a35-40d1-9357-aaddccc017a6:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      database: ""
+      deployEnabled: true
+      description: Financial Accounts from CUST intance
+      isMultisource: false
+      locationName: TARGET
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: c19a6797-6b7e-4f4b-b230-bb5ab43906b0
+              stepCounter: ecfb1809-7a35-40d1-9357-aaddccc017a6
+            dataType: NUMBER(18,0)
+            description: Financial Account ID
+            hashColumns: []
+            hashDetails: null
+            name: ACCOUNT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 25d130e3-6c8a-442a-8ce5-44cdb58f3af5
+                    stepCounter: 8accc57e-55f6-4e3d-be17-ff6992c8762f
+                transform: ""
+          - columnReference:
+              columnCounter: 42b0a07d-f6e6-4b6b-b8be-db286393873f
+              stepCounter: ecfb1809-7a35-40d1-9357-aaddccc017a6
+            dataType: NUMBER(18,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMER_NO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b4a2b491-aef4-4c79-abad-a17c3ea1dffc
+                    stepCounter: 8accc57e-55f6-4e3d-be17-ff6992c8762f
+                transform: ""
+          - columnReference:
+              columnCounter: aa706ce6-61a2-4139-baaf-c6a5415b62b3
+              stepCounter: ecfb1809-7a35-40d1-9357-aaddccc017a6
+            dataType: TIMESTAMP_NTZ(0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYS_CREATION_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0c6f9867-a3ca-46c8-9280-dac5bc35edc6
+                    stepCounter: 8accc57e-55f6-4e3d-be17-ff6992c8762f
+                transform: ""
+          - columnReference:
+              columnCounter: 4aabe07e-a401-48f2-bf84-62042224fb88
+              stepCounter: ecfb1809-7a35-40d1-9357-aaddccc017a6
+            dataType: TIMESTAMP_NTZ(0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYS_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 19efb195-ff5d-48dc-a228-a8c3c943daf5
+                    stepCounter: 8accc57e-55f6-4e3d-be17-ff6992c8762f
+                transform: ""
+          - columnReference:
+              columnCounter: c8214ef1-bccf-4a68-ad4b-d4a29120e030
+              stepCounter: ecfb1809-7a35-40d1-9357-aaddccc017a6
+            dataType: NUMBER(9,0)
+            description: OPERATOR_ID
+            hashColumns: []
+            hashDetails: null
+            name: OPERATOR_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a1b4658e-6d1b-4bcf-a199-90ed5de05feb
+                    stepCounter: 8accc57e-55f6-4e3d-be17-ff6992c8762f
+                transform: ""
+          - columnReference:
+              columnCounter: b80fc50b-b8dc-4670-8d61-d576836e64d4
+              stepCounter: ecfb1809-7a35-40d1-9357-aaddccc017a6
+            dataType: VARCHAR(720)
+            description: ""
+            name: S_LOGIN_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 896acd2b-1c37-4b0b-af0e-28bba2e97e9a
+                    stepCounter: 0346b552-7d42-4f0c-a9fd-6d7165a29e30
+                transform: ""
+          - columnReference:
+              columnCounter: 93e09410-e6d9-43f0-b662-773376598dea
+              stepCounter: ecfb1809-7a35-40d1-9357-aaddccc017a6
+            dataType: VARCHAR(270)
+            description: ""
+            name: S_FIRST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fdb2d47f-d435-4bff-8d55-9a6760bdb6fe
+                    stepCounter: e29bd353-06e7-411c-aa10-315709ba2aac
+                transform: ""
+          - columnReference:
+              columnCounter: 55c02b57-702b-40b0-9ce2-ebdfc88d9cce
+              stepCounter: ecfb1809-7a35-40d1-9357-aaddccc017a6
+            dataType: VARCHAR(270)
+            description: ""
+            name: S_LAST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0002dfbd-3cd5-4d50-be7c-fd7ade625e87
+                    stepCounter: e29bd353-06e7-411c-aa10-315709ba2aac
+                transform: ""
+          - columnReference:
+              columnCounter: efe2f666-93a9-48c2-bbb2-32e8cd42d61f
+              stepCounter: ecfb1809-7a35-40d1-9357-aaddccc017a6
+            dataType: VARCHAR(720)
+            description: ""
+            name: E_MAIL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e0a20211-3111-44e3-8f86-8db0863ba18e
+                    stepCounter: e29bd353-06e7-411c-aa10-315709ba2aac
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: L_UFY_CB_FA_CUST
+              - locationName: SOURCE
+                nodeName: L_UFY_CB_SEC_USER_INFO
+              - locationName: SOURCE
+                nodeName: L_UFY_CB_TABLE_EMPLOYEE
+              - locationName: SOURCE
+                nodeName: L_UFY_CB_TABLE_USER
+            join:
+              joinCondition: |-
+                FROM {{ ref('SOURCE', 'L_UFY_CB_FA_CUST') }} "L_UFY_CB_FA_CUST"
+                LEFT OUTER JOIN {{ ref('SOURCE', 'L_UFY_CB_SEC_USER_INFO') }} l_UFY_CB_SEC_USER_INFO
+                ON l_UFY_CB_FA_CUST.OPERATOR_ID = l_UFY_CB_SEC_USER_INFO.L9_OPERATOR_ID
+                LEFT OUTER JOIN {{ ref('SOURCE', 'L_UFY_CB_TABLE_USER') }} "L_UFY_CB_TABLE_USER"
+                ON l_UFY_CB_SEC_USER_INFO.USER_ID = l_UFY_CB_TABLE_USER.S_LOGIN_NAME
+                LEFT OUTER JOIN {{ ref('SOURCE', 'L_UFY_CB_TABLE_EMPLOYEE') }} "L_UFY_CB_TABLE_EMPLOYEE"
+                ON l_UFY_CB_TABLE_USER.OBJID = l_UFY_CB_TABLE_EMPLOYEE.EMPLOYEE2USER
+                ;
+            name: UFY_CB_FA_LOAD_V
+            noLinkRefs: []
+      name: UFY_CB_FA_LOAD_V
+      overrideSQL: false
+      schema: ""
+      sqlType: View
+      type: sql
+    stepCounter: ecfb1809-7a35-40d1-9357-aaddccc017a6

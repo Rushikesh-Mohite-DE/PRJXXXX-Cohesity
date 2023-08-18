@@ -1,0 +1,131 @@
+steps:
+  UFY_CB_REF_FIXED_CUSTS-136f39e5-7030-415a-9b62-05ce7b9a0281:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 658d719f-53ad-45a6-8b59-a057fc3a6ed7
+              stepCounter: 136f39e5-7030-415a-9b62-05ce7b9a0281
+            dataType: VARCHAR(765)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 02446e98-7962-48fc-a1e8-28c94d4bf6f6
+                    stepCounter: 8ef25c50-5e45-4f5f-bc0f-401cee320034
+                transform: ""
+          - columnReference:
+              columnCounter: 19dc20fd-3ab0-4b0b-91dc-60306ea5b342
+              stepCounter: 136f39e5-7030-415a-9b62-05ce7b9a0281
+            dataType: VARCHAR(10)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMER_CATEGORY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ac43c966-e036-4f90-849d-98f78890dffa
+                    stepCounter: 8ef25c50-5e45-4f5f-bc0f-401cee320034
+                transform: ""
+          - columnReference:
+              columnCounter: 14295989-344c-4451-aba4-63e59dfaab3b
+              stepCounter: 136f39e5-7030-415a-9b62-05ce7b9a0281
+            dataType: DATE
+            description: The planned migration date of the customer, from Derby to Unify
+            hashColumns: []
+            hashDetails: null
+            name: MIGRATION_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cee10503-e6c5-49cb-8c4d-c2ca83a9a011
+                    stepCounter: 8ef25c50-5e45-4f5f-bc0f-401cee320034
+                transform: ""
+          - columnReference:
+              columnCounter: f7be9073-c32c-4313-b324-f6baef82d671
+              stepCounter: 136f39e5-7030-415a-9b62-05ce7b9a0281
+            dataType: DATE
+            description: Date on which this customer was first seen/observed in BCV.For migrated customers, this is typically one day after the migration date.
+            hashColumns: []
+            hashDetails: null
+            name: OBSERVATION_DATE_BCV
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8ef552f7-4beb-4bd1-8c1e-f406655f207b
+                    stepCounter: 8ef25c50-5e45-4f5f-bc0f-401cee320034
+                transform: ""
+          - columnReference:
+              columnCounter: c24e667f-1b62-4004-8578-6efc47315674
+              stepCounter: 136f39e5-7030-415a-9b62-05ce7b9a0281
+            dataType: VARCHAR(2000)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: REMARKS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 926565c6-62b4-46b6-a92f-86a192b6a1b1
+                    stepCounter: 8ef25c50-5e45-4f5f-bc0f-401cee320034
+                transform: ""
+          - columnReference:
+              columnCounter: 16cdeab9-9d55-4df4-9f80-d5c652795285
+              stepCounter: 136f39e5-7030-415a-9b62-05ce7b9a0281
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the row was created in the data warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: ROWCREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 96dff6e4-0464-42ac-82bc-35418b3420f2
+                    stepCounter: 8ef25c50-5e45-4f5f-bc0f-401cee320034
+                transform: ""
+          - columnReference:
+              columnCounter: 645ba5be-5733-4503-9fde-a002a989e642
+              stepCounter: 136f39e5-7030-415a-9b62-05ce7b9a0281
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the row was updated in the data warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: ROWUPDATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3b2b9152-8cb2-4229-85ee-f60b7ad18109
+                    stepCounter: 8ef25c50-5e45-4f5f-bc0f-401cee320034
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: DS_UFY_CB_REF_FIXED_CUSTS
+            join:
+              joinCondition: FROM {{ ref('STAGE', 'DS_UFY_CB_REF_FIXED_CUSTS') }} "DS_UFY_CB_REF_FIXED_CUSTS"
+            name: UFY_CB_REF_FIXED_CUSTS
+            noLinkRefs: []
+      name: UFY_CB_REF_FIXED_CUSTS
+      overrideSQL: false
+      schema: ""
+      sqlType: View
+      type: sql
+    stepCounter: 136f39e5-7030-415a-9b62-05ce7b9a0281

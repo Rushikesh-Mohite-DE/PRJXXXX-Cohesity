@@ -1,0 +1,145 @@
+steps:
+  DV_PROCESS_METADATA-6700c63c-b9a4-4a41-88ea-9d766b2d56e8:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: f648c015-9b4b-4796-92f4-2100994eb009
+              stepCounter: 6700c63c-b9a4-4a41-88ea-9d766b2d56e8
+            dataType: VARCHAR(64)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: IDENTIFIER_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 103349a9-9430-4792-9ebe-065884f091e5
+                    stepCounter: 1be8b20a-cd28-4e7b-bffa-32b5e53b8fda
+                transform: ""
+          - columnReference:
+              columnCounter: b1ab0b05-5bee-4959-abf3-dc031435e8e1
+              stepCounter: 6700c63c-b9a4-4a41-88ea-9d766b2d56e8
+            dataType: VARCHAR(64)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: IDENTIFIER_2
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cb2a165b-0f2f-4590-aad6-9a09319f6b1e
+                    stepCounter: 1be8b20a-cd28-4e7b-bffa-32b5e53b8fda
+                transform: ""
+          - columnReference:
+              columnCounter: 8df711e3-a513-42dc-8af8-4158e196d525
+              stepCounter: 6700c63c-b9a4-4a41-88ea-9d766b2d56e8
+            dataType: VARCHAR(64)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: IDENTIFIER_3
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 226dc400-eb8a-4ed4-ba70-b92659b2f5af
+                    stepCounter: 1be8b20a-cd28-4e7b-bffa-32b5e53b8fda
+                transform: ""
+          - columnReference:
+              columnCounter: 518d7e01-caff-4b79-b5a3-8fa448b9fc72
+              stepCounter: 6700c63c-b9a4-4a41-88ea-9d766b2d56e8
+            dataType: VARCHAR(64)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: IDENTIFIER_4
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8f78427f-7c9b-4425-b586-2bae470244f3
+                    stepCounter: 1be8b20a-cd28-4e7b-bffa-32b5e53b8fda
+                transform: ""
+          - columnReference:
+              columnCounter: f494af0d-a679-4805-b8fb-e11b8cb6900f
+              stepCounter: 6700c63c-b9a4-4a41-88ea-9d766b2d56e8
+            dataType: VARCHAR(256)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: METADATA_VALUE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8b529979-e04c-4007-a04a-432379ef2ac1
+                    stepCounter: 1be8b20a-cd28-4e7b-bffa-32b5e53b8fda
+                transform: ""
+          - columnReference:
+              columnCounter: 30a86a99-bcce-4818-b761-e19a0b7b88c2
+              stepCounter: 6700c63c-b9a4-4a41-88ea-9d766b2d56e8
+            dataType: VARCHAR(256)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DESCRIPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5d202d0a-7a43-41b0-b5d7-47037afb01c3
+                    stepCounter: 1be8b20a-cd28-4e7b-bffa-32b5e53b8fda
+                transform: ""
+          - columnReference:
+              columnCounter: d826bf0a-4b42-4624-8e2c-b427288f7f53
+              stepCounter: 6700c63c-b9a4-4a41-88ea-9d766b2d56e8
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the row was created in the data warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: ROWCREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0af310dc-3301-42e1-bbeb-8e15125c5e0f
+                    stepCounter: 1be8b20a-cd28-4e7b-bffa-32b5e53b8fda
+                transform: ""
+          - columnReference:
+              columnCounter: b2bd18c2-96fd-4c99-852a-ee788b2a2fa0
+              stepCounter: 6700c63c-b9a4-4a41-88ea-9d766b2d56e8
+            dataType: TIMESTAMP_NTZ(9)
+            description: Date and time the row was updated in the data warehouse.
+            hashColumns: []
+            hashDetails: null
+            name: ROWUPDATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fff2a0da-9e5d-4beb-99e8-cf45047f65bf
+                    stepCounter: 1be8b20a-cd28-4e7b-bffa-32b5e53b8fda
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: DS_DV_PROCESS_METADATA
+            join:
+              joinCondition: FROM {{ ref('SOURCE', 'DS_DV_PROCESS_METADATA') }} "DS_DV_PROCESS_METADATA"
+            name: DV_PROCESS_METADATA
+            noLinkRefs: []
+      name: DV_PROCESS_METADATA
+      overrideSQL: false
+      schema: ""
+      sqlType: View
+      type: sql
+    stepCounter: 6700c63c-b9a4-4a41-88ea-9d766b2d56e8

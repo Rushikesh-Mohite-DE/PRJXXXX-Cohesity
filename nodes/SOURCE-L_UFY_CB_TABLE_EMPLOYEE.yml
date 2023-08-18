@@ -1,0 +1,79 @@
+steps:
+  L_UFY_CB_TABLE_EMPLOYEE-e29bd353-06e7-411c-aa10-315709ba2aac:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ec47e2dd-bd0b-413d-9a70-6a027ab94b5b
+              stepCounter: e29bd353-06e7-411c-aa10-315709ba2aac
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: EMPLOYEE2USER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fdb2d47f-d435-4bff-8d55-9a6760bdb6fe
+              stepCounter: e29bd353-06e7-411c-aa10-315709ba2aac
+            config: {}
+            dataType: VARCHAR(270)
+            defaultValue: ""
+            description: ""
+            name: S_FIRST_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0002dfbd-3cd5-4d50-be7c-fd7ade625e87
+              stepCounter: e29bd353-06e7-411c-aa10-315709ba2aac
+            config: {}
+            dataType: VARCHAR(270)
+            defaultValue: ""
+            description: ""
+            name: S_LAST_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e0a20211-3111-44e3-8f86-8db0863ba18e
+              stepCounter: e29bd353-06e7-411c-aa10-315709ba2aac
+            config: {}
+            dataType: VARCHAR(720)
+            defaultValue: ""
+            description: ""
+            name: E_MAIL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'L_UFY_CB_TABLE_EMPLOYEE') }}
+      name: L_UFY_CB_TABLE_EMPLOYEE
+      schema: ""
+      sqlType: Source
+      table: L_UFY_CB_TABLE_EMPLOYEE
+      type: sourceInput
+    stepCounter: e29bd353-06e7-411c-aa10-315709ba2aac

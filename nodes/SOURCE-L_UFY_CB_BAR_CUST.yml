@@ -1,0 +1,79 @@
+steps:
+  L_UFY_CB_BAR_CUST-3e8538f8-2cc1-44d5-b06d-b5a84aaffdb3:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: Billing Arrangements from CRM instance
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d7417af2-9072-4d5f-a3be-abed357b12eb
+              stepCounter: 3e8538f8-2cc1-44d5-b06d-b5a84aaffdb3
+            config: {}
+            dataType: NUMBER(18,0)
+            defaultValue: ""
+            description: ""
+            name: BILLING_ARRANGEMENT_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 879d7e29-f57c-482e-9ce7-2fb49c718cb1
+              stepCounter: 3e8538f8-2cc1-44d5-b06d-b5a84aaffdb3
+            config: {}
+            dataType: NUMBER(18,0)
+            defaultValue: ""
+            description: ""
+            name: ACCOUNT_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fe052ebe-2788-4b19-8aa0-0c6c120fdca1
+              stepCounter: 3e8538f8-2cc1-44d5-b06d-b5a84aaffdb3
+            config: {}
+            dataType: TIMESTAMP_NTZ(0)
+            defaultValue: ""
+            description: ""
+            name: SYS_CREATION_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c8c5a163-7ca3-43e5-bf50-048f759a1b85
+              stepCounter: 3e8538f8-2cc1-44d5-b06d-b5a84aaffdb3
+            config: {}
+            dataType: TIMESTAMP_NTZ(0)
+            defaultValue: ""
+            description: ""
+            name: SYS_UPDATE_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'L_UFY_CB_BAR_CUST') }}
+      name: L_UFY_CB_BAR_CUST
+      schema: ""
+      sqlType: Source
+      table: L_UFY_CB_BAR_CUST
+      type: sourceInput
+    stepCounter: 3e8538f8-2cc1-44d5-b06d-b5a84aaffdb3

@@ -1,0 +1,131 @@
+steps:
+  UFY_CB_CUST_BRANDING_CNTC_WA_V-1e0826f5-a8c0-4d93-a1cf-158b0f989161:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 688ec1ef-883f-42da-9174-e4ebb34e61c9
+              stepCounter: 1e0826f5-a8c0-4d93-a1cf-158b0f989161
+            dataType: VARCHAR(765)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c955828c-01aa-46dc-8a34-da64b59b0dfd
+                    stepCounter: f9fcd9f5-a171-461a-8833-3f0b938289b3
+                transform: "NULL"
+          - columnReference:
+              columnCounter: f577bdeb-725f-43d7-9c43-46d25f3ee2e3
+              stepCounter: 1e0826f5-a8c0-4d93-a1cf-158b0f989161
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUST_OBJID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: befc5e99-4df2-49b6-aaed-6bacc0aa4cb6
+                    stepCounter: f9fcd9f5-a171-461a-8833-3f0b938289b3
+                transform: "NULL"
+          - columnReference:
+              columnCounter: 386e62f5-534d-4af7-bb12-78d004577eb8
+              stepCounter: 1e0826f5-a8c0-4d93-a1cf-158b0f989161
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: OBJID_CONTACT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d1030d71-3d16-4aa0-ad25-ce7a8fc5b14c
+                    stepCounter: f9fcd9f5-a171-461a-8833-3f0b938289b3
+                transform: ""
+          - columnReference:
+              columnCounter: 662b0d23-6cfc-440b-9c53-0598d1f31bf1
+              stepCounter: 1e0826f5-a8c0-4d93-a1cf-158b0f989161
+            dataType: VARCHAR(279)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CONTACT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d515e940-78be-41b2-ae8e-b82a40976a6a
+                    stepCounter: f9fcd9f5-a171-461a-8833-3f0b938289b3
+                transform: ""
+          - columnReference:
+              columnCounter: b07d069f-396d-4d8c-a83d-86bf9f38ce70
+              stepCounter: 1e0826f5-a8c0-4d93-a1cf-158b0f989161
+            dataType: VARCHAR(10)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CONTACT_LEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8cdb5f34-d84d-43e1-9f04-72a9aefbc8cd
+                    stepCounter: f9fcd9f5-a171-461a-8833-3f0b938289b3
+                transform: ""
+          - columnReference:
+              columnCounter: c7a3b0c7-2992-43f3-82d8-814f6defc884
+              stepCounter: 1e0826f5-a8c0-4d93-a1cf-158b0f989161
+            dataType: VARCHAR(120)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: BRAND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 57e0da89-1af0-4210-a8d9-ab8d22a22d2e
+                    stepCounter: f9fcd9f5-a171-461a-8833-3f0b938289b3
+                transform: ""
+          - columnReference:
+              columnCounter: e184e0a3-04af-4f76-a062-7a433931536c
+              stepCounter: 1e0826f5-a8c0-4d93-a1cf-158b0f989161
+            dataType: VARCHAR(3)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PROCESS_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6c2b9a2e-96c7-4b29-8b1d-31d83f24dc3d
+                    stepCounter: f9fcd9f5-a171-461a-8833-3f0b938289b3
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: UFY_CB_CUST_BRANDING_CNTC_WA_V_X
+            join:
+              joinCondition: FROM {{ ref('TARGET', 'UFY_CB_CUST_BRANDING_CNTC_WA_V_X') }} "UFY_CB_CUST_BRANDING_CNTC_WA_V_X"
+            name: UFY_CB_CUST_BRANDING_CNTC_WA_V
+            noLinkRefs: []
+      name: UFY_CB_CUST_BRANDING_CNTC_WA_V
+      overrideSQL: false
+      schema: ""
+      sqlType: View
+      type: sql
+    stepCounter: 1e0826f5-a8c0-4d93-a1cf-158b0f989161

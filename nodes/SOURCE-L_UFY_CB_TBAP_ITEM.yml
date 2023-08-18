@@ -1,0 +1,79 @@
+steps:
+  L_UFY_CB_TBAP_ITEM-bf171332-4740-4acd-93e9-769be821e55f:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c0c34869-dca4-4552-88de-6e75d64e07b5
+              stepCounter: bf171332-4740-4acd-93e9-769be821e55f
+            config: {}
+            dataType: VARCHAR(18)
+            defaultValue: ""
+            description: ""
+            name: AP_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a469c64f-69f7-41b1-b8e8-13039bc323ba
+              stepCounter: bf171332-4740-4acd-93e9-769be821e55f
+            config: {}
+            dataType: VARCHAR(18)
+            defaultValue: ""
+            description: ""
+            name: MAIN_ITEM_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1a5248ee-4360-4f27-a621-bc6cdf26d227
+              stepCounter: bf171332-4740-4acd-93e9-769be821e55f
+            config: {}
+            dataType: VARCHAR(765)
+            defaultValue: ""
+            description: ""
+            name: CUSTOMER_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0d0eb543-c413-4f04-a722-98c6317a80b2
+              stepCounter: bf171332-4740-4acd-93e9-769be821e55f
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: AP_VERSION_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'L_UFY_CB_TBAP_ITEM') }}
+      name: L_UFY_CB_TBAP_ITEM
+      schema: ""
+      sqlType: Source
+      table: L_UFY_CB_TBAP_ITEM
+      type: sourceInput
+    stepCounter: bf171332-4740-4acd-93e9-769be821e55f

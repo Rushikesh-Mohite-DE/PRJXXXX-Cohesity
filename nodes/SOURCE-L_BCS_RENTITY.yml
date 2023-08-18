@@ -1,0 +1,229 @@
+steps:
+  L_BCS_RENTITY-196f5123-5e7e-42ca-8e35-9928fb4abd71:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: WHERE c_mod >= to_date('2016-04-01', 'yyyy-mm-dd')
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a217f88b-63dc-4618-8920-e7233cebe564
+              stepCounter: 196f5123-5e7e-42ca-8e35-9928fb4abd71
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: C_OID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7140fed3-8188-4fb0-9349-3eba5881d569
+              stepCounter: 196f5123-5e7e-42ca-8e35-9928fb4abd71
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: C_MOD
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 13921a78-a898-4647-8aac-addd6f5f1492
+              stepCounter: 196f5123-5e7e-42ca-8e35-9928fb4abd71
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: C_ACT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4ce066f3-ed28-4c2d-a3b0-7619cf9c1555
+              stepCounter: 196f5123-5e7e-42ca-8e35-9928fb4abd71
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: C_CREATOR
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c76a18c7-55ae-4dc6-ba69-b3d76bb6adb9
+              stepCounter: 196f5123-5e7e-42ca-8e35-9928fb4abd71
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: C_CTIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2af4ba9d-1585-45a0-bd19-0c6d20f23c5c
+              stepCounter: 196f5123-5e7e-42ca-8e35-9928fb4abd71
+            config: {}
+            dataType: VARCHAR(32)
+            defaultValue: ""
+            description: ""
+            name: C_DELETER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 26ffde76-f5c9-49ed-a254-fa38d3aef7e4
+              stepCounter: 196f5123-5e7e-42ca-8e35-9928fb4abd71
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: C_DTIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5df4f1bd-4963-43b1-96a9-fc6a3f9c7ce4
+              stepCounter: 196f5123-5e7e-42ca-8e35-9928fb4abd71
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: C_EDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a6767382-097a-4a3f-a2df-75c72e32247c
+              stepCounter: 196f5123-5e7e-42ca-8e35-9928fb4abd71
+            config: {}
+            dataType: NUMBER(10,0)
+            defaultValue: ""
+            description: ""
+            name: C_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c31f5c4f-87c8-4045-a75e-106a85df73ec
+              stepCounter: 196f5123-5e7e-42ca-8e35-9928fb4abd71
+            config: {}
+            dataType: VARCHAR(64)
+            defaultValue: ""
+            description: ""
+            name: C_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 71edfc03-ac75-4c4f-9950-c739b5b60637
+              stepCounter: 196f5123-5e7e-42ca-8e35-9928fb4abd71
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: C_SDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d97e47e8-365c-469b-8d76-60fcf4c60814
+              stepCounter: 196f5123-5e7e-42ca-8e35-9928fb4abd71
+            config: {}
+            dataType: NUMBER(5,0)
+            defaultValue: ""
+            description: ""
+            name: C_SDOW
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c17a8ea5-2d26-45ee-b783-052f41d942e6
+              stepCounter: 196f5123-5e7e-42ca-8e35-9928fb4abd71
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: C_TYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 896948e6-2a1f-4ce4-801e-f8f21df7aaad
+              stepCounter: 196f5123-5e7e-42ca-8e35-9928fb4abd71
+            config: {}
+            dataType: VARCHAR(34)
+            defaultValue: ""
+            description: ""
+            name: C_TZ
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'L_BCS_RENTITY') }}
+      name: L_BCS_RENTITY
+      schema: ""
+      sqlType: Source
+      table: L_BCS_RENTITY
+      type: sourceInput
+    stepCounter: 196f5123-5e7e-42ca-8e35-9928fb4abd71

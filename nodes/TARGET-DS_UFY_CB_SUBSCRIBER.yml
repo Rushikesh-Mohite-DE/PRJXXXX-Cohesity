@@ -1,0 +1,144 @@
+steps:
+  DS_UFY_CB_SUBSCRIBER-af13b15b-0420-4bd6-b92e-02e99e8c9a88:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: |-
+          DELETE FROM {{ ref('TARGET', 'DS_UFY_CB_SUBSCRIBER') }} "DS_UFY_CB_SUBSCRIBER"
+            WHERE SUBSCRIBER_NO IN
+          (SELECT SUBSCRIBER_NO FROM {{ ref('SOURCE', 'L_UFY_CB_SUBSCRIBER') }});
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: ab82ec9d-2cb5-44fa-b642-1f2a61abc93e
+              stepCounter: af13b15b-0420-4bd6-b92e-02e99e8c9a88
+            dataType: NUMBER(18)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SUBSCRIBER_NO
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: de4070b4-1b16-4413-8aec-e65f8de6bf98
+                    stepCounter: 04d1df73-7671-4f9c-a90e-90b01630ecc4
+                transform: ""
+          - columnReference:
+              columnCounter: 7e9ef8ed-a017-49b0-a8e8-fe6c6e258091
+              stepCounter: af13b15b-0420-4bd6-b92e-02e99e8c9a88
+            dataType: NUMBER(18)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6ae64a88-c4f0-4b24-85f9-1557f39d9817
+                    stepCounter: 04d1df73-7671-4f9c-a90e-90b01630ecc4
+                transform: ""
+          - columnReference:
+              columnCounter: e4dfc325-462f-4430-80e6-e661647b5963
+              stepCounter: af13b15b-0420-4bd6-b92e-02e99e8c9a88
+            dataType: VARCHAR(600)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PRIM_RESOURCE_VAL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f496be80-abd4-4fd5-8910-fffc772f657c
+                    stepCounter: 04d1df73-7671-4f9c-a90e-90b01630ecc4
+                transform: ""
+          - columnReference:
+              columnCounter: f1299993-5efb-441c-9e1e-760f3e1fcf51
+              stepCounter: af13b15b-0420-4bd6-b92e-02e99e8c9a88
+            dataType: TIMESTAMP_NTZ(0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYS_CREATION_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4551c85a-26c6-4ae8-95a1-0964bc1858ff
+                    stepCounter: 04d1df73-7671-4f9c-a90e-90b01630ecc4
+                transform: ""
+          - columnReference:
+              columnCounter: 9c665015-bef6-484a-b123-81e082b42aad
+              stepCounter: af13b15b-0420-4bd6-b92e-02e99e8c9a88
+            dataType: TIMESTAMP_NTZ(0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYS_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4b045e12-cdf2-42d1-95e2-4e21e58d8cb0
+                    stepCounter: 04d1df73-7671-4f9c-a90e-90b01630ecc4
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 28a342a9-e246-4061-98d0-ff72cc16152d
+              stepCounter: af13b15b-0420-4bd6-b92e-02e99e8c9a88
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCreateDate: true
+            name: ROWCREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7a167f90-eff5-46f7-b920-ed0575216357
+              stepCounter: af13b15b-0420-4bd6-b92e-02e99e8c9a88
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemUpdateDate: true
+            name: ROWUPDATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: L_UFY_CB_SUBSCRIBER
+            join:
+              joinCondition: FROM {{ ref('SOURCE', 'L_UFY_CB_SUBSCRIBER') }} "L_UFY_CB_SUBSCRIBER";
+            name: DS_UFY_CB_SUBSCRIBER
+            noLinkRefs: []
+      name: DS_UFY_CB_SUBSCRIBER
+      overrideSQL: false
+      schema: ""
+      sqlType: persistentStage
+      type: sql
+    stepCounter: af13b15b-0420-4bd6-b92e-02e99e8c9a88

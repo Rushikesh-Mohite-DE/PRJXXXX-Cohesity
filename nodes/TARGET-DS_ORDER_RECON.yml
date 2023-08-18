@@ -1,0 +1,210 @@
+steps:
+  DS_ORDER_RECON-00529802-a7bb-438b-8082-b95806116df7:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: dc5a7b19-2f8c-414f-ae06-4fd5ce3f2f62
+              stepCounter: 00529802-a7bb-438b-8082-b95806116df7
+            dataType: TIMESTAMP_NTZ(9)
+            description: The creation date of the record.
+            hashColumns: []
+            hashDetails: null
+            name: CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a4882075-92a7-4c0a-95bf-458d4b1835ae
+                    stepCounter: 7e363682-e335-436c-8aa9-167f19ea7992
+                transform: ""
+          - columnReference:
+              columnCounter: 349d1ac0-6d54-4826-9bdc-88109ce19da3
+              stepCounter: 00529802-a7bb-438b-8082-b95806116df7
+            dataType: VARCHAR(255)
+            description: The shopping cart id.
+            hashColumns: []
+            hashDetails: null
+            name: SHOPPING_CART_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ef5227d9-4c2c-4edd-9b51-515cdc5d947e
+                    stepCounter: 7e363682-e335-436c-8aa9-167f19ea7992
+                transform: ""
+          - columnReference:
+              columnCounter: bc786024-7578-434a-95fa-e43f30ce8052
+              stepCounter: 00529802-a7bb-438b-8082-b95806116df7
+            dataType: VARCHAR(255)
+            description: The Dynalean order id.
+            hashColumns: []
+            hashDetails: null
+            name: DYNALEAN_ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 38c2b837-6271-44b8-9aa4-515683d4ae5b
+                    stepCounter: 7e363682-e335-436c-8aa9-167f19ea7992
+                transform: ""
+          - columnReference:
+              columnCounter: bd878ad3-efec-4f92-b932-da7967e18c37
+              stepCounter: 00529802-a7bb-438b-8082-b95806116df7
+            dataType: VARCHAR(255)
+            description: "The even name. Possible values: “CREATE_AND_VALIDATE_ORDER”, “SUBMIT_ORDER” or “FRONT_END”."
+            hashColumns: []
+            hashDetails: null
+            name: EVENT_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b7b85176-7d76-4785-82b1-eaa24f6ff72e
+                    stepCounter: 7e363682-e335-436c-8aa9-167f19ea7992
+                transform: ""
+          - columnReference:
+              columnCounter: a6840001-6248-47e2-b7da-e2203d024fa6
+              stepCounter: 00529802-a7bb-438b-8082-b95806116df7
+            dataType: VARCHAR(1)
+            description: The even result indicator. 0 = failure, 1 = success.
+            hashColumns: []
+            hashDetails: null
+            name: EVENT_RESULT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 16d479fb-8dbb-4c96-87d7-7f3040c31bb7
+                    stepCounter: 7e363682-e335-436c-8aa9-167f19ea7992
+                transform: ""
+          - columnReference:
+              columnCounter: 6bd5ef20-d558-409f-90ec-e848e4c20b6c
+              stepCounter: 00529802-a7bb-438b-8082-b95806116df7
+            dataType: VARCHAR(255)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TRANSACTION_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 775b7307-19cd-40cb-a31b-afb9fff40b1b
+                    stepCounter: 7e363682-e335-436c-8aa9-167f19ea7992
+                transform: ""
+          - columnReference:
+              columnCounter: 506dacfa-b64c-4aa4-96d7-c4ece3f990bf
+              stepCounter: 00529802-a7bb-438b-8082-b95806116df7
+            dataType: VARCHAR(1)
+            description: The (C)onsumer or (B)usiness flag. Contains value “C” or “B”.
+            hashColumns: []
+            hashDetails: null
+            name: CONSUMER_OR_BUSINESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 941d0eff-1c96-464d-8805-8001a3cfc298
+                    stepCounter: 7e363682-e335-436c-8aa9-167f19ea7992
+                transform: ""
+          - columnReference:
+              columnCounter: 0317887a-810a-4c6c-8a5b-fb39be320aac
+              stepCounter: 00529802-a7bb-438b-8082-b95806116df7
+            dataType: VARCHAR(1)
+            description: The (A)cquisition or (R)etention flag. Contains value “A” or “R”.
+            hashColumns: []
+            hashDetails: null
+            name: AQUISITION_OR_RETENTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1f927d0d-b2db-4c2f-b4c7-41d0b534989d
+                    stepCounter: 7e363682-e335-436c-8aa9-167f19ea7992
+                transform: ""
+          - columnReference:
+              columnCounter: 138d0b4f-87b8-4844-a879-60614a0690b1
+              stepCounter: 00529802-a7bb-438b-8082-b95806116df7
+            dataType: VARCHAR(1)
+            description: The indicator if a handset was ordered. 0 = false, 1 = true.
+            hashColumns: []
+            hashDetails: null
+            name: HANDSET
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1d0c69dd-5de3-48bf-8050-d521ac09d9b1
+                    stepCounter: 7e363682-e335-436c-8aa9-167f19ea7992
+                transform: ""
+          - columnReference:
+              columnCounter: bf9821b6-692b-4a41-bafc-0d1eb0d073ff
+              stepCounter: 00529802-a7bb-438b-8082-b95806116df7
+            dataType: VARCHAR(4000)
+            description: The error message.
+            hashColumns: []
+            hashDetails: null
+            name: ERROR_MESSAGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e96534e6-bcc5-4d00-84c1-b87645715251
+                    stepCounter: 7e363682-e335-436c-8aa9-167f19ea7992
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5b5148a6-5d5d-43e0-a373-0efa0f48d8d7
+              stepCounter: 00529802-a7bb-438b-8082-b95806116df7
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCreateDate: true
+            name: ROWCREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 97b9621f-360b-47a3-bb20-22ad53608ac2
+              stepCounter: 00529802-a7bb-438b-8082-b95806116df7
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemUpdateDate: true
+            name: ROWUPDATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: L_ORDER_RECON
+            join:
+              joinCondition: FROM {{ ref('SOURCE', 'L_ORDER_RECON') }} "L_ORDER_RECON"
+            name: DS_ORDER_RECON
+            noLinkRefs: []
+      name: DS_ORDER_RECON
+      overrideSQL: false
+      schema: ""
+      sqlType: persistentStage
+      type: sql
+    stepCounter: 00529802-a7bb-438b-8082-b95806116df7

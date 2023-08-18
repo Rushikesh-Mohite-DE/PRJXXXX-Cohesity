@@ -1,0 +1,299 @@
+steps:
+  UFY_CB_CUST_BRANDING_V_X-7c170449-dcac-48fb-bab5-2e12ebb5595a:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: true
+      locationName: TARGET
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: ba56e1bd-7b95-492d-9e21-cabb55f91141
+              stepCounter: 7c170449-dcac-48fb-bab5-2e12ebb5595a
+            dataType: VARCHAR(765)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3001355c-6dab-418b-919e-1e7b9606cabf
+                    stepCounter: 9307fea2-9aa2-4f76-a224-93ce930e56c3
+                transform: ""
+              - columnReferences: []
+                transform: CAST(UFY_CB_REF_EXCEPTIONS.KEY_VALUE_EXCEPTION AS VARCHAR(765))
+              - columnReferences: []
+                transform: CAST(NULL AS VARCHAR(765))
+              - columnReferences: []
+                transform: CAST(NULL AS VARCHAR(765))
+          - columnReference:
+              columnCounter: 1dc5457f-1296-4659-99d5-e032116f7a91
+              stepCounter: 7c170449-dcac-48fb-bab5-2e12ebb5595a
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: OBJID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: edd4fd92-6fb5-4181-99f4-983d595a89c1
+                    stepCounter: 9307fea2-9aa2-4f76-a224-93ce930e56c3
+                transform: ""
+              - columnReferences: []
+                transform: DS_UFY_CB_CUSTOMER1.OBJID
+              - columnReferences: []
+                transform: ""
+              - columnReferences: []
+                transform: CAST(NULL AS NUMBER)
+          - columnReference:
+              columnCounter: 21605cfd-1e44-4cce-a256-31f568b40c6b
+              stepCounter: 7c170449-dcac-48fb-bab5-2e12ebb5595a
+            dataType: NUMBER(18,0)
+            description: Financial Account ID
+            name: FA_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 298eb005-fd64-4136-b0b2-9227642a05a9
+                    stepCounter: 98adede6-b5d9-43bc-915d-023ad2bc279c
+                transform: ""
+              - columnReferences: []
+                transform: ""
+              - columnReferences: []
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 43e8d139-2fb9-46ee-a447-7681b1b0741e
+              stepCounter: 7c170449-dcac-48fb-bab5-2e12ebb5595a
+            dataType: NUMBER(18,0)
+            description: ""
+            name: BA_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fc779dd3-4b5f-410d-a9ab-e2277ce18461
+                    stepCounter: 5836fd29-0d9f-4823-abf2-9bda3c9a9373
+                transform: ""
+              - columnReferences: []
+                transform: ""
+              - columnReferences: []
+                transform: ""
+              - columnReferences: []
+                transform: CAST(UFY_CB_REF_EXCEPTIONS.KEY_VALUE_EXCEPTION AS NUMBER(18))
+          - columnReference:
+              columnCounter: 0fa20d4c-59c3-41a9-8318-d73e5323e5e9
+              stepCounter: 7c170449-dcac-48fb-bab5-2e12ebb5595a
+            dataType: NUMBER(9,0)
+            description: OPERATOR_ID
+            name: OPERATOR_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 90c89389-626c-47cd-8b73-cf98325b8e83
+                    stepCounter: 98adede6-b5d9-43bc-915d-023ad2bc279c
+                transform: ""
+              - columnReferences: []
+                transform: ""
+              - columnReferences: []
+                transform: ""
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 66d41857-aede-4e19-b8ca-db699507b82b
+              stepCounter: 7c170449-dcac-48fb-bab5-2e12ebb5595a
+            dataType: VARCHAR(720)
+            description: ""
+            name: S_LOGIN_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d4dcb041-b852-418b-82b9-83add9ff62a8
+                    stepCounter: 98adede6-b5d9-43bc-915d-023ad2bc279c
+                transform: ""
+              - columnReferences: []
+                transform: CAST(NULL AS VARCHAR(720))
+              - columnReferences: []
+                transform: CAST(NULL AS VARCHAR(720))
+              - columnReferences: []
+                transform: CAST(NULL AS VARCHAR(720))
+          - columnReference:
+              columnCounter: f70c5f50-ed5f-4e3b-b4eb-97e220fbaeb9
+              stepCounter: 7c170449-dcac-48fb-bab5-2e12ebb5595a
+            dataType: VARCHAR(270)
+            description: ""
+            name: S_FIRST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fb78834e-d610-422b-822f-06fcfa2fe424
+                    stepCounter: 98adede6-b5d9-43bc-915d-023ad2bc279c
+                transform: ""
+              - columnReferences: []
+                transform: CAST(NULL AS VARCHAR(720))
+              - columnReferences: []
+                transform: CAST(NULL AS VARCHAR(720))
+              - columnReferences: []
+                transform: CAST(NULL AS VARCHAR(720))
+          - columnReference:
+              columnCounter: f93ce37f-e60c-4b9f-908c-5489c210d55d
+              stepCounter: 7c170449-dcac-48fb-bab5-2e12ebb5595a
+            dataType: VARCHAR(270)
+            description: ""
+            name: S_LAST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f3704eca-c63e-4eca-98f7-bee767642528
+                    stepCounter: 98adede6-b5d9-43bc-915d-023ad2bc279c
+                transform: ""
+              - columnReferences: []
+                transform: CAST(NULL AS VARCHAR(720))
+              - columnReferences: []
+                transform: CAST(NULL AS VARCHAR(720))
+              - columnReferences: []
+                transform: CAST(NULL AS VARCHAR(720))
+          - columnReference:
+              columnCounter: f6f4f022-645d-4f3a-b55d-392974576bfa
+              stepCounter: 7c170449-dcac-48fb-bab5-2e12ebb5595a
+            dataType: VARCHAR(720)
+            description: ""
+            name: E_MAIL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0372ba17-4fd2-4ffc-9ff1-0816b85acb24
+                    stepCounter: 98adede6-b5d9-43bc-915d-023ad2bc279c
+                transform: ""
+              - columnReferences: []
+                transform: CAST(NULL AS VARCHAR(720))
+              - columnReferences: []
+                transform: CAST(NULL AS VARCHAR(720))
+              - columnReferences: []
+                transform: CAST(NULL AS VARCHAR(720))
+          - columnReference:
+              columnCounter: d9375a03-9fff-43b9-8c80-c1e67434d00e
+              stepCounter: 7c170449-dcac-48fb-bab5-2e12ebb5595a
+            dataType: VARCHAR(360)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: BRAND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3e0d465b-ebad-4c02-b978-2756f70f061c
+                    stepCounter: 9307fea2-9aa2-4f76-a224-93ce930e56c3
+                transform: ""
+              - columnReferences: []
+                transform: UFY_CB_REF_EXCEPTIONS.BRAND
+              - columnReferences: []
+                transform: UFY_CB_REF_EXCEPTIONS.BRAND
+              - columnReferences: []
+                transform: UFY_CB_REF_EXCEPTIONS.BRAND
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4804df16-d906-4dee-8c3b-1dc941c932a9
+              stepCounter: 7c170449-dcac-48fb-bab5-2e12ebb5595a
+            config: {}
+            dataType: STRING
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: PROCESS_SOURCE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "'REG'"
+              - columnReferences: []
+                transform: "'EXC'"
+              - columnReferences: []
+                transform: "'EXC'"
+              - columnReferences: []
+                transform: "'EXC'"
+            systemColumnType: None
+            transform: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              DS_UFY_CB_BAR: 5836fd29-0d9f-4823-abf2-9bda3c9a9373
+              DS_UFY_CB_CUSTOMER: 9307fea2-9aa2-4f76-a224-93ce930e56c3
+              DS_UFY_CB_FA: 98adede6-b5d9-43bc-915d-023ad2bc279c
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: DS_UFY_CB_BAR
+              - locationName: TARGET
+                nodeName: DS_UFY_CB_CUSTOMER
+              - locationName: TARGET
+                nodeName: DS_UFY_CB_FA
+            join:
+              joinCondition: |-
+                FROM {{ ref('TARGET', 'DS_UFY_CB_CUSTOMER') }} "DS_UFY_CB_CUSTOMER"
+                LEFT OUTER JOIN {{ ref('TARGET', 'DS_UFY_CB_FA') }} "DS_UFY_CB_FA"
+                ON DS_UFY_CB_CUSTOMER.CUSTOMER_ID = DS_UFY_CB_FA.CUSTOMER_NO
+                LEFT OUTER JOIN {{ ref('TARGET', 'DS_UFY_CB_BAR') }} "DS_UFY_CB_BAR"
+                ON DS_UFY_CB_BAR.ACCOUNT_ID = DS_UFY_CB_FA.ACCOUNT_ID
+            name: UFY_CB_CUST_BRANDING_V_X_05
+            noLinkRefs: []
+          - aliases:
+              DS_UFY_CB_CUSTOMER1: 9307fea2-9aa2-4f76-a224-93ce930e56c3
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: DS_UFY_CB_CUSTOMER
+              - locationName: TARGET
+                nodeName: UFY_CB_REF_EXCEPTIONS
+            join:
+              joinCondition: |-
+                FROM {{ ref('TARGET', 'UFY_CB_REF_EXCEPTIONS') }} "UFY_CB_REF_EXCEPTIONS"
+                LEFT OUTER JOIN {{ ref('TARGET', 'DS_UFY_CB_CUSTOMER') }} "DS_UFY_CB_CUSTOMER1"
+                ON DS_UFY_CB_CUSTOMER1.CUSTOMER_ID = UFY_CB_REF_EXCEPTIONS.KEY_VALUE_EXCEPTION
+                WHERE UFY_CB_REF_EXCEPTIONS.LEVEL = 'CUSTOMER'
+            name: UFY_CB_CUST_BRANDING_V_X_10
+            noLinkRefs: []
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: UFY_CB_REF_EXCEPTIONS
+            join:
+              joinCondition: |-
+                FROM {{ ref('TARGET', 'UFY_CB_REF_EXCEPTIONS') }} "UFY_CB_REF_EXCEPTIONS"
+                WHERE UFY_CB_REF_EXCEPTIONS.LEVEL = 'FIN ACCOUNT'
+            name: UFY_CB_CUST_BRANDING_V_X_15
+            noLinkRefs: []
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: UFY_CB_REF_EXCEPTIONS
+            join:
+              joinCondition: |-
+                FROM {{ ref('TARGET', 'UFY_CB_REF_EXCEPTIONS') }} "UFY_CB_REF_EXCEPTIONS"
+                WHERE UFY_CB_REF_EXCEPTIONS.LEVEL = 'BILLING ARRANGEMENT'
+            name: UFY_CB_CUST_BRANDING_V_X_20
+            noLinkRefs: []
+      name: UFY_CB_CUST_BRANDING_V_X
+      overrideSQL: false
+      schema: ""
+      sqlType: View
+      type: sql
+    stepCounter: 7c170449-dcac-48fb-bab5-2e12ebb5595a

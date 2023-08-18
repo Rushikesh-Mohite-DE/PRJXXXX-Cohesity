@@ -1,0 +1,127 @@
+steps:
+  DS_UFY_CB_BAR-5836fd29-0d9f-4823-abf2-9bda3c9a9373:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: Billing Arrangements from CRM instance
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: fc779dd3-4b5f-410d-a9ab-e2277ce18461
+              stepCounter: 5836fd29-0d9f-4823-abf2-9bda3c9a9373
+            dataType: NUMBER(18,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: BILLING_ARRANGEMENT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d7417af2-9072-4d5f-a3be-abed357b12eb
+                    stepCounter: 3e8538f8-2cc1-44d5-b06d-b5a84aaffdb3
+                transform: ""
+          - columnReference:
+              columnCounter: 993ac83f-1152-471a-9540-2d4b85a27b9e
+              stepCounter: 5836fd29-0d9f-4823-abf2-9bda3c9a9373
+            dataType: NUMBER(18,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ACCOUNT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 879d7e29-f57c-482e-9ce7-2fb49c718cb1
+                    stepCounter: 3e8538f8-2cc1-44d5-b06d-b5a84aaffdb3
+                transform: ""
+          - columnReference:
+              columnCounter: a3b14f63-5770-4767-84c6-6f4ddff80208
+              stepCounter: 5836fd29-0d9f-4823-abf2-9bda3c9a9373
+            dataType: TIMESTAMP_NTZ(0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYS_CREATION_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fe052ebe-2788-4b19-8aa0-0c6c120fdca1
+                    stepCounter: 3e8538f8-2cc1-44d5-b06d-b5a84aaffdb3
+                transform: ""
+          - columnReference:
+              columnCounter: 8a52385b-ba7a-4ead-b425-2eca953129b0
+              stepCounter: 5836fd29-0d9f-4823-abf2-9bda3c9a9373
+            dataType: TIMESTAMP_NTZ(0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYS_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c8c5a163-7ca3-43e5-bf50-048f759a1b85
+                    stepCounter: 3e8538f8-2cc1-44d5-b06d-b5a84aaffdb3
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 210c3d31-b0e3-495e-b5c9-76049d6dcf9f
+              stepCounter: 5836fd29-0d9f-4823-abf2-9bda3c9a9373
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCreateDate: true
+            name: ROWCREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 321ef2e5-13b6-4eff-965a-6115cda81cd5
+              stepCounter: 5836fd29-0d9f-4823-abf2-9bda3c9a9373
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemUpdateDate: true
+            name: ROWUPDATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: L_UFY_CB_BAR_CUST
+            join:
+              joinCondition: FROM {{ ref('SOURCE', 'L_UFY_CB_BAR_CUST') }} "L_UFY_CB_BAR_CUST"
+            name: DS_UFY_CB_BAR
+            noLinkRefs: []
+      name: DS_UFY_CB_BAR
+      overrideSQL: false
+      schema: ""
+      sqlType: persistentStage
+      type: sql
+    stepCounter: 5836fd29-0d9f-4823-abf2-9bda3c9a9373

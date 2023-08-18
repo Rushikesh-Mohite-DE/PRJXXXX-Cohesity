@@ -1,0 +1,94 @@
+steps:
+  L_BCS_SKILLGROEPHIST-694f26cc-38a7-42df-9430-f2bb7d1c73c8:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4471a915-c671-4afe-b0e6-81328386a56f
+              stepCounter: 694f26cc-38a7-42df-9430-f2bb7d1c73c8
+            config: {}
+            dataType: NUMBER(10,0)
+            defaultValue: ""
+            description: ""
+            name: RECNR
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 83968f63-ebf5-4fa4-9477-ebe7f7960cfc
+              stepCounter: 694f26cc-38a7-42df-9430-f2bb7d1c73c8
+            config: {}
+            dataType: NUMBER(10,0)
+            defaultValue: ""
+            description: ""
+            name: REFNRSKILL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4724db09-bef7-474d-b470-748808ecfe84
+              stepCounter: 694f26cc-38a7-42df-9430-f2bb7d1c73c8
+            config: {}
+            dataType: NUMBER(10,0)
+            defaultValue: ""
+            description: ""
+            name: REFNRGROEP
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2b418238-9587-48dc-a3df-574ea5226ca5
+              stepCounter: 694f26cc-38a7-42df-9430-f2bb7d1c73c8
+            config: {}
+            dataType: TIMESTAMP_NTZ(0)
+            defaultValue: ""
+            description: ""
+            name: DTVAN
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9a354137-515b-4aa0-94ed-75db9845fe67
+              stepCounter: 694f26cc-38a7-42df-9430-f2bb7d1c73c8
+            config: {}
+            dataType: TIMESTAMP_NTZ(0)
+            defaultValue: ""
+            description: ""
+            name: DTTOT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'L_BCS_SKILLGROEPHIST') }}
+      name: L_BCS_SKILLGROEPHIST
+      schema: ""
+      sqlType: Source
+      table: L_BCS_SKILLGROEPHIST
+      type: sourceInput
+    stepCounter: 694f26cc-38a7-42df-9430-f2bb7d1c73c8

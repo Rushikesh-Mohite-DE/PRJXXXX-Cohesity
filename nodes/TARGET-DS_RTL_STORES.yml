@@ -1,0 +1,113 @@
+steps:
+  DS_RTL_STORES-95dd1c33-9eef-42d3-b1ac-0cf8766483bc:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 5041a97d-7770-4a5c-b1e7-e3b5c70a7e2b
+              stepCounter: 95dd1c33-9eef-42d3-b1ac-0cf8766483bc
+            dataType: VARCHAR(5)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: STOREID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 505c1b51-aff4-4d15-b00f-e532225f3614
+                    stepCounter: 9f58a48f-3c93-403f-ac34-de1dff477b35
+                transform: ""
+          - columnReference:
+              columnCounter: aac3a8d3-b7cd-470e-b530-7691c1cdd4b0
+              stepCounter: 95dd1c33-9eef-42d3-b1ac-0cf8766483bc
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: STORECITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8ea3874c-d4c3-42e0-844d-6a0a991600ba
+                    stepCounter: 9f58a48f-3c93-403f-ac34-de1dff477b35
+                transform: ""
+          - columnReference:
+              columnCounter: 6f7ad290-e856-4211-bb35-a87631ea847b
+              stepCounter: 95dd1c33-9eef-42d3-b1ac-0cf8766483bc
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: STOREADDRESS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d3350ccd-2d60-4f04-82e1-7ffec56810f6
+                    stepCounter: 9f58a48f-3c93-403f-ac34-de1dff477b35
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 79bc9fca-9341-43e6-94ad-58fa55dd9f09
+              stepCounter: 95dd1c33-9eef-42d3-b1ac-0cf8766483bc
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCreateDate: true
+            name: ROWCREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a7eca736-76f2-48ab-b62f-0e59e17d81ed
+              stepCounter: 95dd1c33-9eef-42d3-b1ac-0cf8766483bc
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemUpdateDate: true
+            name: ROWUPDATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: L_RTL_STORES
+            join:
+              joinCondition: FROM {{ ref('SOURCE', 'L_RTL_STORES') }} "L_RTL_STORES"
+            name: DS_RTL_STORES
+            noLinkRefs: []
+      name: DS_RTL_STORES
+      overrideSQL: false
+      schema: ""
+      sqlType: persistentStage
+      type: sql
+    stepCounter: 95dd1c33-9eef-42d3-b1ac-0cf8766483bc

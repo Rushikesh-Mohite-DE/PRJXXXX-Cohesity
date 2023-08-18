@@ -1,0 +1,94 @@
+steps:
+  UFY_CB_TABLE_CONTACT_LOAD_V-d55cc0c3-ba16-4c2d-865d-4cac58c1d1b1:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 665b4351-7ab6-4cf6-8e22-bb5fcb46e78e
+              stepCounter: d55cc0c3-ba16-4c2d-865d-4cac58c1d1b1
+            dataType: NUMBER(38)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: OBJID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 55793b7f-c165-44a8-bde0-b454ead63ffd
+                    stepCounter: 8e497d46-04c6-454c-ac7c-4520e958892d
+                transform: ""
+          - columnReference:
+              columnCounter: befacf92-b2dd-461c-b780-6437463b6d57
+              stepCounter: d55cc0c3-ba16-4c2d-865d-4cac58c1d1b1
+            dataType: TIMESTAMP_NTZ(0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: UPDATE_STAMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 97c2bf41-07a8-400c-9727-4739b90b1746
+                    stepCounter: 8e497d46-04c6-454c-ac7c-4520e958892d
+                transform: ""
+          - columnReference:
+              columnCounter: 84bea9ad-c8c4-40e0-85d3-41c468d53df9
+              stepCounter: d55cc0c3-ba16-4c2d-865d-4cac58c1d1b1
+            dataType: VARCHAR(279)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CONTACT_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 706351bd-5587-4276-9f93-a0736124832e
+                    stepCounter: 8e497d46-04c6-454c-ac7c-4520e958892d
+                transform: ""
+          - columnReference:
+              columnCounter: 02a590cc-5427-4d9a-9285-ad8fb05ed437
+              stepCounter: d55cc0c3-ba16-4c2d-865d-4cac58c1d1b1
+            dataType: VARCHAR(360)
+            description: ""
+            name: BRAND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dd1557a9-527d-40bd-a1aa-e92086e12c14
+                    stepCounter: 200819a4-0e79-4240-b754-1f1c0b9e50ee
+                transform: COALESCE(TITLE_COL,'VODAFONE')
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: L_UFY_CB_HGBST_ELM
+              - locationName: SOURCE
+                nodeName: L_UFY_CB_TABLE_CONTACT
+            join:
+              joinCondition: |
+                FROM {{ ref('SOURCE', 'L_UFY_CB_TABLE_CONTACT') }} "L_UFY_CB_TABLE_CONTACT"
+                LEFT OUTER JOIN {{ ref('SOURCE', 'L_UFY_CB_HGBST_ELM') }} "L_UFY_CB_HGBST_ELM"
+                ON l_UFY_CB_HGBST_ELM.OBJID = l_UFY_CB_TABLE_CONTACT.X_CONTACT_BRAND2HGBST_ELM
+                ;
+            name: UFY_CB_TABLE_CONTACT_LOAD_V
+            noLinkRefs: []
+      name: UFY_CB_TABLE_CONTACT_LOAD_V
+      overrideSQL: false
+      schema: ""
+      sqlType: View
+      type: sql
+    stepCounter: d55cc0c3-ba16-4c2d-865d-4cac58c1d1b1

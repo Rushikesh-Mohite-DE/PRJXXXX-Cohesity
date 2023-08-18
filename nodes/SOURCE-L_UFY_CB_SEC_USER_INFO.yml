@@ -1,0 +1,64 @@
+steps:
+  L_UFY_CB_SEC_USER_INFO-33619265-0fee-4051-b7e8-2ef09ad47a18:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: User intormation (from CUST intance)
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6dd5b5ee-629d-4af5-b4d4-82168a6fc42a
+              stepCounter: 33619265-0fee-4051-b7e8-2ef09ad47a18
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: USER_ID
+            name: USER_ID
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f4cc7b22-9f6c-44f0-b508-39ab2abbfb77
+              stepCounter: 33619265-0fee-4051-b7e8-2ef09ad47a18
+            config: {}
+            dataType: VARCHAR(64)
+            defaultValue: ""
+            description: ""
+            name: USER_TYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5488aa32-8568-4165-9c99-2642210903e5
+              stepCounter: 33619265-0fee-4051-b7e8-2ef09ad47a18
+            config: {}
+            dataType: NUMBER(9,0)
+            defaultValue: ""
+            description: OPERATOR_ID
+            name: L9_OPERATOR_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'L_UFY_CB_SEC_USER_INFO') }}
+      name: L_UFY_CB_SEC_USER_INFO
+      schema: ""
+      sqlType: Source
+      table: L_UFY_CB_SEC_USER_INFO
+      type: sourceInput
+    stepCounter: 33619265-0fee-4051-b7e8-2ef09ad47a18

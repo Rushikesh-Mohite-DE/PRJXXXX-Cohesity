@@ -1,0 +1,49 @@
+steps:
+  L_UFY_CB_TABLE_USER-0346b552-7d42-4f0c-a9fd-6d7165a29e30:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 96fa29f4-3cbf-4538-9f69-16de6aec301c
+              stepCounter: 0346b552-7d42-4f0c-a9fd-6d7165a29e30
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: OBJID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 896acd2b-1c37-4b0b-af0e-28bba2e97e9a
+              stepCounter: 0346b552-7d42-4f0c-a9fd-6d7165a29e30
+            config: {}
+            dataType: VARCHAR(720)
+            defaultValue: ""
+            description: ""
+            name: S_LOGIN_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'L_UFY_CB_TABLE_USER') }}
+      name: L_UFY_CB_TABLE_USER
+      schema: ""
+      sqlType: Source
+      table: L_UFY_CB_TABLE_USER
+      type: sourceInput
+    stepCounter: 0346b552-7d42-4f0c-a9fd-6d7165a29e30

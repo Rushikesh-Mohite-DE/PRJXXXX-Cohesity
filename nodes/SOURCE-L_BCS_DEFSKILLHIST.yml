@@ -1,0 +1,199 @@
+steps:
+  L_BCS_DEFSKILLHIST-c4d00e73-8cc3-4608-aa6d-29c9a7bff37b:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: To load table bocs_adm.Cs_Def_Skill_Hist from Oracle to Teradata
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 63599384-78d8-4da1-9eb1-3d6686a11a6d
+              stepCounter: c4d00e73-8cc3-4608-aa6d-29c9a7bff37b
+            config: {}
+            dataType: NUMBER(10,0)
+            defaultValue: ""
+            description: ""
+            name: RECNR
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 93e7f454-398f-4284-9c31-133d4dc0454b
+              stepCounter: c4d00e73-8cc3-4608-aa6d-29c9a7bff37b
+            config: {}
+            dataType: NUMBER(10,0)
+            defaultValue: ""
+            description: ""
+            name: SKILL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fd71ff36-cca5-4642-802f-be4b8c6484cd
+              stepCounter: c4d00e73-8cc3-4608-aa6d-29c9a7bff37b
+            config: {}
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            name: NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f96390d7-7a3b-44eb-997f-b759a1d67f09
+              stepCounter: c4d00e73-8cc3-4608-aa6d-29c9a7bff37b
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: EXTENSION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 44eac542-4198-44b4-ad9f-a30e1e39176c
+              stepCounter: c4d00e73-8cc3-4608-aa6d-29c9a7bff37b
+            config: {}
+            dataType: NUMBER(10,0)
+            defaultValue: ""
+            description: ""
+            name: QUEUESIZE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a97fc000-bb53-45ae-97f6-0da0c9747af2
+              stepCounter: c4d00e73-8cc3-4608-aa6d-29c9a7bff37b
+            config: {}
+            dataType: TIMESTAMP_NTZ(0)
+            defaultValue: ""
+            description: ""
+            name: UPDATEDT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ecf68866-bbcb-4bde-9e49-99f23d99a0c7
+              stepCounter: c4d00e73-8cc3-4608-aa6d-29c9a7bff37b
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SERVICELEVEL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e6e394a2-1f09-457e-9772-52072651fe52
+              stepCounter: c4d00e73-8cc3-4608-aa6d-29c9a7bff37b
+            config: {}
+            dataType: NUMBER(10,0)
+            defaultValue: ""
+            description: ""
+            name: SERVICELEVELSEC
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6771fb7b-5aa4-46ce-a3f7-aa97f21165bc
+              stepCounter: c4d00e73-8cc3-4608-aa6d-29c9a7bff37b
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: LOGGEN
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8370ed47-6267-49ad-a0c7-574a2110cd77
+              stepCounter: c4d00e73-8cc3-4608-aa6d-29c9a7bff37b
+            config: {}
+            dataType: NUMBER(5,0)
+            defaultValue: ""
+            description: ""
+            name: AWT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cbeea528-27e8-4fe2-b23b-4a2dff76762f
+              stepCounter: c4d00e73-8cc3-4608-aa6d-29c9a7bff37b
+            config: {}
+            dataType: TIMESTAMP_NTZ(0)
+            defaultValue: ""
+            description: ""
+            name: DTVAN
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0582f22e-a447-400a-b1d1-ff9d17bb9aee
+              stepCounter: c4d00e73-8cc3-4608-aa6d-29c9a7bff37b
+            config: {}
+            dataType: TIMESTAMP_NTZ(0)
+            defaultValue: ""
+            description: ""
+            name: DTTOT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'L_BCS_DEFSKILLHIST') }}
+      name: L_BCS_DEFSKILLHIST
+      schema: ""
+      sqlType: Source
+      table: L_BCS_DEFSKILLHIST
+      type: sourceInput
+    stepCounter: c4d00e73-8cc3-4608-aa6d-29c9a7bff37b

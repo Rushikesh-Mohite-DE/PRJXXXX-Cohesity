@@ -1,0 +1,64 @@
+steps:
+  L_RTL_STORES-9f58a48f-3c93-403f-ac34-de1dff477b35:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 505c1b51-aff4-4d15-b00f-e532225f3614
+              stepCounter: 9f58a48f-3c93-403f-ac34-de1dff477b35
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            name: STOREID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8ea3874c-d4c3-42e0-844d-6a0a991600ba
+              stepCounter: 9f58a48f-3c93-403f-ac34-de1dff477b35
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: STORECITY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: d3350ccd-2d60-4f04-82e1-7ffec56810f6
+              stepCounter: 9f58a48f-3c93-403f-ac34-de1dff477b35
+            config: {}
+            dataType: VARCHAR(100)
+            defaultValue: ""
+            description: ""
+            name: STOREADDRESS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'L_RTL_STORES') }}
+      name: L_RTL_STORES
+      schema: ""
+      sqlType: Source
+      table: L_RTL_STORES
+      type: sourceInput
+    stepCounter: 9f58a48f-3c93-403f-ac34-de1dff477b35

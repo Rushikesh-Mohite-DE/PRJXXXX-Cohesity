@@ -1,0 +1,96 @@
+steps:
+  UFY_CB_CUSTOMER_LOAD_V-1798ae4b-8ebd-4fa5-8362-73083375f3d4:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: b761f12d-31c6-47a0-b217-b96fa525174e
+              stepCounter: 1798ae4b-8ebd-4fa5-8362-73083375f3d4
+            dataType: VARCHAR(765)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CUSTOMER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eb1df7c1-1df1-4c92-9226-15af4abae1a5
+                    stepCounter: 190a3285-712f-452e-aded-f2339328a4e1
+                transform: ""
+          - columnReference:
+              columnCounter: 125a72fc-2376-40e7-aa00-c37416c5b730
+              stepCounter: 1798ae4b-8ebd-4fa5-8362-73083375f3d4
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: OBJID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7f420d06-7394-4e52-9edb-f8c034cd23b2
+                    stepCounter: 190a3285-712f-452e-aded-f2339328a4e1
+                transform: ""
+          - columnReference:
+              columnCounter: 33ebf13a-bb0d-4ef0-9ae8-33a3fe7da5e5
+              stepCounter: 1798ae4b-8ebd-4fa5-8362-73083375f3d4
+            dataType: TIMESTAMP_NTZ(0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: MODIFY_STMP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3e2da063-44e5-439a-ad01-fcb971c2386e
+                    stepCounter: 190a3285-712f-452e-aded-f2339328a4e1
+                transform: ""
+          - columnReference:
+              columnCounter: 30f99a91-9abd-49d1-8444-3a131552ae47
+              stepCounter: 1798ae4b-8ebd-4fa5-8362-73083375f3d4
+            dataType: VARCHAR(360)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: BRAND
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dd1557a9-527d-40bd-a1aa-e92086e12c14
+                    stepCounter: 200819a4-0e79-4240-b754-1f1c0b9e50ee
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: L_UFY_CB_CUSTOMER_CRM
+              - locationName: SOURCE
+                nodeName: L_UFY_CB_HGBST_ELM
+            join:
+              joinCondition: |-
+                FROM {{ ref('SOURCE', 'L_UFY_CB_CUSTOMER_CRM') }} "L_UFY_CB_CUSTOMER_CRM"
+                LEFT OUTER JOIN  {{ ref('SOURCE', 'L_UFY_CB_HGBST_ELM') }} "L_UFY_CB_HGBST_ELM"
+                ON l_UFY_CB_HGBST_ELM.OBJID = l_UFY_CB_CUSTOMER_CRM.X_CUST_BRAND2HGBST_ELM
+                ;
+            name: UFY_CB_CUSTOMER_LOAD_V
+            noLinkRefs: []
+      name: UFY_CB_CUSTOMER_LOAD_V
+      overrideSQL: false
+      schema: ""
+      sqlType: View
+      type: sql
+    stepCounter: 1798ae4b-8ebd-4fa5-8362-73083375f3d4

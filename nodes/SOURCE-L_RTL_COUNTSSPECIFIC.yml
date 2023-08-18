@@ -1,0 +1,124 @@
+steps:
+  L_RTL_COUNTSSPECIFIC-7b3d4833-8a22-45d2-a56e-c40a8c925968:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: Retail stores Specific counts
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e54fed8d-c6df-4fc3-ae07-77e2a3659bd6
+              stepCounter: 7b3d4833-8a22-45d2-a56e-c40a8c925968
+            config: {}
+            dataType: VARCHAR(10)
+            defaultValue: ""
+            description: ""
+            name: STOREID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 653662b0-6f54-4fc1-bf87-c6dbd1544222
+              stepCounter: 7b3d4833-8a22-45d2-a56e-c40a8c925968
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: COUNTDATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8387d0a3-1d94-4a4e-83c7-4a5296e09f49
+              stepCounter: 7b3d4833-8a22-45d2-a56e-c40a8c925968
+            config: {}
+            dataType: TIME(0)
+            defaultValue: ""
+            description: ""
+            name: COUNTTIME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 41c78851-89b6-4427-b50d-956d4a293db7
+              stepCounter: 7b3d4833-8a22-45d2-a56e-c40a8c925968
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SET1IN
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: dcc1440c-75e5-40f2-a897-0b8887884cf2
+              stepCounter: 7b3d4833-8a22-45d2-a56e-c40a8c925968
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SET1OUT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 08de1522-6101-4a90-b675-017e1aef0aae
+              stepCounter: 7b3d4833-8a22-45d2-a56e-c40a8c925968
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SET2IN
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e6bb46f2-273e-4a9a-b99a-c3902a9efc87
+              stepCounter: 7b3d4833-8a22-45d2-a56e-c40a8c925968
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: SET2OUT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'L_RTL_COUNTSSPECIFIC') }}
+      name: L_RTL_COUNTSSPECIFIC
+      schema: ""
+      sqlType: Source
+      table: L_RTL_COUNTSSPECIFIC
+      type: sourceInput
+    stepCounter: 7b3d4833-8a22-45d2-a56e-c40a8c925968

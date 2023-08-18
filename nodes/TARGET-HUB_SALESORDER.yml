@@ -1,0 +1,123 @@
+steps:
+  HUB_SALESORDER-a215d4b5-476a-4f42-bcda-74ab7f7dd3aa:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 6ed3b6b1-740d-49fc-a248-2d624ef81741
+              stepCounter: a215d4b5-476a-4f42-bcda-74ab7f7dd3aa
+            config:
+              isHubHash: true
+            dataType: STRING
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: HUB_SALESORDER_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 38c61ea4-ee04-4ed9-a62d-9304cc7b0705
+                    stepCounter: c03295cd-3e72-46a3-b7cb-58346e60f7de
+                transform: ""
+          - columnReference:
+              columnCounter: 6f856741-fb00-4bfc-957b-ac80b937affa
+              stepCounter: a215d4b5-476a-4f42-bcda-74ab7f7dd3aa
+            dataType: VARCHAR(40)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORDER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fe5bfb5e-4812-4209-b1a3-b60c7e584872
+                    stepCounter: c03295cd-3e72-46a3-b7cb-58346e60f7de
+                transform: ""
+          - columnReference:
+              columnCounter: 5d6fe1ca-87c0-4d17-9ef0-3a009e5965ac
+              stepCounter: a215d4b5-476a-4f42-bcda-74ab7f7dd3aa
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROWSOURCENAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e6a89bb9-891d-4656-bcb4-190dff0c7341
+                    stepCounter: c03295cd-3e72-46a3-b7cb-58346e60f7de
+                transform: ""
+          - columnReference:
+              columnCounter: b85c4336-0dae-4f40-a63f-4cac82a90de1
+              stepCounter: a215d4b5-476a-4f42-bcda-74ab7f7dd3aa
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROWSOURCEDATE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1195705f-da8e-41ab-b2b6-01167091f437
+                    stepCounter: c03295cd-3e72-46a3-b7cb-58346e60f7de
+                transform: ""
+          - columnReference:
+              columnCounter: 8edb5ff3-2219-4568-b3b1-f9ac9b5cd2ec
+              stepCounter: a215d4b5-476a-4f42-bcda-74ab7f7dd3aa
+            dataType: VARCHAR(100)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ROWSEQUENCE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 34684a10-4d07-4822-afa0-6718958fbd54
+                    stepCounter: c03295cd-3e72-46a3-b7cb-58346e60f7de
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c116c8a8-dafd-4feb-91fe-6ebb93e5f6d0
+              stepCounter: a215d4b5-476a-4f42-bcda-74ab7f7dd3aa
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCreateDate: true
+            name: ROWCREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: S_OINB_ORDER
+            join:
+              joinCondition: FROM {{ ref('STAGE', 'S_OINB_ORDER') }} "S_OINB_ORDER"
+            name: HUB_SALESORDER
+            noLinkRefs: []
+      name: HUB_SALESORDER
+      overrideSQL: false
+      schema: ""
+      sqlType: "86"
+      type: sql
+    stepCounter: a215d4b5-476a-4f42-bcda-74ab7f7dd3aa

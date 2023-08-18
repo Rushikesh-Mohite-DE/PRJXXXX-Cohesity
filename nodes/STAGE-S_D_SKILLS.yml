@@ -1,0 +1,333 @@
+steps:
+  S_D_SKILLS-67e3406a-2e31-47d9-a68d-c538df061d54:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: b9d814aa-30e7-49e3-8ddc-24a8da515af8
+              stepCounter: 67e3406a-2e31-47d9-a68d-c538df061d54
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: DDATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3a21621b-f716-4297-889f-7bf871ff2e46
+                    stepCounter: 36087602-4238-47aa-b6f4-bbce6fa8a9e0
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f462dc95-d74d-4b41-9aa9-75603500477d
+              stepCounter: 67e3406a-2e31-47d9-a68d-c538df061d54
+            config: {}
+            dataType: NUMBER(10)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: SKILL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 93e7f454-398f-4284-9c31-133d4dc0454b
+                    stepCounter: c4d00e73-8cc3-4608-aa6d-29c9a7bff37b
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e09158d4-6ffa-4bff-962b-a3111d7beea8
+              stepCounter: 67e3406a-2e31-47d9-a68d-c538df061d54
+            config: {}
+            dataType: VARCHAR(30)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: fd71ff36-cca5-4642-802f-be4b8c6484cd
+                    stepCounter: c4d00e73-8cc3-4608-aa6d-29c9a7bff37b
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6b672bea-cd57-4591-8ab4-f588c7f4bb85
+              stepCounter: 67e3406a-2e31-47d9-a68d-c538df061d54
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: SERVICELEVEL
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ecf68866-bbcb-4bde-9e49-99f23d99a0c7
+                    stepCounter: c4d00e73-8cc3-4608-aa6d-29c9a7bff37b
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 62275619-1d45-4fe7-b780-56791b19f027
+              stepCounter: 67e3406a-2e31-47d9-a68d-c538df061d54
+            config: {}
+            dataType: NUMBER(10)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: SERVICELEVELSEC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e6e394a2-1f09-457e-9772-52072651fe52
+                    stepCounter: c4d00e73-8cc3-4608-aa6d-29c9a7bff37b
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 93bd17ec-1c1a-45f3-9139-c3d644bbadd7
+              stepCounter: 67e3406a-2e31-47d9-a68d-c538df061d54
+            config: {}
+            dataType: VARCHAR(5)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: AFKORTING
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0489d7e2-05c7-43e0-86bf-60442cfcd358
+                    stepCounter: 619df986-457c-4af3-a6d4-07cc86d12b56
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4db2951e-0261-428f-87b3-0b01cfd62c17
+              stepCounter: 67e3406a-2e31-47d9-a68d-c538df061d54
+            config: {}
+            dataType: VARCHAR(255)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: NAAM_ENG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0c88158a-4ff6-4193-9c45-c1a4d8a08ae1
+                    stepCounter: 619df986-457c-4af3-a6d4-07cc86d12b56
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e8ad9f12-fe7a-44ad-b489-f07488ddd317
+              stepCounter: 67e3406a-2e31-47d9-a68d-c538df061d54
+            config: {}
+            dataType: DECIMAL(10)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: RECNR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4471a915-c671-4afe-b0e6-81328386a56f
+                    stepCounter: 694f26cc-38a7-42df-9430-f2bb7d1c73c8
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b36010fb-e955-4da1-a8bb-cfbbe6614de6
+              stepCounter: 67e3406a-2e31-47d9-a68d-c538df061d54
+            config: {}
+            dataType: VARCHAR(150)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: SEGMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1bd6aa37-3303-49dc-958a-333e71b9fa0e
+                    stepCounter: a43911fd-9fce-4f56-b473-b3da32c7d807
+                transform: ""
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2c1a8681-bdf1-496d-b1c1-cea569d0f260
+              stepCounter: 67e3406a-2e31-47d9-a68d-c538df061d54
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: SKILL_GROUP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "''"
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a7d1c343-36f0-4968-ba7c-3d71723b4f8c
+              stepCounter: 67e3406a-2e31-47d9-a68d-c538df061d54
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: SKILL_CHAIN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "''"
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b2dfbeac-c24f-4bab-9671-1d0ad76c4865
+              stepCounter: 67e3406a-2e31-47d9-a68d-c538df061d54
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: SKILL_SERVICE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "''"
+            systemColumnType: None
+            transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ca9e836b-6546-4b96-ab2e-bc1b3e92d99f
+              stepCounter: 67e3406a-2e31-47d9-a68d-c538df061d54
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: COMMERCIAL_SEGMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: "''"
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SOURCE
+                nodeName: L_BCS_DEFSKILLHIST
+              - locationName: SOURCE
+                nodeName: L_BCS_GROEPHIST
+              - locationName: SOURCE
+                nodeName: L_BCS_NPSSEGREFUNI
+              - locationName: SOURCE
+                nodeName: L_BCS_SKILLGROEPHIST
+              - locationName: SOURCE
+                nodeName: L_SYS_EVERYDAY
+            join:
+              joinCondition: |-
+                FROM {{ ref('SOURCE', 'L_SYS_EVERYDAY') }} "L_SYS_EVERYDAY"
+                  LEFT OUTER JOIN {{ ref('SOURCE', 'L_BCS_DEFSKILLHIST') }} "L_BCS_DEFSKILLHIST"
+                    ON L_SYS_EVERYDAY.DDATE BETWEEN CAST(L_BCS_DEFSKILLHIST.DTVAN AS DATE)
+                                            AND CAST(L_BCS_DEFSKILLHIST.DTTOT+ INTERVAL '1 SECOND' AS DATE)-1
+                  
+                  LEFT OUTER JOIN {{ ref('SOURCE', 'L_BCS_SKILLGROEPHIST') }} "L_BCS_SKILLGROEPHIST"
+                    ON L_BCS_SKILLGROEPHIST.REFNRSKILL = L_BCS_DEFSKILLHIST.RECNR
+                   AND L_SYS_EVERYDAY.DDATE BETWEEN CAST(L_BCS_SKILLGROEPHIST.DTVAN AS DATE)
+                                            AND CAST(L_BCS_SKILLGROEPHIST.DTTOT+ INTERVAL '1 SECOND' AS DATE)-1
+                  
+                  LEFT OUTER JOIN {{ ref('SOURCE', 'L_BCS_GROEPHIST') }} L_BCS_GROEPHIST
+                    ON L_BCS_SKILLGROEPHIST.REFNRGROEP = L_BCS_GROEPHIST.RECNR
+                   AND L_SYS_EVERYDAY.DDATE BETWEEN CAST(L_BCS_GROEPHIST.DTVAN AS DATE)
+                                            AND CAST(L_BCS_GROEPHIST.DTTOT+ INTERVAL '1 SECOND'  AS DATE)-1
+                  
+                  LEFT OUTER JOIN {{ ref('SOURCE', 'L_BCS_NPSSEGREFUNI') }} L_BCS_NPSSEGREFUNI
+                    ON L_BCS_GROEPHIST.NAAM_ENG = L_BCS_NPSSEGREFUNI.DEPARTMENT
+                   AND L_SYS_EVERYDAY.DDATE BETWEEN CAST(L_BCS_NPSSEGREFUNI.DTVAN AS DATE)
+                                            AND CAST(L_BCS_NPSSEGREFUNI.DTTOT_EIND AS DATE)
+                  
+                  QUALIFY ROW_NUMBER() OVER (PARTITION BY L_SYS_EVERYDAY.DDATE, L_BCS_DEFSKILLHIST.SKILL
+                                                 ORDER BY L_BCS_SKILLGROEPHIST.RECNR) =  1;
+            name: S_D_SKILLS
+            noLinkRefs: []
+      name: S_D_SKILLS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 67e3406a-2e31-47d9-a68d-c538df061d54

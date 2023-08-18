@@ -1,0 +1,425 @@
+steps:
+  F_EFF_FORECAST-02e1e434-76ea-4847-a7ad-0f2f1563e611:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: TARGET
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: eb6190d8-5d08-4bd0-959c-2400e9d9bfe9
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: EVENT_DT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7e0934e8-9eac-4704-aa2e-180729e2da69
+                    stepCounter: 1c5c44c5-2f99-4d61-8f11-801967a898d5
+                transform: ""
+          - columnReference:
+              columnCounter: e4971682-2cc0-428c-b141-0814512953ff
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            dataType: INTEGER
+            description: Dummy
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: D_AGENT_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 69a9f5a3-4c56-445a-82b8-8e8a15efdd36
+                    stepCounter: 1c5c44c5-2f99-4d61-8f11-801967a898d5
+                transform: ""
+          - columnReference:
+              columnCounter: 568a4809-c685-4505-97b5-271c2522cad1
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            dataType: NUMBER(10,0)
+            description: Unique identifier (code) for a skill.
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: D_SKILLS_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f0d357fd-1d03-4e20-98fe-aaef385801fc
+                    stepCounter: 1c5c44c5-2f99-4d61-8f11-801967a898d5
+                transform: ""
+          - columnReference:
+              columnCounter: 217d18cb-7776-4064-833f-a40df5fb1b95
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: FORECAST_DT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 47c200fe-1156-4546-bad3-7f45ecaff0b9
+                    stepCounter: 1c5c44c5-2f99-4d61-8f11-801967a898d5
+                transform: ""
+          - columnReference:
+              columnCounter: eae2e653-5f73-437d-9b06-2e5ebd859986
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            dataType: VARCHAR(20)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: FORECAST_TYPE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 489c00bb-30ea-4058-9503-6c159ccb584a
+                    stepCounter: 1c5c44c5-2f99-4d61-8f11-801967a898d5
+                transform: ""
+          - columnReference:
+              columnCounter: 1f412e85-7c67-4437-b0e8-70a8d0ed423d
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            dataType: VARCHAR(20)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            isBusinessKey: true
+            name: FORECAST_PERIOD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9be4b2d3-ef23-4f41-b488-b831127705f0
+                    stepCounter: 1c5c44c5-2f99-4d61-8f11-801967a898d5
+                transform: ""
+          - columnReference:
+              columnCounter: ef72140d-9701-43db-beb4-110adf07bf03
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            dataType: DECIMAL(8,2)
+            description: Dummy hours
+            hashColumns: []
+            hashDetails: null
+            name: MSR_TOTAL_HOURS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 327a47d7-bd63-4a3d-bb07-49b3e2751a1e
+                    stepCounter: 1c5c44c5-2f99-4d61-8f11-801967a898d5
+                transform: ""
+          - columnReference:
+              columnCounter: c03379e8-e1b0-42a5-861d-051f28d3109c
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            dataType: DECIMAL(8,2)
+            description: Dummy hours
+            hashColumns: []
+            hashDetails: null
+            name: MSR_DIRECT_HOURS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1d8bda6d-868d-4c5c-b23f-479ddced8eef
+                    stepCounter: 1c5c44c5-2f99-4d61-8f11-801967a898d5
+                transform: ""
+          - columnReference:
+              columnCounter: 2748c511-6d9a-4e36-afed-24aa6145bbc4
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            dataType: DECIMAL(8,2)
+            description: Dummy hours
+            hashColumns: []
+            hashDetails: null
+            name: MSR_INDIRECT_HOURS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cf72c55a-72e9-4eb5-b275-51636cb63524
+                    stepCounter: 1c5c44c5-2f99-4d61-8f11-801967a898d5
+                transform: ""
+          - columnReference:
+              columnCounter: 9860ca8a-8839-4fe7-83b5-a7b8aafe1e66
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            dataType: DECIMAL(8,2)
+            description: Dummy hours
+            hashColumns: []
+            hashDetails: null
+            name: MSR_LEAVE_HOURS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c60ed79e-8f9c-4db4-ac83-efa8c1c0589e
+                    stepCounter: 1c5c44c5-2f99-4d61-8f11-801967a898d5
+                transform: ""
+          - columnReference:
+              columnCounter: 9a4160cf-3e99-4b63-973e-f49c92352d82
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            dataType: DECIMAL(8,2)
+            description: Dummy hours
+            hashColumns: []
+            hashDetails: null
+            name: MSR_ILLNESS_HOURS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 75e3391a-b0f8-424f-b2d3-80f74063b598
+                    stepCounter: 1c5c44c5-2f99-4d61-8f11-801967a898d5
+                transform: ""
+          - columnReference:
+              columnCounter: a8c6aead-84ab-4cb7-9155-92e04fb4e317
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            dataType: DECIMAL(8,2)
+            description: Dummy hours
+            hashColumns: []
+            hashDetails: null
+            name: MSR_SHORT_ILLNESS_HOURS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: dfba0fa2-1374-4dca-8086-af5d441adc99
+                    stepCounter: 1c5c44c5-2f99-4d61-8f11-801967a898d5
+                transform: ""
+          - columnReference:
+              columnCounter: c3f657e1-1988-4c33-8dfe-bab3b13ce44d
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            dataType: DECIMAL(8,2)
+            description: Dummy hours
+            hashColumns: []
+            hashDetails: null
+            name: MSR_LONG_ILLNESS_HOURS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e5834804-3d28-4c38-a5d1-7e0a4ebcc5d6
+                    stepCounter: 1c5c44c5-2f99-4d61-8f11-801967a898d5
+                transform: ""
+          - columnReference:
+              columnCounter: 2caf7746-28fa-4008-937b-c68bbea6be4a
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            dataType: DECIMAL(8,2)
+            description: Dummy hours
+            hashColumns: []
+            hashDetails: null
+            name: MSR_COACHING_HOURS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: cc63e3b7-7014-4773-8ac9-bfb0b4c657c1
+                    stepCounter: 1c5c44c5-2f99-4d61-8f11-801967a898d5
+                transform: ""
+          - columnReference:
+              columnCounter: e6cb2cb6-1ce1-4343-9820-0ba5b9781cc9
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            dataType: DECIMAL(8,2)
+            description: Dummy hours
+            hashColumns: []
+            hashDetails: null
+            name: MSR_BREAK_HOURS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c9f6e7d2-dbec-48ea-8c43-38d949c00977
+                    stepCounter: 1c5c44c5-2f99-4d61-8f11-801967a898d5
+                transform: ""
+          - columnReference:
+              columnCounter: 06a3aabd-c18e-4f43-8311-000552eb496e
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            dataType: DECIMAL(8,2)
+            description: Dummy hours
+            hashColumns: []
+            hashDetails: null
+            name: MSR_TRAINING_HOURS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7a5a5214-8866-4cd6-8a30-8988066ae670
+                    stepCounter: 1c5c44c5-2f99-4d61-8f11-801967a898d5
+                transform: ""
+          - columnReference:
+              columnCounter: 740d47c6-2739-469d-8b0f-e5f5d890bf10
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            dataType: DECIMAL(8,2)
+            description: Dummy hours
+            hashColumns: []
+            hashDetails: null
+            name: MSR_OTHER_HOURS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d66fce1e-a431-423f-8310-9d09ce8b637f
+                    stepCounter: 1c5c44c5-2f99-4d61-8f11-801967a898d5
+                transform: ""
+          - columnReference:
+              columnCounter: 301d0aa2-a490-4c03-8489-7f4e797e1497
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            dataType: DECIMAL(8,2)
+            description: Dummy hours
+            hashColumns: []
+            hashDetails: null
+            name: MSR_PREGNANCY_HOURS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d759bfa0-b626-4430-8e4d-7fb054dc8d5b
+                    stepCounter: 1c5c44c5-2f99-4d61-8f11-801967a898d5
+                transform: ""
+          - columnReference:
+              columnCounter: 5058b76f-e41e-445b-b912-afa4f61ca95d
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            dataType: DECIMAL(8,2)
+            description: Dummy hours
+            hashColumns: []
+            hashDetails: null
+            name: MSR_INFLOW_HOURS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: f27f7dfd-80c7-47be-8ad6-f012e80f3143
+                    stepCounter: 1c5c44c5-2f99-4d61-8f11-801967a898d5
+                transform: ""
+          - columnReference:
+              columnCounter: 703bf43c-e796-4441-9058-53c16f1893f6
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            dataType: DECIMAL(8,2)
+            description: Dummy hours
+            hashColumns: []
+            hashDetails: null
+            name: MSR_OPEN_HOURS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9bafac60-7170-4136-8ee7-601a63f65ab3
+                    stepCounter: 1c5c44c5-2f99-4d61-8f11-801967a898d5
+                transform: ""
+          - columnReference:
+              columnCounter: df47363e-26f6-4c3f-a579-c69b1597c703
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            dataType: DECIMAL(8,2)
+            description: Dummy hours
+            hashColumns: []
+            hashDetails: null
+            name: MSR_OPEN_THUIS_HOURS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7c9fde1a-6c47-4785-b0d2-0ae61e339d57
+                    stepCounter: 1c5c44c5-2f99-4d61-8f11-801967a898d5
+                transform: ""
+          - columnReference:
+              columnCounter: 3a85ffcd-2c86-45cf-8c84-9d6f8e7cf31e
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            dataType: DECIMAL(8,2)
+            description: Dummy hours
+            hashColumns: []
+            hashDetails: null
+            name: MSR_AHT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d04b6064-e731-46d5-847c-4a1d549eb413
+                    stepCounter: 1c5c44c5-2f99-4d61-8f11-801967a898d5
+                transform: ""
+          - columnReference:
+              columnCounter: a63bf05e-e30d-47a9-a963-c813f80d5c04
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            dataType: DECIMAL(8,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: MSR_OFFERED_COUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2413e53f-283d-4d7c-9687-4edc290fd496
+                    stepCounter: 1c5c44c5-2f99-4d61-8f11-801967a898d5
+                transform: ""
+          - columnReference:
+              columnCounter: 06c1a4e2-9236-4b0f-aacf-d1e4deac08f0
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            dataType: DECIMAL(8,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: MSR_ANSWERED_COUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 26b6e48c-a2b7-4711-aa24-0f295741a02a
+                    stepCounter: 1c5c44c5-2f99-4d61-8f11-801967a898d5
+                transform: ""
+          - columnReference:
+              columnCounter: 8721b466-a789-4fe8-afa5-733ad71535d9
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            dataType: DECIMAL(8,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: MSR_MAX_OCCUPANCY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2f34bc67-b45e-4b03-8ecf-fe32fffbc9e7
+                    stepCounter: 1c5c44c5-2f99-4d61-8f11-801967a898d5
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e48287a6-0813-41d4-9ae5-bb19e2dcac3b
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCreateDate: true
+            name: ROWCREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 327ea530-61f1-44ee-a72d-cb86647d4b59
+              stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemUpdateDate: true
+            name: ROWUPDATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: TARGET
+                nodeName: A_EFF_FORECAST
+            join:
+              joinCondition: FROM {{ ref('TARGET', 'A_EFF_FORECAST') }} "A_EFF_FORECAST"
+            name: F_EFF_FORECAST
+            noLinkRefs: []
+      name: F_EFF_FORECAST
+      overrideSQL: false
+      schema: ""
+      sqlType: Fact
+      type: sql
+    stepCounter: 02e1e434-76ea-4847-a7ad-0f2f1563e611

@@ -1,0 +1,79 @@
+steps:
+  L_UFY_CB_ACCOUNT-4fc21ad1-8c82-437d-8ccb-6b32df48dc64:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SOURCE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 117f3167-ac26-4826-a0ef-24cb20deaecb
+              stepCounter: 4fc21ad1-8c82-437d-8ccb-6b32df48dc64
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: OBJID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cb6466b7-9766-42f4-87ca-117078cd6008
+              stepCounter: 4fc21ad1-8c82-437d-8ccb-6b32df48dc64
+            config: {}
+            dataType: VARCHAR(120)
+            defaultValue: ""
+            description: ""
+            name: ORG_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6806bbeb-5f84-4d34-9287-3b6b938c04bc
+              stepCounter: 4fc21ad1-8c82-437d-8ccb-6b32df48dc64
+            config: {}
+            dataType: VARCHAR(360)
+            defaultValue: ""
+            description: ""
+            name: X_CORPORATE_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1726dd19-57ea-45cb-bde2-75b3bc74d932
+              stepCounter: 4fc21ad1-8c82-437d-8ccb-6b32df48dc64
+            config: {}
+            dataType: TIMESTAMP_NTZ(0)
+            defaultValue: ""
+            description: ""
+            name: UPDATE_STAMP
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SOURCE', 'L_UFY_CB_ACCOUNT') }}
+      name: L_UFY_CB_ACCOUNT
+      schema: ""
+      sqlType: Source
+      table: L_UFY_CB_ACCOUNT
+      type: sourceInput
+    stepCounter: 4fc21ad1-8c82-437d-8ccb-6b32df48dc64
